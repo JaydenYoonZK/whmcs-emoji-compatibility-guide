@@ -20,6 +20,10 @@ Open the interactive guide:
 
 [jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/)
 
+Machine-readable data is also available:
+
+[docs/data/emoji.json](docs/data/emoji.json)
+
 Use it when editing:
 
 - Product and service names
@@ -66,7 +70,7 @@ Pull requests are welcome for verified additions, removals, and compatibility no
 
 ## Roadmap
 
-- Add a machine-readable JSON/CSV compatibility list
+- Add CSV export
 - Add more WHMCS testing contexts
 - Add screenshots for common render failures
 - Add copy groups for hosting, billing, support, and security use cases
