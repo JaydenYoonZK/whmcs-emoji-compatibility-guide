@@ -1,0 +1,67 @@
+name: Emoji compatibility report
+description: Report an emoji that works or breaks in WHMCS.
+title: "[Emoji]: "
+labels: ["compatibility"]
+body:
+  - type: input
+    id: emoji
+    attributes:
+      label: Emoji tested
+      description: Paste the exact emoji or symbol.
+      placeholder: "✅"
+    validations:
+      required: true
+  - type: input
+    id: whmcs-version
+    attributes:
+      label: WHMCS version
+      placeholder: "8.x"
+    validations:
+      required: false
+  - type: input
+    id: php-version
+    attributes:
+      label: PHP version
+      placeholder: "8.2"
+    validations:
+      required: false
+  - type: input
+    id: database
+    attributes:
+      label: Database charset/collation
+      placeholder: "utf8mb4 / utf8mb4_unicode_ci"
+    validations:
+      required: false
+  - type: dropdown
+    id: context
+    attributes:
+      label: Where did you test it?
+      options:
+        - Product or service name
+        - Email template
+        - Knowledge base article
+        - Announcement
+        - Client-area template
+        - Admin note
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Rendered correctly
+        - Rendered as question marks
+        - Rendered as boxes/tofu
+        - Broke after saving
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Add screenshots, reproduction notes, or template/database details.
+    validations:
+      required: false

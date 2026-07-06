@@ -3,131 +3,359 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WHMCS-Compatible Emoji Guide</title>
+  <meta name="description" content="Copy-paste-safe emoji for WHMCS product names, email templates, knowledge base articles, and client-area UI." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34' fill='white'%3E%25E2%259C%2593%3C/text%3E%3C/svg%3E" />
+  <title>WHMCS Emoji Compatibility Guide</title>
   <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7faf9;
+      --ink: #13201b;
+      --muted: #5d6f68;
+      --line: #d8e7e1;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-2: #0369a1;
+      --soft: #e8f5f1;
+      --danger: #b42318;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      color: #222;
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
     }
-    h1, h2, h3 {
-      color: #256250;
+
+    a {
+      color: var(--accent-2);
+      font-weight: 700;
+      text-decoration: none;
     }
-    .emoji-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 1rem 0;
+
+    a:hover {
+      text-decoration: underline;
     }
-    .emoji-item {
+
+    header {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 64px 20px 44px;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #99f6e4;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.25rem, 6vw, 4.75rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: #dbeafe;
+      font-size: 1.08rem;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      margin: -24px auto 28px;
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+    }
+
+    .search {
+      width: 100%;
+      min-height: 44px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .search:focus {
+      border-color: var(--accent);
+      outline: 3px solid rgba(15, 118, 110, 0.16);
+    }
+
+    .count {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.5rem;
-      background-color: #eef7ee;
-      border-radius: 5px;
+      min-height: 44px;
+      padding: 0 14px;
+      border-radius: 6px;
+      background: var(--soft);
+      color: var(--accent);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: 0 0 56px;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+      gap: 8px;
+    }
+
+    button.emoji {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      font-size: 1.65rem;
       cursor: pointer;
-      font-size: 1.5rem;
-      transition: background-color 0.2s ease;
+      transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
     }
-    .emoji-item:hover {
-      background-color: #d8f5d8;
+
+    button.emoji:hover,
+    button.emoji:focus {
+      border-color: var(--accent);
+      box-shadow: 0 8px 22px rgba(15, 118, 110, 0.14);
+      outline: none;
+      transform: translateY(-1px);
     }
+
+    .notes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .note {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .note h2 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    .note ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .warning {
+      color: var(--danger);
+      font-weight: 800;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
+      padding: 26px 0 34px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
     }
-    a {
-      color: #256250;
-      text-decoration: none;
+
+    @media (max-width: 720px) {
+      header {
+        padding-top: 42px;
+      }
+
+      .toolbar,
+      .notes {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">WHMCS compatibility reference</p>
+      <h1>Copy-paste-safe emoji for client-facing WHMCS content.</h1>
+      <p class="intro">Search, click, and copy symbols that are more likely to survive WHMCS product names, templates, emails, announcements, and knowledge base pages without turning into broken characters.</p>
+    </div>
+  </header>
 
-  <h1>✅ WHMCS-Compatible Emoji Guide</h1>
-  <p>Tap or click any emoji to copy it to your clipboard. These have been tested to work in WHMCS.</p>
+  <main class="wrap">
+    <div class="toolbar" aria-label="Emoji tools">
+      <input id="search" class="search" type="search" placeholder="Search by category or paste an emoji..." autocomplete="off" />
+      <div id="count" class="count">0 emoji</div>
+    </div>
 
-  <h2>😀 Smileys & People</h2>
-  <div class="emoji-grid" id="people">
-    ☺️ ☹️ ☠️ ✊ ✌️ ☝️ ✋ ✍️ ⛑
-  </div>
+    <div id="sections"></div>
 
-  <h2>🌿 Animals & Nature</h2>
-  <div class="emoji-grid" id="nature">
-    ☘️ ⭐️ ✨ ⚡️ ☄️ ☀️ ⛅️ ☁️ ⛈ ❄️ ☃️ ⛄️ ☔️ ☂️
-  </div>
+    <div class="notes">
+      <section class="note">
+        <h2>Usually safer</h2>
+        <ul>
+          <li>Basic symbols and older Unicode emoji</li>
+          <li>Simple single-codepoint emoji</li>
+          <li>Emoji without skin tone modifiers</li>
+          <li>Emoji without gender or family combinations</li>
+        </ul>
+      </section>
 
-  <h2>🍵 Food & Drink</h2>
-  <div class="emoji-grid" id="food">
-    ☕️
-  </div>
-
-  <h2>⚽️ Activities</h2>
-  <div class="emoji-grid" id="activities">
-    ⚽️ ⚾️ ⛳️ ⛸ ⛷ ⛹️‍♀️ ⛹️ ⛹️‍♂️ ♟
-  </div>
-
-  <h2>🗺 Travel & Places</h2>
-  <div class="emoji-grid" id="travel">
-    ✈️ ⛵️ ⛴ ⚓️ ⛽️ ⛲️ ⛱ ⛰ ⛺️ ⛪️ ⛩
-  </div>
-
-  <h2>🔧 Objects</h2>
-  <div class="emoji-grid" id="objects">
-    ⌚️ ⌨️ ☎️ ⏱ ⏲ ⏰ ⌛️ ⏳ ⚖️ ⚒ ⛏ ⚙️ ⛓ ⚔️ ⚰️ ⚱️ ⚗️ ✉️ ✂️ ✒️ ✏️
-  </div>
-
-  <h2>🌀 Symbols</h2>
-  <div class="emoji-grid" id="symbols">
-    ❤️ ❣️ ☮️ ✝️ ☪️ ☸️ ✡️ ☯️ ☦️ ⛎ ♈️ ♉️ ♊️ ♋️ ♌️ ♎️ ♏️ ♐️ ♑️ ♒️ ♓️ ⚛️ ☢️ ☣️ ✴️ ㊙️ ㊗️ ❌ ⭕️ ⛔️ ♨️ ❗️ ❕ ❓ ❔ ‼️ ⁉️ 〽️ ⚠️ ⚜️ ♻️ ✅ ❇️ ✳️ ❎ Ⓜ️ ♿️ ⚧ ℹ️ 0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ #️⃣ *️⃣ ⏏️ ▶️ ⏸ ⏯ ⏹ ⏺ ⏭ ⏮ ⏩ ⏪ ⏫ ⏬ ◀️ ➡️ ⬅️ ⬆️ ⬇️ ↗️ ↘️ ↙️ ↖️ ↕️ ↔️ ↪️ ↩️ ⤴️ ⤵️ ➕ ➖ ➗ ✖️ ♾️ ™️ ©️ ®️ 〰️ ➰ ➿ ✔️ ☑️ ⚫️ ⚪️ ▪️ ▫️ ◾️ ◽️ ◼️ ◻️ ⬛️ ⬜️ ♠️ ♣️ ♥️ ♦️
-  </div>
-
-  <h2>🚫 Known Unsupported</h2>
-  <p>These emojis often show up as "????" in WHMCS:</p>
-  <ul>
-    <li>All country flags (🇲🇾 🇺🇸 🇨🇳 etc.)</li>
-    <li>Newer Unicode emojis</li>
-    <li>Skin tone variations and gendered combinations</li>
-  </ul>
-
-  <h2>📂 Usage</h2>
-  <ul>
-    <li>Use in product names like VPS or SSL plans</li>
-    <li>Decorate email templates and client notifications</li>
-    <li>Add personality to knowledge base articles</li>
-    <li>Make your WHMCS dashboard more friendly</li>
-  </ul>
-
-  <h2>📣 Contributing</h2>
-  <p>Have an emoji that works (or doesn’t)? Submit it through a GitHub pull request or open an issue. All contributions are appreciated.</p>
-
-  <h2>🔖 License</h2>
-  <p>This guide is licensed under the MIT License. Please credit <a href="https://github.com/JaydenYoonZK" target="_blank">Jayden Yoon ZK</a> when sharing or modifying.</p>
+      <section class="note">
+        <h2 class="warning">Often unsupported</h2>
+        <ul>
+          <li>Country flags</li>
+          <li>New emoji from recent Unicode releases</li>
+          <li>Skin tone variations</li>
+          <li>Complex zero-width-joiner emoji sequences</li>
+        </ul>
+      </section>
+    </div>
+  </main>
 
   <footer>
-    <p>Created by <a href="https://www.JaydenYoonZK.com" target="_blank">Jayden Yoon ZK</a> — Developer • Designer • WHMCS Builder</p>
+    <div class="wrap">
+      Built by <a href="https://github.com/JaydenYoonZK">Jayden Yoon ZK</a>. Contributions welcome on <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide">GitHub</a>.
+    </div>
   </footer>
 
-  <script>
-    document.querySelectorAll('.emoji-grid').forEach(grid => {
-      const emojis = grid.textContent.trim().split(/\s+/);
-      grid.innerHTML = emojis.map(e => `<span class="emoji-item" onclick="copyEmoji('${e}')">${e}</span>`).join('');
-    });
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-    function copyEmoji(emoji) {
-      navigator.clipboard.writeText(emoji).then(() => {
-        alert(`Copied: ${emoji}`);
+  <script>
+    const categories = [
+      {
+        name: "Smileys & People",
+        emoji: ["☺️", "☹️", "☠️", "✊", "✌️", "☝️", "✋", "✍️", "⛑"]
+      },
+      {
+        name: "Nature & Weather",
+        emoji: ["☘️", "⭐️", "✨", "⚡️", "☄️", "☀️", "⛅️", "☁️", "⛈", "❄️", "☃️", "⛄️", "☔️", "☂️"]
+      },
+      {
+        name: "Food & Drink",
+        emoji: ["☕️"]
+      },
+      {
+        name: "Activities",
+        emoji: ["⚽️", "⚾️", "⛳️", "⛸", "⛷", "⛹️‍♀️", "⛹️", "⛹️‍♂️", "♟"]
+      },
+      {
+        name: "Travel & Places",
+        emoji: ["✈️", "⛵️", "⛴", "⚓️", "⛽️", "⛲️", "⛱", "⛰", "⛺️", "⛪️", "⛩"]
+      },
+      {
+        name: "Objects",
+        emoji: ["⌚️", "⌨️", "☎️", "⏱", "⏲", "⏰", "⌛️", "⏳", "⚖️", "⚒", "⛏", "⚙️", "⛓", "⚔️", "⚰️", "⚱️", "⚗️", "✉️", "✂️", "✒️", "✏️"]
+      },
+      {
+        name: "Symbols",
+        emoji: ["❤️", "❣️", "☮️", "✝️", "☪️", "☸️", "✡️", "☯️", "☦️", "⛎", "♈️", "♉️", "♊️", "♋️", "♌️", "♎️", "♏️", "♐️", "♑️", "♒️", "♓️", "⚛️", "☢️", "☣️", "✴️", "㊙️", "㊗️", "❌", "⭕️", "⛔️", "♨️", "❗️", "❕", "❓", "❔", "‼️", "⁉️", "〽️", "⚠️", "⚜️", "♻️", "✅", "❇️", "✳️", "❎", "Ⓜ️", "♿️", "⚧", "ℹ️", "0️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "#️⃣", "*️⃣", "⏏️", "▶️", "⏸", "⏯", "⏹", "⏺", "⏭", "⏮", "⏩", "⏪", "⏫", "⏬", "◀️", "➡️", "⬅️", "⬆️", "⬇️", "↗️", "↘️", "↙️", "↖️", "↕️", "↔️", "↪️", "↩️", "⤴️", "⤵️", "➕", "➖", "➗", "✖️", "♾️", "™️", "©️", "®️", "〰️", "➰", "➿", "✔️", "☑️", "⚫️", "⚪️", "▪️", "▫️", "◾️", "◽️", "◼️", "◻️", "⬛️", "⬜️", "♠️", "♣️", "♥️", "♦️"]
+      }
+    ];
+
+    const sections = document.querySelector("#sections");
+    const search = document.querySelector("#search");
+    const count = document.querySelector("#count");
+    const toast = document.querySelector("#toast");
+    let toastTimer;
+
+    function copyEmoji(value) {
+      navigator.clipboard.writeText(value).then(() => {
+        toast.textContent = `Copied ${value}`;
+        toast.classList.add("show");
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => toast.classList.remove("show"), 1300);
       });
     }
-  </script>
 
+    function render() {
+      const query = search.value.trim().toLowerCase();
+      let total = 0;
+
+      sections.innerHTML = categories.map((category) => {
+        const categoryMatches = category.name.toLowerCase().includes(query);
+        const items = category.emoji.filter((value) => categoryMatches || value.includes(query));
+
+        if (!items.length) {
+          return "";
+        }
+
+        total += items.length;
+
+        return `
+          <section class="section">
+            <h2>${category.name}</h2>
+            <div class="grid">
+              ${items.map((value) => `<button class="emoji" type="button" aria-label="Copy ${value}" data-emoji="${value}">${value}</button>`).join("")}
+            </div>
+          </section>
+        `;
+      }).join("");
+
+      count.textContent = `${total} emoji`;
+
+      document.querySelectorAll("[data-emoji]").forEach((button) => {
+        button.addEventListener("click", () => copyEmoji(button.dataset.emoji));
+      });
+    }
+
+    search.addEventListener("input", render);
+    render();
+  </script>
 </body>
 </html>
