@@ -8,6 +8,10 @@ Copy-paste-safe emoji for WHMCS product names, knowledge base articles, email te
   <a href="LICENSE"><img src="https://img.shields.io/github/license/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge" alt="MIT License"></a>
 </p>
 
+<a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">
+  <img src="assets/copy-board-preview.png" alt="The copy board: searchable categories of copy-paste-safe emoji with safer/unsupported compatibility notes" width="100%">
+</a>
+
 ## Why This Exists
 
 WHMCS installations, templates, databases, and email clients do not always handle modern emoji the same way. Some emoji render perfectly. Others turn into `????`, tofu boxes, or broken characters after saving.
