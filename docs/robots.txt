@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/sitemap.xml
