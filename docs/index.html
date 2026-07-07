@@ -101,27 +101,48 @@
   <rect x="4" y="4" width="312" height="262" rx="24" fill="#16140f" stroke="#ffffff" stroke-opacity="0.12"/>
   <rect x="4" y="4" width="312" height="262" rx="24" fill="url(#hg)"/>
   <circle cx="28" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/><circle cx="43" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/><circle cx="58" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/>
-  <text x="270" y="33" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8f887c">product name</text>
+  <text x="292" y="33" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8f887c">product name</text>
   <path d="M4 48H316" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- safe row -->
   <g>
-    <rect x="28" y="70" width="120" height="34" rx="10" fill="#a7e26a" fill-opacity="0.08" stroke="#a7e26a" stroke-opacity="0.35"/>
-    <text x="46" y="93" font-size="18">&#9989;</text>
-    <text x="72" y="92" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#c8c2b6">Pro Plan</text>
-    <rect x="196" y="78" width="42" height="18" rx="6" fill="#a7e26a" fill-opacity="0.15"/><text x="217" y="90.5" text-anchor="middle" fill="#a7e26a" font-size="9" font-weight="700">SAFE</text>
-    <animate attributeName="opacity" values="1;0.6;1" dur="3.2s" repeatCount="indefinite"/>
+    <rect x="24" y="62" width="272" height="44" rx="13" fill="#a7e26a" fill-opacity="0.07" stroke="#a7e26a" stroke-opacity="0.32"/>
+    <path d="M44 79.6c1.6-3 6-2.6 6 1 0 2.4-3 4.6-6 6.8-3-2.2-6-4.4-6-6.8 0-3.6 4.4-4 6-1z" fill="#a7e26a"/>
+    <text x="64" y="89" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#f3f0e9">Starter Plan</text>
+    <rect x="238" y="74" width="46" height="20" rx="7" fill="#a7e26a" fill-opacity="0.16"/><text x="261" y="88" text-anchor="middle" fill="#a7e26a" font-family="ui-monospace, Menlo, monospace" font-size="10" font-weight="700">SAFE</text>
+    <animate attributeName="opacity" values="1;0.6;1" dur="3.4s" repeatCount="indefinite"/>
   </g>
+
+  <!-- broken row -->
   <g>
-    <rect x="28" y="116" width="120" height="34" rx="10" fill="#ff7a6e" fill-opacity="0.07" stroke="#ff7a6e" stroke-opacity="0.3"/>
-    <text x="44" y="138" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#ff7a6e">????</text>
-    <text x="92" y="137" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#8f887c">Plan</text>
-    <rect x="190" y="124" width="48" height="18" rx="6" fill="#ff7a6e" fill-opacity="0.15"/><text x="214" y="136.5" text-anchor="middle" fill="#ff7a6e" font-size="9" font-weight="700">BROKEN</text>
-    <animate attributeName="opacity" values="1;0.4;1" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+    <rect x="24" y="114" width="272" height="44" rx="13" fill="#ff7a6e" fill-opacity="0.06" stroke="#ff7a6e" stroke-opacity="0.28"/>
+    <text x="40" y="141" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#ff7a6e">????</text>
+    <text x="96" y="140" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#8f887c">Starter Plan</text>
+    <rect x="226" y="126" width="58" height="20" rx="7" fill="#ff7a6e" fill-opacity="0.15"/><text x="255" y="140" text-anchor="middle" fill="#ff7a6e" font-family="ui-monospace, Menlo, monospace" font-size="10" font-weight="700">BROKEN</text>
+    <animate attributeName="opacity" values="1;0.42;1" dur="3.4s" begin="0.5s" repeatCount="indefinite"/>
   </g>
-  <text x="28" y="182" fill="#8f887c" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif">Same idea. One renders,</text>
-  <text x="28" y="200" fill="#8f887c" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif">the other does not.</text>
-  <g font-size="20">
-    <text x="40" y="238">&#10004;&#65039;</text><text x="76" y="238">&#11088;</text><text x="112" y="238">&#10084;&#65039;</text><text x="148" y="238">&#9749;</text><text x="184" y="238">&#9993;&#65039;</text><text x="220" y="238">&#9888;&#65039;</text><text x="256" y="238">&#8505;&#65039;</text>
-    <animate attributeName="opacity" values="0.85;1;0.85" dur="4s" repeatCount="indefinite"/>
+
+  <text x="24" y="184" fill="#8f887c" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif">Same symbol. One renders, one breaks.</text>
+
+  <!-- safe vector symbols -->
+  <g>
+    <rect x="24" y="204" width="40" height="40" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#a7e26a" stroke-opacity="0.28"/>
+    <path d="M44 219.5c1.7-3.2 6.4-2.8 6.4 1.1 0 2.6-3.2 4.9-6.4 7.3-3.2-2.4-6.4-4.7-6.4-7.3 0-3.9 4.7-4.3 6.4-1.1z" fill="#a7e26a"/>
+
+    <rect x="82" y="204" width="40" height="40" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#a7e26a" stroke-opacity="0.28"/>
+    <path d="M102 213l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.2-4.1 5.8-.8z" fill="#a7e26a"/>
+
+    <rect x="140" y="204" width="40" height="40" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#a7e26a" stroke-opacity="0.28"/>
+    <path d="M152 224.5l4.5 4.5 11-11" stroke="#a7e26a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="198" y="204" width="40" height="40" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#a7e26a" stroke-opacity="0.28"/>
+    <path d="M208 224h20m-7-7l7 7-7 7" stroke="#a7e26a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="256" y="204" width="40" height="40" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#a7e26a" stroke-opacity="0.28"/>
+    <circle cx="276" cy="224" r="10" stroke="#a7e26a" stroke-width="2.4"/>
+    <circle cx="272.5" cy="222" r="1.4" fill="#a7e26a"/><circle cx="279.5" cy="222" r="1.4" fill="#a7e26a"/>
+    <path d="M272 226.5c1.2 1.6 6.8 1.6 8 0" stroke="#a7e26a" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="4.5s" repeatCount="indefinite"/>
   </g>
 </svg>
     </div>
