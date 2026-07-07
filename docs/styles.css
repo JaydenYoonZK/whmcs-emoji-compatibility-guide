@@ -718,7 +718,18 @@ html[data-theme="light"] .sph .inner {
   background: var(--bg-raise); border: 1px solid var(--line); border-radius: var(--radius);
   color: var(--ink); font-family: var(--font); font-size: 1rem;
 }
+.search-wrap input { padding-right: 46px; }
 .search-wrap input:focus { outline: none; border-color: rgba(171, 207, 55, 0.5); }
+.search-wrap input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-clear {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; padding: 0; border-radius: 50%;
+  border: 1px solid var(--line); background: var(--panel-2); color: var(--ink-mute);
+  font-size: 1.15rem; line-height: 1; cursor: pointer; display: grid; place-items: center;
+  transition: color 0.15s, background 0.15s, border-color 0.15s, transform 0.12s;
+}
+.search-clear:hover { color: var(--ink); background: var(--panel); border-color: var(--line-strong); }
+.search-clear:active { transform: translateY(-50%) scale(0.9); }
 .search-wrap .mag { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--ink-mute); font-size: 1.1rem; pointer-events: none; }
 .board-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }
 .cat-chips { display: flex; flex-wrap: wrap; gap: 8px; }

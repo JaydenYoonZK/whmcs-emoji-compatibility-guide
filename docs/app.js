@@ -108,7 +108,7 @@ function render() {
     suggestEl.hidden = false;
     suggestEl.innerHTML = `Did you mean <button type="button" data-suggest="${esc(suggestion)}">${esc(suggestion)}</button>?`;
     suggestEl.querySelector("[data-suggest]").addEventListener("click", () => {
-      searchInput.value = suggestion; render(); searchInput.focus();
+      searchInput.value = suggestion; syncClear(); render(); searchInput.focus();
     });
   }
 }
@@ -125,14 +125,26 @@ async function load() {
   for (const c of categories) for (const e of normalizeEmoji(c.emoji)) META.set(e.char, { name: e.name, category: c.name });
   renderChips();
   render();
+  syncClear();
 }
 
-searchInput.addEventListener("input", render);
+const clearBtn = $("search-clear");
+function syncClear() { clearBtn.hidden = searchInput.value.length === 0; }
+searchInput.addEventListener("input", () => { syncClear(); render(); });
+clearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  syncClear();
+  render();
+  searchInput.focus();
+});
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && searchInput.value) { searchInput.value = ""; syncClear(); render(); }
+});
 load();
 
 if (new URLSearchParams(location.search).has("demo")) {
   searchInput.value = "heart";
-  addEventListener("load", () => render());
+  addEventListener("load", () => { syncClear(); render(); });
 }
 
 // Shared shell: theme, nav, scroll-to-top, background scene.
