@@ -154,12 +154,13 @@
     <div class="search-wrap">
       <span class="mag">🔍</span>
       <label for="search" style="display:none">Search emoji</label>
-      <input id="search" type="search" placeholder="Search by name, for example: heart, star, check, arrow..." spellcheck="false" autocomplete="off">
+      <input id="search" type="search" placeholder="Search by name, concept, or color, for example: love, danger, red, arrow..." spellcheck="false" autocomplete="off">
     </div>
     <div class="board-toolbar">
       <div class="cat-chips" id="cat-chips"></div>
       <span class="board-count" id="count"></span>
     </div>
+    <div id="suggest" class="board-suggest" hidden></div>
     <div id="sections"></div>
   </div>
 
@@ -199,6 +200,8 @@
     <p style="margin-top:16px">Even a safer emoji is worth a real test in your own stack before it goes into a billing-critical or support-critical message. The list here is a strong starting point, not a promise about your specific database, PHP version, and mail pipeline.</p>
 
     <h2 id="faq">💬 Questions people ask</h2>
+    <h3>How does the search work?</h3>
+    <p>Every emoji carries the official Unicode CLDR keywords (the same set that powers phone emoji keyboards) plus a curated layer of colors and concepts. So you can search by name (<code>heart</code>), by idea (<code>love</code>, <code>danger</code>, <code>zodiac</code>), or by color (<code>red</code>, <code>green</code>), and it still finds the right symbol if you make a typo like <code>hart</code> or <code>chekc</code>. It all runs in your browser, with no lookups sent anywhere.</p>
     <h3>How were these chosen?</h3>
     <p>They are drawn from the older, widely-supported Unicode ranges that predate the four-byte emoji explosion, the symbols that render consistently across old and new systems. The list is reviewed by hand rather than generated wholesale, which is why it is deliberately conservative.</p>
     <h3>My emoji still broke. What now?</h3>

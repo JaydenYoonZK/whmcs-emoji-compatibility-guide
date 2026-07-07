@@ -7,39 +7,120 @@
       "emoji": [
         {
           "char": "☺️",
-          "name": "white smiling face"
+          "name": "white smiling face",
+          "keywords": [
+            "face",
+            "happy",
+            "outlined",
+            "relaxed",
+            "smile",
+            "smiling",
+            "white"
+          ]
         },
         {
           "char": "☹️",
-          "name": "white frowning face"
+          "name": "white frowning face",
+          "keywords": [
+            "face",
+            "frown",
+            "frowning",
+            "sad",
+            "white"
+          ]
         },
         {
           "char": "☠️",
-          "name": "skull and crossbones"
+          "name": "skull and crossbones",
+          "keywords": [
+            "and",
+            "bone",
+            "caution",
+            "crossbones",
+            "danger",
+            "dead",
+            "death",
+            "face",
+            "hazard",
+            "monster",
+            "pirate",
+            "poison",
+            "skull"
+          ]
         },
         {
           "char": "✊",
-          "name": "raised fist"
+          "name": "raised fist",
+          "keywords": [
+            "clenched",
+            "fist",
+            "hand",
+            "punch",
+            "raised",
+            "solidarity"
+          ]
         },
         {
           "char": "✌️",
-          "name": "victory hand"
+          "name": "victory hand",
+          "keywords": [
+            "hand",
+            "peace",
+            "v",
+            "victory"
+          ]
         },
         {
           "char": "☝️",
-          "name": "white up pointing index"
+          "name": "white up pointing index",
+          "keywords": [
+            "finger",
+            "hand",
+            "index",
+            "point",
+            "pointing",
+            "this",
+            "up",
+            "white"
+          ]
         },
         {
           "char": "✋",
-          "name": "raised hand"
+          "name": "raised hand",
+          "keywords": [
+            "5",
+            "five",
+            "hand",
+            "high",
+            "raised",
+            "stop"
+          ]
         },
         {
           "char": "✍️",
-          "name": "writing hand"
+          "name": "writing hand",
+          "keywords": [
+            "draw",
+            "edit",
+            "hand",
+            "write",
+            "writing"
+          ]
         },
         {
           "char": "⛑",
-          "name": "helmet with white cross"
+          "name": "helmet with white cross",
+          "keywords": [
+            "aid",
+            "cross",
+            "face",
+            "hat",
+            "helmet",
+            "rescue",
+            "white",
+            "with",
+            "worker’s"
+          ]
         }
       ]
     },
@@ -48,59 +129,198 @@
       "emoji": [
         {
           "char": "☘️",
-          "name": "shamrock"
+          "name": "shamrock",
+          "keywords": [
+            "green",
+            "irish",
+            "nature",
+            "outdoors",
+            "plant",
+            "shamrock"
+          ]
         },
         {
           "char": "⭐️",
-          "name": "white medium star"
+          "name": "white medium star",
+          "keywords": [
+            "astronomy",
+            "gold",
+            "medium",
+            "star",
+            "stars",
+            "white",
+            "yellow"
+          ]
         },
         {
           "char": "✨",
-          "name": "sparkles"
+          "name": "sparkles",
+          "keywords": [
+            "*",
+            "glitter",
+            "gold",
+            "magic",
+            "shiny",
+            "sparkle",
+            "sparkles",
+            "star",
+            "yellow"
+          ]
         },
         {
           "char": "⚡️",
-          "name": "high voltage sign"
+          "name": "high voltage sign",
+          "keywords": [
+            "danger",
+            "electric",
+            "electricity",
+            "gold",
+            "high",
+            "lightning",
+            "nature",
+            "sky",
+            "thunder",
+            "thunderbolt",
+            "voltage",
+            "weather",
+            "yellow",
+            "zap"
+          ]
         },
         {
           "char": "☄️",
-          "name": "comet"
+          "name": "comet",
+          "keywords": [
+            "comet",
+            "nature",
+            "outdoors",
+            "sky",
+            "space",
+            "weather"
+          ]
         },
         {
           "char": "☀️",
-          "name": "black sun with rays"
+          "name": "black sun with rays",
+          "keywords": [
+            "black",
+            "bright",
+            "gold",
+            "rays",
+            "sky",
+            "space",
+            "sun",
+            "sunny",
+            "weather",
+            "with",
+            "yellow"
+          ]
         },
         {
           "char": "⛅️",
-          "name": "sun behind cloud"
+          "name": "sun behind cloud",
+          "keywords": [
+            "behind",
+            "cloud",
+            "cloudy",
+            "sky",
+            "sun",
+            "weather"
+          ]
         },
         {
           "char": "☁️",
-          "name": "cloud"
+          "name": "cloud",
+          "keywords": [
+            "cloud",
+            "sky",
+            "weather",
+            "white"
+          ]
         },
         {
           "char": "⛈",
-          "name": "thunder cloud and rain"
+          "name": "thunder cloud and rain",
+          "keywords": [
+            "and",
+            "cloud",
+            "lightning",
+            "rain",
+            "sky",
+            "thunder",
+            "thunderstorm",
+            "weather",
+            "with"
+          ]
         },
         {
           "char": "❄️",
-          "name": "snowflake"
+          "name": "snowflake",
+          "keywords": [
+            "blue",
+            "cold",
+            "light blue",
+            "sky",
+            "snow",
+            "snowflake",
+            "weather"
+          ]
         },
         {
           "char": "☃️",
-          "name": "snowman"
+          "name": "snowman",
+          "keywords": [
+            "cold",
+            "man",
+            "sky",
+            "snow",
+            "snowman",
+            "weather",
+            "white"
+          ]
         },
         {
           "char": "⛄️",
-          "name": "snowman without snow"
+          "name": "snowman without snow",
+          "keywords": [
+            "cold",
+            "man",
+            "sky",
+            "snow",
+            "snowman",
+            "weather",
+            "white",
+            "without"
+          ]
         },
         {
           "char": "☔️",
-          "name": "umbrella with rain drops"
+          "name": "umbrella with rain drops",
+          "keywords": [
+            "blue",
+            "clothing",
+            "drop",
+            "drops",
+            "light blue",
+            "rain",
+            "sky",
+            "umbrella",
+            "weather",
+            "with"
+          ]
         },
         {
           "char": "☂️",
-          "name": "umbrella"
+          "name": "umbrella",
+          "keywords": [
+            "blue",
+            "clothing",
+            "light blue",
+            "rain",
+            "sky",
+            "umbrella",
+            "weather"
+          ]
         }
       ]
     },
@@ -109,7 +329,20 @@
       "emoji": [
         {
           "char": "☕️",
-          "name": "hot beverage"
+          "name": "hot beverage",
+          "keywords": [
+            "beverage",
+            "brown",
+            "cafe",
+            "caffeine",
+            "chai",
+            "coffee",
+            "drink",
+            "hot",
+            "morning",
+            "steaming",
+            "tea"
+          ]
         }
       ]
     },
@@ -118,39 +351,137 @@
       "emoji": [
         {
           "char": "⚽️",
-          "name": "soccer ball"
+          "name": "soccer ball",
+          "keywords": [
+            "ball",
+            "football",
+            "futbol",
+            "game",
+            "play",
+            "soccer",
+            "sport"
+          ]
         },
         {
           "char": "⚾️",
-          "name": "baseball"
+          "name": "baseball",
+          "keywords": [
+            "ball",
+            "baseball",
+            "game",
+            "play",
+            "sport"
+          ]
         },
         {
           "char": "⛳️",
-          "name": "flag in hole"
+          "name": "flag in hole",
+          "keywords": [
+            "flag",
+            "game",
+            "golf",
+            "hole",
+            "in",
+            "play",
+            "sport"
+          ]
         },
         {
           "char": "⛸",
-          "name": "ice skate"
+          "name": "ice skate",
+          "keywords": [
+            "game",
+            "ice",
+            "play",
+            "skate",
+            "skating",
+            "sport"
+          ]
         },
         {
           "char": "⛷",
-          "name": "skier"
+          "name": "skier",
+          "keywords": [
+            "game",
+            "play",
+            "ski",
+            "skier",
+            "snow",
+            "sport"
+          ]
         },
         {
           "char": "⛹️‍♀️",
-          "name": "person with ball female sign"
+          "name": "person with ball female sign",
+          "keywords": [
+            "athletic",
+            "ball",
+            "basketball",
+            "bouncing",
+            "championship",
+            "dribble",
+            "female",
+            "net",
+            "person",
+            "player",
+            "throw",
+            "with",
+            "woman"
+          ]
         },
         {
           "char": "⛹️",
-          "name": "person with ball"
+          "name": "person with ball",
+          "keywords": [
+            "athletic",
+            "ball",
+            "basketball",
+            "bouncing",
+            "championship",
+            "dribble",
+            "game",
+            "net",
+            "person",
+            "play",
+            "player",
+            "sport",
+            "throw",
+            "with"
+          ]
         },
         {
           "char": "⛹️‍♂️",
-          "name": "person with ball male sign"
+          "name": "person with ball male sign",
+          "keywords": [
+            "athletic",
+            "ball",
+            "basketball",
+            "bouncing",
+            "championship",
+            "dribble",
+            "male",
+            "man",
+            "net",
+            "person",
+            "player",
+            "throw",
+            "with"
+          ]
         },
         {
           "char": "♟",
-          "name": "black chess pawn"
+          "name": "black chess pawn",
+          "keywords": [
+            "black",
+            "chess",
+            "dark",
+            "dupe",
+            "expendable",
+            "game",
+            "pawn",
+            "play",
+            "sport"
+          ]
         }
       ]
     },
@@ -159,47 +490,133 @@
       "emoji": [
         {
           "char": "✈️",
-          "name": "airplane"
+          "name": "airplane",
+          "keywords": [
+            "aeroplane",
+            "airplane",
+            "fly",
+            "flying",
+            "jet",
+            "plane",
+            "transport",
+            "travel",
+            "vehicle"
+          ]
         },
         {
           "char": "⛵️",
-          "name": "sailboat"
+          "name": "sailboat",
+          "keywords": [
+            "boat",
+            "resort",
+            "sailboat",
+            "sailing",
+            "sea",
+            "transport",
+            "travel",
+            "vehicle",
+            "yacht"
+          ]
         },
         {
           "char": "⛴",
-          "name": "ferry"
+          "name": "ferry",
+          "keywords": [
+            "boat",
+            "ferry",
+            "passenger",
+            "transport",
+            "travel",
+            "vehicle"
+          ]
         },
         {
           "char": "⚓️",
-          "name": "anchor"
+          "name": "anchor",
+          "keywords": [
+            "anchor",
+            "ship",
+            "tool",
+            "transport",
+            "travel",
+            "vehicle"
+          ]
         },
         {
           "char": "⛽️",
-          "name": "fuel pump"
+          "name": "fuel pump",
+          "keywords": [
+            "diesel",
+            "fuel",
+            "fuelpump",
+            "gas",
+            "gasoline",
+            "pump",
+            "station",
+            "transport",
+            "travel",
+            "vehicle"
+          ]
         },
         {
           "char": "⛲️",
-          "name": "fountain"
+          "name": "fountain",
+          "keywords": [
+            "fountain",
+            "nature",
+            "outdoors"
+          ]
         },
         {
           "char": "⛱",
-          "name": "umbrella on ground"
+          "name": "umbrella on ground",
+          "keywords": [
+            "ground",
+            "on",
+            "rain",
+            "sun",
+            "umbrella"
+          ]
         },
         {
           "char": "⛰",
-          "name": "mountain"
+          "name": "mountain",
+          "keywords": [
+            "mountain",
+            "nature",
+            "outdoors"
+          ]
         },
         {
           "char": "⛺️",
-          "name": "tent"
+          "name": "tent",
+          "keywords": [
+            "camping",
+            "nature",
+            "outdoors",
+            "tent"
+          ]
         },
         {
           "char": "⛪️",
-          "name": "church"
+          "name": "church",
+          "keywords": [
+            "bless",
+            "chapel",
+            "christian",
+            "church",
+            "cross",
+            "religion"
+          ]
         },
         {
           "char": "⛩",
-          "name": "shinto shrine"
+          "name": "shinto shrine",
+          "keywords": [
+            "religion",
+            "shinto",
+            "shrine"
+          ]
         }
       ]
     },
@@ -208,87 +625,244 @@
       "emoji": [
         {
           "char": "⌚️",
-          "name": "watch"
+          "name": "watch",
+          "keywords": [
+            "clock",
+            "time",
+            "watch"
+          ]
         },
         {
           "char": "⌨️",
-          "name": "keyboard"
+          "name": "keyboard",
+          "keywords": [
+            "computer",
+            "keyboard",
+            "office",
+            "stationery",
+            "work"
+          ]
         },
         {
           "char": "☎️",
-          "name": "black telephone"
+          "name": "black telephone",
+          "keywords": [
+            "black",
+            "dark",
+            "phone",
+            "telephone"
+          ]
         },
         {
           "char": "⏱",
-          "name": "stopwatch"
+          "name": "stopwatch",
+          "keywords": [
+            "clock",
+            "stopwatch",
+            "time"
+          ]
         },
         {
           "char": "⏲",
-          "name": "timer clock"
+          "name": "timer clock",
+          "keywords": [
+            "clock",
+            "time",
+            "timer"
+          ]
         },
         {
           "char": "⏰",
-          "name": "alarm clock"
+          "name": "alarm clock",
+          "keywords": [
+            "alarm",
+            "clock",
+            "hours",
+            "hrs",
+            "late",
+            "time",
+            "waiting"
+          ]
         },
         {
           "char": "⌛️",
-          "name": "hourglass"
+          "name": "hourglass",
+          "keywords": [
+            "clock",
+            "done",
+            "hourglass",
+            "sand",
+            "time",
+            "timer"
+          ]
         },
         {
           "char": "⏳",
-          "name": "hourglass with flowing sand"
+          "name": "hourglass with flowing sand",
+          "keywords": [
+            "clock",
+            "done",
+            "flowing",
+            "hourglass",
+            "hours",
+            "not",
+            "sand",
+            "time",
+            "timer",
+            "waiting",
+            "with",
+            "yolo"
+          ]
         },
         {
           "char": "⚖️",
-          "name": "scales"
+          "name": "scales",
+          "keywords": [
+            "balance",
+            "justice",
+            "libra",
+            "scale",
+            "scales",
+            "tool",
+            "weight",
+            "zodiac"
+          ]
         },
         {
           "char": "⚒",
-          "name": "hammer and pick"
+          "name": "hammer and pick",
+          "keywords": [
+            "and",
+            "hammer",
+            "pick",
+            "tool"
+          ]
         },
         {
           "char": "⛏",
-          "name": "pick"
+          "name": "pick",
+          "keywords": [
+            "hammer",
+            "mining",
+            "pick",
+            "tool"
+          ]
         },
         {
           "char": "⚙️",
-          "name": "gear"
+          "name": "gear",
+          "keywords": [
+            "cog",
+            "cogwheel",
+            "gear",
+            "tool"
+          ]
         },
         {
           "char": "⛓",
-          "name": "chains"
+          "name": "chains",
+          "keywords": [
+            "chain",
+            "chains",
+            "connect",
+            "link",
+            "lock"
+          ]
         },
         {
           "char": "⚔️",
-          "name": "crossed swords"
+          "name": "crossed swords",
+          "keywords": [
+            "crossed",
+            "swords",
+            "weapon"
+          ]
         },
         {
           "char": "⚰️",
-          "name": "coffin"
+          "name": "coffin",
+          "keywords": [
+            "coffin",
+            "dead",
+            "death",
+            "vampire"
+          ]
         },
         {
           "char": "⚱️",
-          "name": "funeral urn"
+          "name": "funeral urn",
+          "keywords": [
+            "ashes",
+            "death",
+            "funeral",
+            "urn"
+          ]
         },
         {
           "char": "⚗️",
-          "name": "alembic"
+          "name": "alembic",
+          "keywords": [
+            "alembic",
+            "chemistry",
+            "tool"
+          ]
         },
         {
           "char": "✉️",
-          "name": "envelope"
+          "name": "envelope",
+          "keywords": [
+            "e-mail",
+            "email",
+            "envelope",
+            "letter",
+            "office",
+            "stationery",
+            "work"
+          ]
         },
         {
           "char": "✂️",
-          "name": "black scissors"
+          "name": "black scissors",
+          "keywords": [
+            "black",
+            "cut",
+            "cutting",
+            "office",
+            "paper",
+            "scissors",
+            "stationery",
+            "tool",
+            "work"
+          ]
         },
         {
           "char": "✒️",
-          "name": "black nib"
+          "name": "black nib",
+          "keywords": [
+            "black",
+            "dark",
+            "draw",
+            "edit",
+            "nib",
+            "office",
+            "pen",
+            "stationery",
+            "work",
+            "write"
+          ]
         },
         {
           "char": "✏️",
-          "name": "pencil"
+          "name": "pencil",
+          "keywords": [
+            "draw",
+            "edit",
+            "office",
+            "pencil",
+            "stationery",
+            "work",
+            "write"
+          ]
         }
       ]
     },
@@ -297,463 +871,1506 @@
       "emoji": [
         {
           "char": "❤️",
-          "name": "heavy black heart"
+          "name": "heavy black heart",
+          "keywords": [
+            "black",
+            "emotion",
+            "heart",
+            "heavy",
+            "love",
+            "red",
+            "romance",
+            "valentine"
+          ]
         },
         {
           "char": "❣️",
-          "name": "heavy heart exclamation mark ornament"
+          "name": "heavy heart exclamation mark ornament",
+          "keywords": [
+            "exclamation",
+            "heart",
+            "heavy",
+            "love",
+            "ornament",
+            "punctuation",
+            "red",
+            "romance",
+            "valentine"
+          ]
         },
         {
           "char": "☮️",
-          "name": "peace symbol"
+          "name": "peace symbol",
+          "keywords": [
+            "healing",
+            "peace",
+            "peaceful",
+            "symbol"
+          ]
         },
         {
           "char": "✝️",
-          "name": "latin cross"
+          "name": "latin cross",
+          "keywords": [
+            "christ",
+            "christian",
+            "cross",
+            "faith",
+            "latin",
+            "religion",
+            "spiritual"
+          ]
         },
         {
           "char": "☪️",
-          "name": "star and crescent"
+          "name": "star and crescent",
+          "keywords": [
+            "and",
+            "crescent",
+            "faith",
+            "islam",
+            "muslim",
+            "ramadan",
+            "religion",
+            "spiritual",
+            "star"
+          ]
         },
         {
           "char": "☸️",
-          "name": "wheel of dharma"
+          "name": "wheel of dharma",
+          "keywords": [
+            "buddhist",
+            "dharma",
+            "faith",
+            "of",
+            "religion",
+            "spiritual",
+            "wheel"
+          ]
         },
         {
           "char": "✡️",
-          "name": "star of david"
+          "name": "star of david",
+          "keywords": [
+            "david",
+            "faith",
+            "jew",
+            "jewish",
+            "judaism",
+            "of",
+            "religion",
+            "spiritual",
+            "star"
+          ]
         },
         {
           "char": "☯️",
-          "name": "yin yang"
+          "name": "yin yang",
+          "keywords": [
+            "difficult",
+            "faith",
+            "lives",
+            "religion",
+            "spiritual",
+            "tao",
+            "taoist",
+            "total",
+            "yang",
+            "yin",
+            "yinyang"
+          ]
         },
         {
           "char": "☦️",
-          "name": "orthodox cross"
+          "name": "orthodox cross",
+          "keywords": [
+            "christian",
+            "cross",
+            "faith",
+            "orthodox",
+            "religion",
+            "spiritual"
+          ]
         },
         {
           "char": "⛎",
-          "name": "ophiuchus"
+          "name": "ophiuchus",
+          "keywords": [
+            "astrology",
+            "bearer",
+            "horoscope",
+            "ophiuchus",
+            "serpent",
+            "snake",
+            "zodiac"
+          ]
         },
         {
           "char": "♈️",
-          "name": "aries"
+          "name": "aries",
+          "keywords": [
+            "aries",
+            "astrology",
+            "horoscope",
+            "ram",
+            "zodiac"
+          ]
         },
         {
           "char": "♉️",
-          "name": "taurus"
+          "name": "taurus",
+          "keywords": [
+            "astrology",
+            "bull",
+            "horoscope",
+            "ox",
+            "taurus",
+            "zodiac"
+          ]
         },
         {
           "char": "♊️",
-          "name": "gemini"
+          "name": "gemini",
+          "keywords": [
+            "astrology",
+            "gemini",
+            "horoscope",
+            "twins",
+            "zodiac"
+          ]
         },
         {
           "char": "♋️",
-          "name": "cancer"
+          "name": "cancer",
+          "keywords": [
+            "astrology",
+            "cancer",
+            "crab",
+            "horoscope",
+            "zodiac"
+          ]
         },
         {
           "char": "♌️",
-          "name": "leo"
+          "name": "leo",
+          "keywords": [
+            "astrology",
+            "horoscope",
+            "leo",
+            "lion",
+            "zodiac"
+          ]
         },
         {
           "char": "♎️",
-          "name": "libra"
+          "name": "libra",
+          "keywords": [
+            "astrology",
+            "balance",
+            "horoscope",
+            "justice",
+            "libra",
+            "scales",
+            "zodiac"
+          ]
         },
         {
           "char": "♏️",
-          "name": "scorpius"
+          "name": "scorpius",
+          "keywords": [
+            "astrology",
+            "horoscope",
+            "scorpio",
+            "scorpion",
+            "scorpius",
+            "zodiac"
+          ]
         },
         {
           "char": "♐️",
-          "name": "sagittarius"
+          "name": "sagittarius",
+          "keywords": [
+            "archer",
+            "astrology",
+            "horoscope",
+            "sagittarius",
+            "zodiac"
+          ]
         },
         {
           "char": "♑️",
-          "name": "capricorn"
+          "name": "capricorn",
+          "keywords": [
+            "astrology",
+            "capricorn",
+            "goat",
+            "horoscope",
+            "zodiac"
+          ]
         },
         {
           "char": "♒️",
-          "name": "aquarius"
+          "name": "aquarius",
+          "keywords": [
+            "aquarius",
+            "astrology",
+            "bearer",
+            "horoscope",
+            "water",
+            "zodiac"
+          ]
         },
         {
           "char": "♓️",
-          "name": "pisces"
+          "name": "pisces",
+          "keywords": [
+            "astrology",
+            "fish",
+            "horoscope",
+            "pisces",
+            "zodiac"
+          ]
         },
         {
           "char": "⚛️",
-          "name": "atom symbol"
+          "name": "atom symbol",
+          "keywords": [
+            "atheist",
+            "atom",
+            "atomic",
+            "nuclear",
+            "science",
+            "symbol"
+          ]
         },
         {
           "char": "☢️",
-          "name": "radioactive sign"
+          "name": "radioactive sign",
+          "keywords": [
+            "atomic",
+            "caution",
+            "danger",
+            "hazard",
+            "nuclear",
+            "radioactive",
+            "science",
+            "sign"
+          ]
         },
         {
           "char": "☣️",
-          "name": "biohazard sign"
+          "name": "biohazard sign",
+          "keywords": [
+            "biohazard",
+            "caution",
+            "danger",
+            "hazard",
+            "sign"
+          ]
         },
         {
           "char": "✴️",
-          "name": "eight pointed black star"
+          "name": "eight pointed black star",
+          "keywords": [
+            "*",
+            "black",
+            "eight",
+            "eight-pointed",
+            "gold",
+            "pointed",
+            "star",
+            "yellow"
+          ]
         },
         {
           "char": "㊙️",
-          "name": "circled ideograph secret"
+          "name": "circled ideograph secret",
+          "keywords": [
+            "button",
+            "circled",
+            "ideograph",
+            "japanese",
+            "secret",
+            "“secret”"
+          ]
         },
         {
           "char": "㊗️",
-          "name": "circled ideograph congratulation"
+          "name": "circled ideograph congratulation",
+          "keywords": [
+            "button",
+            "circled",
+            "congratulation",
+            "congratulations",
+            "ideograph",
+            "japanese",
+            "“congratulations”"
+          ]
         },
         {
           "char": "❌",
-          "name": "cross mark"
+          "name": "cross mark",
+          "keywords": [
+            "cancel",
+            "cross",
+            "multiplication",
+            "multiply",
+            "red",
+            "x",
+            "×"
+          ]
         },
         {
           "char": "⭕️",
-          "name": "heavy large circle"
+          "name": "heavy large circle",
+          "keywords": [
+            "circle",
+            "heavy",
+            "hollow",
+            "large",
+            "o",
+            "red"
+          ]
         },
         {
           "char": "⛔️",
-          "name": "no entry"
+          "name": "no entry",
+          "keywords": [
+            "caution",
+            "danger",
+            "do",
+            "entry",
+            "fail",
+            "forbidden",
+            "hazard",
+            "no",
+            "not",
+            "pass",
+            "prohibited",
+            "red",
+            "traffic"
+          ]
         },
         {
           "char": "♨️",
-          "name": "hot springs"
+          "name": "hot springs",
+          "keywords": [
+            "hot",
+            "hotsprings",
+            "springs",
+            "steaming"
+          ]
         },
         {
           "char": "❗️",
-          "name": "heavy exclamation mark symbol"
+          "name": "heavy exclamation mark symbol",
+          "keywords": [
+            "!",
+            "exclamation",
+            "heavy",
+            "punctuation",
+            "red"
+          ]
         },
         {
           "char": "❕",
-          "name": "white exclamation mark ornament"
+          "name": "white exclamation mark ornament",
+          "keywords": [
+            "!",
+            "exclamation",
+            "ornament",
+            "outlined",
+            "punctuation",
+            "red",
+            "white"
+          ]
         },
         {
           "char": "❓",
-          "name": "black question mark ornament"
+          "name": "black question mark ornament",
+          "keywords": [
+            "?",
+            "black",
+            "ornament",
+            "punctuation",
+            "question",
+            "red"
+          ]
         },
         {
           "char": "❔",
-          "name": "white question mark ornament"
+          "name": "white question mark ornament",
+          "keywords": [
+            "?",
+            "ornament",
+            "outlined",
+            "punctuation",
+            "question",
+            "white"
+          ]
         },
         {
           "char": "‼️",
-          "name": "double exclamation mark"
+          "name": "double exclamation mark",
+          "keywords": [
+            "!",
+            "!!",
+            "bangbang",
+            "double",
+            "exclamation",
+            "punctuation"
+          ]
         },
         {
           "char": "⁉️",
-          "name": "exclamation question mark"
+          "name": "exclamation question mark",
+          "keywords": [
+            "!",
+            "!?",
+            "?",
+            "exclamation",
+            "interrobang",
+            "punctuation",
+            "question"
+          ]
         },
         {
           "char": "〽️",
-          "name": "part alternation mark"
+          "name": "part alternation mark",
+          "keywords": [
+            "alternation",
+            "mark",
+            "part"
+          ]
         },
         {
           "char": "⚠️",
-          "name": "warning sign"
+          "name": "warning sign",
+          "keywords": [
+            "caution",
+            "danger",
+            "gold",
+            "hazard",
+            "sign",
+            "warning",
+            "yellow"
+          ]
         },
         {
           "char": "⚜️",
-          "name": "fleur-de-lis"
+          "name": "fleur-de-lis",
+          "keywords": [
+            "fleur-de-lis",
+            "knights"
+          ]
         },
         {
           "char": "♻️",
-          "name": "black universal recycling symbol"
+          "name": "black universal recycling symbol",
+          "keywords": [
+            "black",
+            "recycle",
+            "recycling",
+            "universal"
+          ]
         },
         {
           "char": "✅",
-          "name": "white heavy check mark"
+          "name": "white heavy check mark",
+          "keywords": [
+            "button",
+            "check",
+            "checked",
+            "checkmark",
+            "complete",
+            "completed",
+            "done",
+            "fixed",
+            "green",
+            "heavy",
+            "tick",
+            "white",
+            "✓"
+          ]
         },
         {
           "char": "❇️",
-          "name": "sparkle"
+          "name": "sparkle",
+          "keywords": [
+            "*",
+            "glitter",
+            "gold",
+            "magic",
+            "shiny",
+            "sparkle",
+            "yellow"
+          ]
         },
         {
           "char": "✳️",
-          "name": "eight spoked asterisk"
+          "name": "eight spoked asterisk",
+          "keywords": [
+            "*",
+            "asterisk",
+            "eight",
+            "eight-spoked",
+            "spoked"
+          ]
         },
         {
           "char": "❎",
-          "name": "negative squared cross mark"
+          "name": "negative squared cross mark",
+          "keywords": [
+            "button",
+            "cross",
+            "green",
+            "multiplication",
+            "multiply",
+            "negative",
+            "square",
+            "squared",
+            "x",
+            "×"
+          ]
         },
         {
           "char": "Ⓜ️",
-          "name": "circled latin capital letter m"
+          "name": "circled latin capital letter m",
+          "keywords": [
+            "capital",
+            "circle",
+            "circled",
+            "latin",
+            "letter",
+            "m"
+          ]
         },
         {
           "char": "♿️",
-          "name": "wheelchair symbol"
+          "name": "wheelchair symbol",
+          "keywords": [
+            "access",
+            "handicap",
+            "symbol",
+            "wheelchair"
+          ]
         },
         {
           "char": "⚧",
-          "name": "male with stroke and male and female sign"
+          "name": "male with stroke and male and female sign",
+          "keywords": [
+            "and",
+            "female",
+            "male",
+            "stroke",
+            "transgender",
+            "with"
+          ]
         },
         {
           "char": "ℹ️",
-          "name": "information source"
+          "name": "information source",
+          "keywords": [
+            "i",
+            "information",
+            "source"
+          ]
         },
         {
           "char": "0️⃣",
-          "name": "digit zero keycap"
+          "name": "digit zero keycap",
+          "keywords": [
+            "0",
+            "digit",
+            "keycap",
+            "keycap:",
+            "number",
+            "zero"
+          ]
         },
         {
           "char": "1️⃣",
-          "name": "digit one keycap"
+          "name": "digit one keycap",
+          "keywords": [
+            "1",
+            "digit",
+            "keycap",
+            "keycap:",
+            "number",
+            "one"
+          ]
         },
         {
           "char": "2️⃣",
-          "name": "digit two keycap"
+          "name": "digit two keycap",
+          "keywords": [
+            "2",
+            "digit",
+            "keycap",
+            "keycap:",
+            "number",
+            "two"
+          ]
         },
         {
           "char": "3️⃣",
-          "name": "digit three keycap"
+          "name": "digit three keycap",
+          "keywords": [
+            "3",
+            "digit",
+            "keycap",
+            "keycap:",
+            "number",
+            "three"
+          ]
         },
         {
           "char": "4️⃣",
-          "name": "digit four keycap"
+          "name": "digit four keycap",
+          "keywords": [
+            "4",
+            "digit",
+            "four",
+            "keycap",
+            "keycap:",
+            "number"
+          ]
         },
         {
           "char": "5️⃣",
-          "name": "digit five keycap"
+          "name": "digit five keycap",
+          "keywords": [
+            "5",
+            "digit",
+            "five",
+            "keycap",
+            "keycap:",
+            "number"
+          ]
         },
         {
           "char": "6️⃣",
-          "name": "digit six keycap"
+          "name": "digit six keycap",
+          "keywords": [
+            "6",
+            "digit",
+            "keycap",
+            "keycap:",
+            "number",
+            "six"
+          ]
         },
         {
           "char": "7️⃣",
-          "name": "digit seven keycap"
+          "name": "digit seven keycap",
+          "keywords": [
+            "7",
+            "digit",
+            "keycap",
+            "keycap:",
+            "number",
+            "seven"
+          ]
         },
         {
           "char": "8️⃣",
-          "name": "digit eight keycap"
+          "name": "digit eight keycap",
+          "keywords": [
+            "8",
+            "digit",
+            "eight",
+            "keycap",
+            "keycap:",
+            "number"
+          ]
         },
         {
           "char": "9️⃣",
-          "name": "digit nine keycap"
+          "name": "digit nine keycap",
+          "keywords": [
+            "9",
+            "digit",
+            "keycap",
+            "keycap:",
+            "nine",
+            "number"
+          ]
         },
         {
           "char": "#️⃣",
-          "name": "number sign keycap"
+          "name": "number sign keycap",
+          "keywords": [
+            "digit",
+            "keycap",
+            "number",
+            "sign"
+          ]
         },
         {
           "char": "*️⃣",
-          "name": "asterisk keycap"
+          "name": "asterisk keycap",
+          "keywords": [
+            "asterisk",
+            "digit",
+            "keycap",
+            "number"
+          ]
         },
         {
           "char": "⏏️",
-          "name": "eject symbol"
+          "name": "eject symbol",
+          "keywords": [
+            "button",
+            "control",
+            "eject",
+            "media",
+            "playback",
+            "player",
+            "symbol",
+            "video"
+          ]
         },
         {
           "char": "▶️",
-          "name": "black right-pointing triangle"
+          "name": "black right-pointing triangle",
+          "keywords": [
+            "arrow",
+            "black",
+            "button",
+            "control",
+            "media",
+            "play",
+            "playback",
+            "player",
+            "right",
+            "right-pointing",
+            "triangle",
+            "video"
+          ]
         },
         {
           "char": "⏸",
-          "name": "double vertical bar"
+          "name": "double vertical bar",
+          "keywords": [
+            "bar",
+            "button",
+            "control",
+            "double",
+            "media",
+            "pause",
+            "playback",
+            "player",
+            "vertical",
+            "video"
+          ]
         },
         {
           "char": "⏯",
-          "name": "black right-pointing triangle with double vertical bar"
+          "name": "black right-pointing triangle with double vertical bar",
+          "keywords": [
+            "arrow",
+            "bar",
+            "black",
+            "button",
+            "control",
+            "double",
+            "media",
+            "or",
+            "pause",
+            "play",
+            "playback",
+            "player",
+            "right",
+            "right-pointing",
+            "triangle",
+            "vertical",
+            "video",
+            "with"
+          ]
         },
         {
           "char": "⏹",
-          "name": "black square for stop"
+          "name": "black square for stop",
+          "keywords": [
+            "black",
+            "button",
+            "control",
+            "for",
+            "media",
+            "playback",
+            "player",
+            "square",
+            "stop",
+            "video"
+          ]
         },
         {
           "char": "⏺",
-          "name": "black circle for record"
+          "name": "black circle for record",
+          "keywords": [
+            "black",
+            "button",
+            "circle",
+            "control",
+            "for",
+            "media",
+            "playback",
+            "player",
+            "record",
+            "video"
+          ]
         },
         {
           "char": "⏭",
-          "name": "black right-pointing double triangle with vertical bar"
+          "name": "black right-pointing double triangle with vertical bar",
+          "keywords": [
+            "arrow",
+            "bar",
+            "black",
+            "button",
+            "control",
+            "double",
+            "media",
+            "next",
+            "playback",
+            "player",
+            "right-pointing",
+            "scene",
+            "track",
+            "triangle",
+            "vertical",
+            "video",
+            "with"
+          ]
         },
         {
           "char": "⏮",
-          "name": "black left-pointing double triangle with vertical bar"
+          "name": "black left-pointing double triangle with vertical bar",
+          "keywords": [
+            "arrow",
+            "bar",
+            "black",
+            "button",
+            "control",
+            "double",
+            "last",
+            "left-pointing",
+            "media",
+            "playback",
+            "player",
+            "previous",
+            "scene",
+            "track",
+            "triangle",
+            "vertical",
+            "video",
+            "with"
+          ]
         },
         {
           "char": "⏩",
-          "name": "black right-pointing double triangle"
+          "name": "black right-pointing double triangle",
+          "keywords": [
+            "arrow",
+            "black",
+            "button",
+            "control",
+            "double",
+            "fast",
+            "fast-forward",
+            "forward",
+            "media",
+            "playback",
+            "player",
+            "right-pointing",
+            "triangle",
+            "video"
+          ]
         },
         {
           "char": "⏪",
-          "name": "black left-pointing double triangle"
+          "name": "black left-pointing double triangle",
+          "keywords": [
+            "arrow",
+            "black",
+            "button",
+            "control",
+            "double",
+            "fast",
+            "left-pointing",
+            "media",
+            "playback",
+            "player",
+            "reverse",
+            "rewind",
+            "triangle",
+            "video"
+          ]
         },
         {
           "char": "⏫",
-          "name": "black up-pointing double triangle"
+          "name": "black up-pointing double triangle",
+          "keywords": [
+            "arrow",
+            "black",
+            "button",
+            "control",
+            "double",
+            "fast",
+            "media",
+            "playback",
+            "player",
+            "triangle",
+            "up",
+            "up-pointing",
+            "video"
+          ]
         },
         {
           "char": "⏬",
-          "name": "black down-pointing double triangle"
+          "name": "black down-pointing double triangle",
+          "keywords": [
+            "arrow",
+            "black",
+            "button",
+            "control",
+            "double",
+            "down",
+            "down-pointing",
+            "fast",
+            "media",
+            "playback",
+            "player",
+            "triangle",
+            "video"
+          ]
         },
         {
           "char": "◀️",
-          "name": "black left-pointing triangle"
+          "name": "black left-pointing triangle",
+          "keywords": [
+            "arrow",
+            "black",
+            "button",
+            "control",
+            "left",
+            "left-pointing",
+            "media",
+            "playback",
+            "player",
+            "reverse",
+            "triangle",
+            "video"
+          ]
         },
         {
           "char": "➡️",
-          "name": "black rightwards arrow"
+          "name": "black rightwards arrow",
+          "keywords": [
+            "arrow",
+            "black",
+            "cardinal",
+            "direction",
+            "east",
+            "point",
+            "right",
+            "rightwards"
+          ]
         },
         {
           "char": "⬅️",
-          "name": "leftwards black arrow"
+          "name": "leftwards black arrow",
+          "keywords": [
+            "arrow",
+            "black",
+            "cardinal",
+            "direction",
+            "left",
+            "leftwards",
+            "point",
+            "west"
+          ]
         },
         {
           "char": "⬆️",
-          "name": "upwards black arrow"
+          "name": "upwards black arrow",
+          "keywords": [
+            "arrow",
+            "black",
+            "cardinal",
+            "direction",
+            "north",
+            "point",
+            "up",
+            "upwards"
+          ]
         },
         {
           "char": "⬇️",
-          "name": "downwards black arrow"
+          "name": "downwards black arrow",
+          "keywords": [
+            "arrow",
+            "black",
+            "cardinal",
+            "direction",
+            "down",
+            "downwards",
+            "point",
+            "south"
+          ]
         },
         {
           "char": "↗️",
-          "name": "north east arrow"
+          "name": "north east arrow",
+          "keywords": [
+            "arrow",
+            "direction",
+            "east",
+            "intercardinal",
+            "north",
+            "northeast",
+            "point",
+            "up-right"
+          ]
         },
         {
           "char": "↘️",
-          "name": "south east arrow"
+          "name": "south east arrow",
+          "keywords": [
+            "arrow",
+            "direction",
+            "down-right",
+            "east",
+            "intercardinal",
+            "point",
+            "south",
+            "southeast"
+          ]
         },
         {
           "char": "↙️",
-          "name": "south west arrow"
+          "name": "south west arrow",
+          "keywords": [
+            "arrow",
+            "direction",
+            "down-left",
+            "intercardinal",
+            "point",
+            "south",
+            "southwest",
+            "west"
+          ]
         },
         {
           "char": "↖️",
-          "name": "north west arrow"
+          "name": "north west arrow",
+          "keywords": [
+            "arrow",
+            "direction",
+            "intercardinal",
+            "north",
+            "northwest",
+            "point",
+            "up-left",
+            "west"
+          ]
         },
         {
           "char": "↕️",
-          "name": "up down arrow"
+          "name": "up down arrow",
+          "keywords": [
+            "arrow",
+            "direction",
+            "down",
+            "point",
+            "up",
+            "up-down"
+          ]
         },
         {
           "char": "↔️",
-          "name": "left right arrow"
+          "name": "left right arrow",
+          "keywords": [
+            "arrow",
+            "direction",
+            "left",
+            "left-right",
+            "point",
+            "right"
+          ]
         },
         {
           "char": "↪️",
-          "name": "rightwards arrow with hook"
+          "name": "rightwards arrow with hook",
+          "keywords": [
+            "arrow",
+            "curving",
+            "direction",
+            "hook",
+            "left",
+            "point",
+            "right",
+            "rightwards",
+            "with"
+          ]
         },
         {
           "char": "↩️",
-          "name": "leftwards arrow with hook"
+          "name": "leftwards arrow with hook",
+          "keywords": [
+            "arrow",
+            "curving",
+            "direction",
+            "hook",
+            "left",
+            "leftwards",
+            "point",
+            "right",
+            "with"
+          ]
         },
         {
           "char": "⤴️",
-          "name": "arrow pointing rightwards then curving upwards"
+          "name": "arrow pointing rightwards then curving upwards",
+          "keywords": [
+            "arrow",
+            "curving",
+            "direction",
+            "point",
+            "pointing",
+            "right",
+            "rightwards",
+            "then",
+            "up",
+            "upwards"
+          ]
         },
         {
           "char": "⤵️",
-          "name": "arrow pointing rightwards then curving downwards"
+          "name": "arrow pointing rightwards then curving downwards",
+          "keywords": [
+            "arrow",
+            "curving",
+            "direction",
+            "down",
+            "downwards",
+            "point",
+            "pointing",
+            "right",
+            "rightwards",
+            "then"
+          ]
         },
         {
           "char": "➕",
-          "name": "heavy plus sign"
+          "name": "heavy plus sign",
+          "keywords": [
+            "+",
+            "calculation",
+            "heavy",
+            "math",
+            "plus",
+            "sign"
+          ]
         },
         {
           "char": "➖",
-          "name": "heavy minus sign"
+          "name": "heavy minus sign",
+          "keywords": [
+            "-",
+            "calculation",
+            "heavy",
+            "math",
+            "minus",
+            "−"
+          ]
         },
         {
           "char": "➗",
-          "name": "heavy division sign"
+          "name": "heavy division sign",
+          "keywords": [
+            "calculation",
+            "divide",
+            "division",
+            "heavy",
+            "math",
+            "÷"
+          ]
         },
         {
           "char": "✖️",
-          "name": "heavy multiplication x"
+          "name": "heavy multiplication x",
+          "keywords": [
+            "calculation",
+            "cancel",
+            "heavy",
+            "math",
+            "multiplication",
+            "multiply",
+            "x",
+            "×"
+          ]
         },
         {
           "char": "♾️",
-          "name": "permanent paper sign"
+          "name": "permanent paper sign",
+          "keywords": [
+            "calculation",
+            "forever",
+            "infinity",
+            "math",
+            "paper",
+            "permanent",
+            "unbounded",
+            "universal"
+          ]
         },
         {
           "char": "™️",
-          "name": "trade mark sign"
+          "name": "trade mark sign",
+          "keywords": [
+            "tm",
+            "trade",
+            "trademark"
+          ]
         },
         {
           "char": "©️",
-          "name": "copyright sign"
+          "name": "copyright sign",
+          "keywords": [
+            "c",
+            "copyright",
+            "sign"
+          ]
         },
         {
           "char": "®️",
-          "name": "registered sign"
+          "name": "registered sign",
+          "keywords": [
+            "r",
+            "registered",
+            "sign"
+          ]
         },
         {
           "char": "〰️",
-          "name": "wavy dash"
+          "name": "wavy dash",
+          "keywords": [
+            "dash",
+            "punctuation",
+            "wavy"
+          ]
         },
         {
           "char": "➰",
-          "name": "curly loop"
+          "name": "curly loop",
+          "keywords": [
+            "curl",
+            "curly",
+            "loop"
+          ]
         },
         {
           "char": "➿",
-          "name": "double curly loop"
+          "name": "double curly loop",
+          "keywords": [
+            "curl",
+            "curly",
+            "double",
+            "loop"
+          ]
         },
         {
           "char": "✔️",
-          "name": "heavy check mark"
+          "name": "heavy check mark",
+          "keywords": [
+            "check",
+            "checked",
+            "checkmark",
+            "done",
+            "heavy",
+            "tick",
+            "✓"
+          ]
         },
         {
           "char": "☑️",
-          "name": "ballot box with check"
+          "name": "ballot box with check",
+          "keywords": [
+            "ballot",
+            "box",
+            "check",
+            "checked",
+            "done",
+            "off",
+            "tick",
+            "with",
+            "✓"
+          ]
         },
         {
           "char": "⚫️",
-          "name": "medium black circle"
+          "name": "medium black circle",
+          "keywords": [
+            "black",
+            "circle",
+            "dark",
+            "geometric",
+            "medium"
+          ]
         },
         {
           "char": "⚪️",
-          "name": "medium white circle"
+          "name": "medium white circle",
+          "keywords": [
+            "circle",
+            "geometric",
+            "medium",
+            "white"
+          ]
         },
         {
           "char": "▪️",
-          "name": "black small square"
+          "name": "black small square",
+          "keywords": [
+            "black",
+            "dark",
+            "geometric",
+            "small",
+            "square"
+          ]
         },
         {
           "char": "▫️",
-          "name": "white small square"
+          "name": "white small square",
+          "keywords": [
+            "geometric",
+            "small",
+            "square",
+            "white"
+          ]
         },
         {
           "char": "◾️",
-          "name": "black medium small square"
+          "name": "black medium small square",
+          "keywords": [
+            "black",
+            "dark",
+            "geometric",
+            "medium",
+            "medium-small",
+            "small",
+            "square"
+          ]
         },
         {
           "char": "◽️",
-          "name": "white medium small square"
+          "name": "white medium small square",
+          "keywords": [
+            "geometric",
+            "medium",
+            "medium-small",
+            "small",
+            "square",
+            "white"
+          ]
         },
         {
           "char": "◼️",
-          "name": "black medium square"
+          "name": "black medium square",
+          "keywords": [
+            "black",
+            "dark",
+            "geometric",
+            "medium",
+            "square"
+          ]
         },
         {
           "char": "◻️",
-          "name": "white medium square"
+          "name": "white medium square",
+          "keywords": [
+            "geometric",
+            "medium",
+            "square",
+            "white"
+          ]
         },
         {
           "char": "⬛️",
-          "name": "black large square"
+          "name": "black large square",
+          "keywords": [
+            "black",
+            "dark",
+            "geometric",
+            "large",
+            "square"
+          ]
         },
         {
           "char": "⬜️",
-          "name": "white large square"
+          "name": "white large square",
+          "keywords": [
+            "geometric",
+            "large",
+            "square",
+            "white"
+          ]
         },
         {
           "char": "♠️",
-          "name": "black spade suit"
+          "name": "black spade suit",
+          "keywords": [
+            "black",
+            "card",
+            "dark",
+            "game",
+            "spade",
+            "suit"
+          ]
         },
         {
           "char": "♣️",
-          "name": "black club suit"
+          "name": "black club suit",
+          "keywords": [
+            "black",
+            "card",
+            "club",
+            "clubs",
+            "dark",
+            "game",
+            "suit"
+          ]
         },
         {
           "char": "♥️",
-          "name": "black heart suit"
+          "name": "black heart suit",
+          "keywords": [
+            "black",
+            "card",
+            "emotion",
+            "game",
+            "heart",
+            "hearts",
+            "love",
+            "red",
+            "romance",
+            "suit",
+            "valentine"
+          ]
         },
         {
           "char": "♦️",
-          "name": "black diamond suit"
+          "name": "black diamond suit",
+          "keywords": [
+            "black",
+            "card",
+            "diamond",
+            "game",
+            "red",
+            "suit"
+          ]
         }
       ]
     }
@@ -772,5 +2389,6 @@
       "Complex zero-width-joiner emoji sequences"
     ]
   },
-  "schema": 2
+  "schema": 3,
+  "keywordSource": "Unicode CLDR annotations (en) plus Unicode names"
 }

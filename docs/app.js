@@ -1,12 +1,17 @@
+import { buildIndex, search as smartSearch } from "./search.js";
+
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 const sections = $("sections");
-const search = $("search");
+const searchInput = $("search");
 const count = $("count");
 const chipsEl = $("cat-chips");
+const suggestEl = $("suggest");
 const toast = $("toast");
 let toastTimer;
+let index = null;
+const META = new Map(); // char -> { name, category }
 
 // Fallback so the board still works if the JSON fails to load.
 const FALLBACK = { categories: [
@@ -51,31 +56,60 @@ function renderChips() {
   }
 }
 
-function render() {
-  const query = search.value.trim().toLowerCase();
-  let total = 0;
+function cell(char) {
+  const name = META.get(char)?.name || char;
+  return `<button class="emoji-btn" type="button" title="${esc(name)}" aria-label="Copy ${esc(name)}" data-emoji="${esc(char)}">${char}</button>`;
+}
 
-  const html = categories.map((category) => {
-    if (activeCat !== "all" && category.name !== activeCat) return "";
-    const catMatch = category.name.toLowerCase().includes(query);
-    const items = normalizeEmoji(category.emoji).filter((e) =>
-      !query || catMatch || e.char.includes(query) || (e.name && e.name.includes(query))
-    );
-    if (!items.length) return "";
-    total += items.length;
-    return `<section class="emoji-section">
-      <h2>${esc(category.name)} <span style="color:var(--ink-mute);font-weight:600">${items.length}</span></h2>
-      <div class="emoji-grid">
-        ${items.map((e) => `<button class="emoji-btn" type="button" title="${esc(e.name || e.char)}" aria-label="Copy ${esc(e.name || e.char)}" data-emoji="${esc(e.char)}">${e.char}</button>`).join("")}
-      </div>
-    </section>`;
-  }).join("");
-
-  sections.innerHTML = html || `<p class="board-empty">No emoji match “${esc(query)}”. Try a simpler word, or clear the search.</p>`;
-  count.textContent = `${total} emoji`;
-
+function bindCopy() {
   for (const btn of sections.querySelectorAll("[data-emoji]")) {
     btn.addEventListener("click", () => copyEmoji(btn.dataset.emoji));
+  }
+}
+
+function render() {
+  const query = searchInput.value.trim();
+  suggestEl.hidden = true;
+  suggestEl.innerHTML = "";
+
+  if (!query) {
+    // Browse mode: category groups.
+    let total = 0;
+    sections.innerHTML = categories.map((category) => {
+      if (activeCat !== "all" && category.name !== activeCat) return "";
+      const items = normalizeEmoji(category.emoji);
+      total += items.length;
+      return `<section class="emoji-section">
+        <h2>${esc(category.name)} <span style="color:var(--ink-mute);font-weight:600">${items.length}</span></h2>
+        <div class="emoji-grid">${items.map((e) => cell(e.char)).join("")}</div>
+      </section>`;
+    }).join("");
+    count.textContent = `${total} emoji`;
+    bindCopy();
+    return;
+  }
+
+  // Search mode: ranked results across the whole set (respecting active chip).
+  const { results, suggestion } = smartSearch(index, query);
+  const filtered = activeCat === "all" ? results : results.filter(r => r.category === activeCat);
+  count.textContent = `${filtered.length} result${filtered.length === 1 ? "" : "s"}`;
+
+  if (filtered.length) {
+    sections.innerHTML = `<section class="emoji-section">
+      <h2>Results <span style="color:var(--ink-mute);font-weight:600">${filtered.length}</span></h2>
+      <div class="emoji-grid">${filtered.map(r => cell(r.char)).join("")}</div>
+    </section>`;
+    bindCopy();
+  } else {
+    sections.innerHTML = `<p class="board-empty">No emoji match “${esc(query)}”.</p>`;
+  }
+
+  if (suggestion) {
+    suggestEl.hidden = false;
+    suggestEl.innerHTML = `Did you mean <button type="button" data-suggest="${esc(suggestion)}">${esc(suggestion)}</button>?`;
+    suggestEl.querySelector("[data-suggest]").addEventListener("click", () => {
+      searchInput.value = suggestion; render(); searchInput.focus();
+    });
   }
 }
 
@@ -87,15 +121,17 @@ async function load() {
       if (Array.isArray(data.categories) && data.categories.length) categories = data.categories;
     }
   } catch { /* keep fallback */ }
+  index = buildIndex(categories);
+  for (const c of categories) for (const e of normalizeEmoji(c.emoji)) META.set(e.char, { name: e.name, category: c.name });
   renderChips();
   render();
 }
 
-search.addEventListener("input", render);
+searchInput.addEventListener("input", render);
 load();
 
 if (new URLSearchParams(location.search).has("demo")) {
-  search.value = "heart";
+  searchInput.value = "heart";
   addEventListener("load", () => render());
 }
 

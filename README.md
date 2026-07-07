@@ -21,8 +21,8 @@ Some emoji render perfectly in a WHMCS product name or email template. Others tu
 ## What this is
 
 - A **hand-reviewed list of 180 emoji** drawn from the older, widely-supported Unicode ranges that hold up across old and new systems.
-- A **searchable copy board**: search by name (`heart`, `star`, `check`, `arrow`), filter by category, and click to copy.
-- A **machine-readable dataset** at [`docs/data/emoji.json`](docs/data/emoji.json), now enriched with a Unicode name per emoji so it powers real search.
+- A **smart copy board**: search by name (`heart`), concept (`love`, `danger`, `zodiac`), or color (`red`, `green`), with typo tolerance (`hart`, `chekc`) and did-you-mean suggestions. Filter by category and click to copy. All in your browser, nothing sent anywhere.
+- A **machine-readable dataset** at [`docs/data/emoji.json`](docs/data/emoji.json), enriched with Unicode CLDR keywords plus a curated color and concept layer, so it powers real search.
 - Plain-language notes on **why emoji break in WHMCS** and what tends to work.
 
 ## Use it
