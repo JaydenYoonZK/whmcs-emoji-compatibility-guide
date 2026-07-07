@@ -1,84 +1,57 @@
-# WHMCS Emoji Compatibility Guide
+# WHMCS Emoji Compatibility Guide ✅
 
-Copy-paste-safe emoji for WHMCS product names, knowledge base articles, email templates, announcements, and client-area UI.
+A tested reference of emoji that survive WHMCS product names, email templates, and knowledge base articles, with a searchable browser copy board. Runs entirely in your browser.
 
 <p>
-  <a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/"><img src="https://img.shields.io/badge/Live%20guide-open-10b981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Open live guide"></a>
+  <a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/"><img src="https://img.shields.io/badge/Live%20guide-open-abcf37?style=for-the-badge&logo=githubpages&logoColor=black" alt="Open the live guide"></a>
   <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/stargazers"><img src="https://img.shields.io/github/stars/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge&logo=github" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge" alt="MIT License"></a>
 </p>
 
-<a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">
-  <img src="assets/copy-board-preview.png" alt="The copy board: searchable categories of copy-paste-safe emoji with safer/unsupported compatibility notes" width="100%">
+<a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/?demo">
+  <img src="assets/copy-board-preview.png" alt="The searchable emoji copy board, filtered to hearts, in the shared dark design with category chips" width="100%">
 </a>
 
-## Why This Exists
+**[Open the live guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/)** or **[jump to a search demo](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/?demo)**. Nothing is tracked or uploaded.
 
-WHMCS installations, templates, databases, and email clients do not always handle modern emoji the same way. Some emoji render perfectly. Others turn into `????`, tofu boxes, or broken characters after saving.
+## The problem
 
-This guide keeps a practical list of emoji that are safer to use in WHMCS environments, plus a copy board you can open in the browser while editing client-facing content.
+Some emoji render perfectly in a WHMCS product name or email template. Others turn into `????`, empty boxes, or broken characters the moment they hit an older database or a mail client. The most common cause is a database still on the `utf8` MySQL charset, which cannot store four-byte emoji, so the character is mangled on save. The failure is quiet: the admin area looks fine while the customer sees a broken box.
 
-## Live Copy Board
+## What this is
 
-Open the interactive guide:
+- A **hand-reviewed list of 180 emoji** drawn from the older, widely-supported Unicode ranges that hold up across old and new systems.
+- A **searchable copy board**: search by name (`heart`, `star`, `check`, `arrow`), filter by category, and click to copy.
+- A **machine-readable dataset** at [`docs/data/emoji.json`](docs/data/emoji.json), now enriched with a Unicode name per emoji so it powers real search.
+- Plain-language notes on **why emoji break in WHMCS** and what tends to work.
 
-[jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/)
+## Use it
 
-Machine-readable data is also available:
+No install: [jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/)
 
-[docs/data/emoji.json](docs/data/emoji.json)
+It works offline once the page has loaded. Run locally:
 
-Use it when editing:
+```bash
+git clone https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide.git
+cd whmcs-emoji-compatibility-guide
+python3 -m http.server 8441 -d docs   # http://localhost:8441
+```
 
-- Product and service names
-- Email templates
-- Knowledge base articles
-- Announcements
-- Client-area labels
-- Admin notes and internal checklists
+## Usually safer vs often unsupported
 
-## Compatibility Notes
+| Usually safer | Often unsupported |
+|---|---|
+| Basic symbols and older Unicode emoji | Country flags |
+| Simple single-code-point emoji | New emoji from recent Unicode releases |
+| Emoji without skin tone modifiers | Skin tone variations |
+| Emoji without gender or family combinations | Complex zero-width-joiner sequences |
 
-These are usually safer:
-
-- Basic symbols
-- Older Unicode emoji
-- Simple monochrome-style symbols
-- Emoji without skin tone modifiers
-- Emoji without complex zero-width-joiner sequences
-
-These often fail or render inconsistently:
-
-- Country flags
-- New emoji from recent Unicode releases
-- Skin tone variations
-- Gendered and multi-person combinations
-- Highly stylized platform-specific emoji
-
-Always test in your own WHMCS stack before using emoji in billing-critical or support-critical messages.
+Even a safer emoji is worth a real test in your own stack before it goes into a billing-critical or support-critical message.
 
 ## Contributing
 
-Found an emoji that works well? Found one that breaks in WHMCS?
-
-Please open an issue with:
-
-- Emoji tested
-- WHMCS version
-- PHP version
-- Database charset/collation if known
-- Where it was tested, such as product name, email template, knowledge base, or announcement
-- Result, including screenshots if possible
-
-Pull requests are welcome for verified additions, removals, and compatibility notes.
-
-## Roadmap
-
-- Add CSV export
-- Add more WHMCS testing contexts
-- Add screenshots for common render failures
-- Add copy groups for hosting, billing, support, and security use cases
+Real test reports are the most valuable contribution. If an emoji works or breaks in your setup, open an [emoji report](https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose) with the emoji, your WHMCS and PHP versions, your database charset, and where you tested it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-MIT License. Built and maintained by [Jayden Yoon ZK](https://github.com/JaydenYoonZK).
+MIT. Built and maintained by [Jayden Yoon ZK](https://github.com/JaydenYoonZK). Part of a small-business web toolkit alongside [WP Serial Fix](https://github.com/JaydenYoonZK/wp-serial-fix), [WP Config Doctor](https://github.com/JaydenYoonZK/wp-config-doctor), and [WP Plugin Checkup](https://github.com/JaydenYoonZK/wp-plugin-checkup).

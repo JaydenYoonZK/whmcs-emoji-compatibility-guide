@@ -1,34 +1,761 @@
 {
   "name": "WHMCS Emoji Compatibility Guide",
-  "lastReviewed": "2026-07-06",
+  "lastReviewed": "2026-07-07",
   "categories": [
     {
       "name": "Smileys & People",
-      "emoji": ["☺️", "☹️", "☠️", "✊", "✌️", "☝️", "✋", "✍️", "⛑"]
+      "emoji": [
+        {
+          "char": "☺️",
+          "name": "white smiling face"
+        },
+        {
+          "char": "☹️",
+          "name": "white frowning face"
+        },
+        {
+          "char": "☠️",
+          "name": "skull and crossbones"
+        },
+        {
+          "char": "✊",
+          "name": "raised fist"
+        },
+        {
+          "char": "✌️",
+          "name": "victory hand"
+        },
+        {
+          "char": "☝️",
+          "name": "white up pointing index"
+        },
+        {
+          "char": "✋",
+          "name": "raised hand"
+        },
+        {
+          "char": "✍️",
+          "name": "writing hand"
+        },
+        {
+          "char": "⛑",
+          "name": "helmet with white cross"
+        }
+      ]
     },
     {
       "name": "Nature & Weather",
-      "emoji": ["☘️", "⭐️", "✨", "⚡️", "☄️", "☀️", "⛅️", "☁️", "⛈", "❄️", "☃️", "⛄️", "☔️", "☂️"]
+      "emoji": [
+        {
+          "char": "☘️",
+          "name": "shamrock"
+        },
+        {
+          "char": "⭐️",
+          "name": "white medium star"
+        },
+        {
+          "char": "✨",
+          "name": "sparkles"
+        },
+        {
+          "char": "⚡️",
+          "name": "high voltage sign"
+        },
+        {
+          "char": "☄️",
+          "name": "comet"
+        },
+        {
+          "char": "☀️",
+          "name": "black sun with rays"
+        },
+        {
+          "char": "⛅️",
+          "name": "sun behind cloud"
+        },
+        {
+          "char": "☁️",
+          "name": "cloud"
+        },
+        {
+          "char": "⛈",
+          "name": "thunder cloud and rain"
+        },
+        {
+          "char": "❄️",
+          "name": "snowflake"
+        },
+        {
+          "char": "☃️",
+          "name": "snowman"
+        },
+        {
+          "char": "⛄️",
+          "name": "snowman without snow"
+        },
+        {
+          "char": "☔️",
+          "name": "umbrella with rain drops"
+        },
+        {
+          "char": "☂️",
+          "name": "umbrella"
+        }
+      ]
     },
     {
       "name": "Food & Drink",
-      "emoji": ["☕️"]
+      "emoji": [
+        {
+          "char": "☕️",
+          "name": "hot beverage"
+        }
+      ]
     },
     {
       "name": "Activities",
-      "emoji": ["⚽️", "⚾️", "⛳️", "⛸", "⛷", "⛹️‍♀️", "⛹️", "⛹️‍♂️", "♟"]
+      "emoji": [
+        {
+          "char": "⚽️",
+          "name": "soccer ball"
+        },
+        {
+          "char": "⚾️",
+          "name": "baseball"
+        },
+        {
+          "char": "⛳️",
+          "name": "flag in hole"
+        },
+        {
+          "char": "⛸",
+          "name": "ice skate"
+        },
+        {
+          "char": "⛷",
+          "name": "skier"
+        },
+        {
+          "char": "⛹️‍♀️",
+          "name": "person with ball female sign"
+        },
+        {
+          "char": "⛹️",
+          "name": "person with ball"
+        },
+        {
+          "char": "⛹️‍♂️",
+          "name": "person with ball male sign"
+        },
+        {
+          "char": "♟",
+          "name": "black chess pawn"
+        }
+      ]
     },
     {
       "name": "Travel & Places",
-      "emoji": ["✈️", "⛵️", "⛴", "⚓️", "⛽️", "⛲️", "⛱", "⛰", "⛺️", "⛪️", "⛩"]
+      "emoji": [
+        {
+          "char": "✈️",
+          "name": "airplane"
+        },
+        {
+          "char": "⛵️",
+          "name": "sailboat"
+        },
+        {
+          "char": "⛴",
+          "name": "ferry"
+        },
+        {
+          "char": "⚓️",
+          "name": "anchor"
+        },
+        {
+          "char": "⛽️",
+          "name": "fuel pump"
+        },
+        {
+          "char": "⛲️",
+          "name": "fountain"
+        },
+        {
+          "char": "⛱",
+          "name": "umbrella on ground"
+        },
+        {
+          "char": "⛰",
+          "name": "mountain"
+        },
+        {
+          "char": "⛺️",
+          "name": "tent"
+        },
+        {
+          "char": "⛪️",
+          "name": "church"
+        },
+        {
+          "char": "⛩",
+          "name": "shinto shrine"
+        }
+      ]
     },
     {
       "name": "Objects",
-      "emoji": ["⌚️", "⌨️", "☎️", "⏱", "⏲", "⏰", "⌛️", "⏳", "⚖️", "⚒", "⛏", "⚙️", "⛓", "⚔️", "⚰️", "⚱️", "⚗️", "✉️", "✂️", "✒️", "✏️"]
+      "emoji": [
+        {
+          "char": "⌚️",
+          "name": "watch"
+        },
+        {
+          "char": "⌨️",
+          "name": "keyboard"
+        },
+        {
+          "char": "☎️",
+          "name": "black telephone"
+        },
+        {
+          "char": "⏱",
+          "name": "stopwatch"
+        },
+        {
+          "char": "⏲",
+          "name": "timer clock"
+        },
+        {
+          "char": "⏰",
+          "name": "alarm clock"
+        },
+        {
+          "char": "⌛️",
+          "name": "hourglass"
+        },
+        {
+          "char": "⏳",
+          "name": "hourglass with flowing sand"
+        },
+        {
+          "char": "⚖️",
+          "name": "scales"
+        },
+        {
+          "char": "⚒",
+          "name": "hammer and pick"
+        },
+        {
+          "char": "⛏",
+          "name": "pick"
+        },
+        {
+          "char": "⚙️",
+          "name": "gear"
+        },
+        {
+          "char": "⛓",
+          "name": "chains"
+        },
+        {
+          "char": "⚔️",
+          "name": "crossed swords"
+        },
+        {
+          "char": "⚰️",
+          "name": "coffin"
+        },
+        {
+          "char": "⚱️",
+          "name": "funeral urn"
+        },
+        {
+          "char": "⚗️",
+          "name": "alembic"
+        },
+        {
+          "char": "✉️",
+          "name": "envelope"
+        },
+        {
+          "char": "✂️",
+          "name": "black scissors"
+        },
+        {
+          "char": "✒️",
+          "name": "black nib"
+        },
+        {
+          "char": "✏️",
+          "name": "pencil"
+        }
+      ]
     },
     {
       "name": "Symbols",
-      "emoji": ["❤️", "❣️", "☮️", "✝️", "☪️", "☸️", "✡️", "☯️", "☦️", "⛎", "♈️", "♉️", "♊️", "♋️", "♌️", "♎️", "♏️", "♐️", "♑️", "♒️", "♓️", "⚛️", "☢️", "☣️", "✴️", "㊙️", "㊗️", "❌", "⭕️", "⛔️", "♨️", "❗️", "❕", "❓", "❔", "‼️", "⁉️", "〽️", "⚠️", "⚜️", "♻️", "✅", "❇️", "✳️", "❎", "Ⓜ️", "♿️", "⚧", "ℹ️", "0️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "#️⃣", "*️⃣", "⏏️", "▶️", "⏸", "⏯", "⏹", "⏺", "⏭", "⏮", "⏩", "⏪", "⏫", "⏬", "◀️", "➡️", "⬅️", "⬆️", "⬇️", "↗️", "↘️", "↙️", "↖️", "↕️", "↔️", "↪️", "↩️", "⤴️", "⤵️", "➕", "➖", "➗", "✖️", "♾️", "™️", "©️", "®️", "〰️", "➰", "➿", "✔️", "☑️", "⚫️", "⚪️", "▪️", "▫️", "◾️", "◽️", "◼️", "◻️", "⬛️", "⬜️", "♠️", "♣️", "♥️", "♦️"]
+      "emoji": [
+        {
+          "char": "❤️",
+          "name": "heavy black heart"
+        },
+        {
+          "char": "❣️",
+          "name": "heavy heart exclamation mark ornament"
+        },
+        {
+          "char": "☮️",
+          "name": "peace symbol"
+        },
+        {
+          "char": "✝️",
+          "name": "latin cross"
+        },
+        {
+          "char": "☪️",
+          "name": "star and crescent"
+        },
+        {
+          "char": "☸️",
+          "name": "wheel of dharma"
+        },
+        {
+          "char": "✡️",
+          "name": "star of david"
+        },
+        {
+          "char": "☯️",
+          "name": "yin yang"
+        },
+        {
+          "char": "☦️",
+          "name": "orthodox cross"
+        },
+        {
+          "char": "⛎",
+          "name": "ophiuchus"
+        },
+        {
+          "char": "♈️",
+          "name": "aries"
+        },
+        {
+          "char": "♉️",
+          "name": "taurus"
+        },
+        {
+          "char": "♊️",
+          "name": "gemini"
+        },
+        {
+          "char": "♋️",
+          "name": "cancer"
+        },
+        {
+          "char": "♌️",
+          "name": "leo"
+        },
+        {
+          "char": "♎️",
+          "name": "libra"
+        },
+        {
+          "char": "♏️",
+          "name": "scorpius"
+        },
+        {
+          "char": "♐️",
+          "name": "sagittarius"
+        },
+        {
+          "char": "♑️",
+          "name": "capricorn"
+        },
+        {
+          "char": "♒️",
+          "name": "aquarius"
+        },
+        {
+          "char": "♓️",
+          "name": "pisces"
+        },
+        {
+          "char": "⚛️",
+          "name": "atom symbol"
+        },
+        {
+          "char": "☢️",
+          "name": "radioactive sign"
+        },
+        {
+          "char": "☣️",
+          "name": "biohazard sign"
+        },
+        {
+          "char": "✴️",
+          "name": "eight pointed black star"
+        },
+        {
+          "char": "㊙️",
+          "name": "circled ideograph secret"
+        },
+        {
+          "char": "㊗️",
+          "name": "circled ideograph congratulation"
+        },
+        {
+          "char": "❌",
+          "name": "cross mark"
+        },
+        {
+          "char": "⭕️",
+          "name": "heavy large circle"
+        },
+        {
+          "char": "⛔️",
+          "name": "no entry"
+        },
+        {
+          "char": "♨️",
+          "name": "hot springs"
+        },
+        {
+          "char": "❗️",
+          "name": "heavy exclamation mark symbol"
+        },
+        {
+          "char": "❕",
+          "name": "white exclamation mark ornament"
+        },
+        {
+          "char": "❓",
+          "name": "black question mark ornament"
+        },
+        {
+          "char": "❔",
+          "name": "white question mark ornament"
+        },
+        {
+          "char": "‼️",
+          "name": "double exclamation mark"
+        },
+        {
+          "char": "⁉️",
+          "name": "exclamation question mark"
+        },
+        {
+          "char": "〽️",
+          "name": "part alternation mark"
+        },
+        {
+          "char": "⚠️",
+          "name": "warning sign"
+        },
+        {
+          "char": "⚜️",
+          "name": "fleur-de-lis"
+        },
+        {
+          "char": "♻️",
+          "name": "black universal recycling symbol"
+        },
+        {
+          "char": "✅",
+          "name": "white heavy check mark"
+        },
+        {
+          "char": "❇️",
+          "name": "sparkle"
+        },
+        {
+          "char": "✳️",
+          "name": "eight spoked asterisk"
+        },
+        {
+          "char": "❎",
+          "name": "negative squared cross mark"
+        },
+        {
+          "char": "Ⓜ️",
+          "name": "circled latin capital letter m"
+        },
+        {
+          "char": "♿️",
+          "name": "wheelchair symbol"
+        },
+        {
+          "char": "⚧",
+          "name": "male with stroke and male and female sign"
+        },
+        {
+          "char": "ℹ️",
+          "name": "information source"
+        },
+        {
+          "char": "0️⃣",
+          "name": "digit zero keycap"
+        },
+        {
+          "char": "1️⃣",
+          "name": "digit one keycap"
+        },
+        {
+          "char": "2️⃣",
+          "name": "digit two keycap"
+        },
+        {
+          "char": "3️⃣",
+          "name": "digit three keycap"
+        },
+        {
+          "char": "4️⃣",
+          "name": "digit four keycap"
+        },
+        {
+          "char": "5️⃣",
+          "name": "digit five keycap"
+        },
+        {
+          "char": "6️⃣",
+          "name": "digit six keycap"
+        },
+        {
+          "char": "7️⃣",
+          "name": "digit seven keycap"
+        },
+        {
+          "char": "8️⃣",
+          "name": "digit eight keycap"
+        },
+        {
+          "char": "9️⃣",
+          "name": "digit nine keycap"
+        },
+        {
+          "char": "#️⃣",
+          "name": "number sign keycap"
+        },
+        {
+          "char": "*️⃣",
+          "name": "asterisk keycap"
+        },
+        {
+          "char": "⏏️",
+          "name": "eject symbol"
+        },
+        {
+          "char": "▶️",
+          "name": "black right-pointing triangle"
+        },
+        {
+          "char": "⏸",
+          "name": "double vertical bar"
+        },
+        {
+          "char": "⏯",
+          "name": "black right-pointing triangle with double vertical bar"
+        },
+        {
+          "char": "⏹",
+          "name": "black square for stop"
+        },
+        {
+          "char": "⏺",
+          "name": "black circle for record"
+        },
+        {
+          "char": "⏭",
+          "name": "black right-pointing double triangle with vertical bar"
+        },
+        {
+          "char": "⏮",
+          "name": "black left-pointing double triangle with vertical bar"
+        },
+        {
+          "char": "⏩",
+          "name": "black right-pointing double triangle"
+        },
+        {
+          "char": "⏪",
+          "name": "black left-pointing double triangle"
+        },
+        {
+          "char": "⏫",
+          "name": "black up-pointing double triangle"
+        },
+        {
+          "char": "⏬",
+          "name": "black down-pointing double triangle"
+        },
+        {
+          "char": "◀️",
+          "name": "black left-pointing triangle"
+        },
+        {
+          "char": "➡️",
+          "name": "black rightwards arrow"
+        },
+        {
+          "char": "⬅️",
+          "name": "leftwards black arrow"
+        },
+        {
+          "char": "⬆️",
+          "name": "upwards black arrow"
+        },
+        {
+          "char": "⬇️",
+          "name": "downwards black arrow"
+        },
+        {
+          "char": "↗️",
+          "name": "north east arrow"
+        },
+        {
+          "char": "↘️",
+          "name": "south east arrow"
+        },
+        {
+          "char": "↙️",
+          "name": "south west arrow"
+        },
+        {
+          "char": "↖️",
+          "name": "north west arrow"
+        },
+        {
+          "char": "↕️",
+          "name": "up down arrow"
+        },
+        {
+          "char": "↔️",
+          "name": "left right arrow"
+        },
+        {
+          "char": "↪️",
+          "name": "rightwards arrow with hook"
+        },
+        {
+          "char": "↩️",
+          "name": "leftwards arrow with hook"
+        },
+        {
+          "char": "⤴️",
+          "name": "arrow pointing rightwards then curving upwards"
+        },
+        {
+          "char": "⤵️",
+          "name": "arrow pointing rightwards then curving downwards"
+        },
+        {
+          "char": "➕",
+          "name": "heavy plus sign"
+        },
+        {
+          "char": "➖",
+          "name": "heavy minus sign"
+        },
+        {
+          "char": "➗",
+          "name": "heavy division sign"
+        },
+        {
+          "char": "✖️",
+          "name": "heavy multiplication x"
+        },
+        {
+          "char": "♾️",
+          "name": "permanent paper sign"
+        },
+        {
+          "char": "™️",
+          "name": "trade mark sign"
+        },
+        {
+          "char": "©️",
+          "name": "copyright sign"
+        },
+        {
+          "char": "®️",
+          "name": "registered sign"
+        },
+        {
+          "char": "〰️",
+          "name": "wavy dash"
+        },
+        {
+          "char": "➰",
+          "name": "curly loop"
+        },
+        {
+          "char": "➿",
+          "name": "double curly loop"
+        },
+        {
+          "char": "✔️",
+          "name": "heavy check mark"
+        },
+        {
+          "char": "☑️",
+          "name": "ballot box with check"
+        },
+        {
+          "char": "⚫️",
+          "name": "medium black circle"
+        },
+        {
+          "char": "⚪️",
+          "name": "medium white circle"
+        },
+        {
+          "char": "▪️",
+          "name": "black small square"
+        },
+        {
+          "char": "▫️",
+          "name": "white small square"
+        },
+        {
+          "char": "◾️",
+          "name": "black medium small square"
+        },
+        {
+          "char": "◽️",
+          "name": "white medium small square"
+        },
+        {
+          "char": "◼️",
+          "name": "black medium square"
+        },
+        {
+          "char": "◻️",
+          "name": "white medium square"
+        },
+        {
+          "char": "⬛️",
+          "name": "black large square"
+        },
+        {
+          "char": "⬜️",
+          "name": "white large square"
+        },
+        {
+          "char": "♠️",
+          "name": "black spade suit"
+        },
+        {
+          "char": "♣️",
+          "name": "black club suit"
+        },
+        {
+          "char": "♥️",
+          "name": "black heart suit"
+        },
+        {
+          "char": "♦️",
+          "name": "black diamond suit"
+        }
+      ]
     }
   ],
   "notes": {
@@ -44,5 +771,6 @@
       "Skin tone variations",
       "Complex zero-width-joiner emoji sequences"
     ]
-  }
+  },
+  "schema": 2
 }

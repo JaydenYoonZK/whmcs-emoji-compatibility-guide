@@ -1,383 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Copy-paste-safe emoji for WHMCS product names, email templates, knowledge base articles, and client-area UI." />
-  <link rel="canonical" href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34' fill='white'%3E%25E2%259C%2593%3C/text%3E%3C/svg%3E" />
-  <meta property="og:title" content="WHMCS Emoji Compatibility Guide" />
-  <meta property="og:description" content="Copy-paste-safe emoji for WHMCS product names, email templates, knowledge base articles, and client-area UI." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/" />
-  <meta name="twitter:card" content="summary" />
-  <title>WHMCS Emoji Compatibility Guide</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f7faf9;
-      --ink: #13201b;
-      --muted: #5d6f68;
-      --line: #d8e7e1;
-      --panel: #ffffff;
-      --accent: #0f766e;
-      --accent-2: #0369a1;
-      --soft: #e8f5f1;
-      --danger: #b42318;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--accent-2);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 64px 20px 44px;
-    }
-
-    .wrap {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: #99f6e4;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 760px;
-      margin: 0;
-      font-size: clamp(2.25rem, 6vw, 4.75rem);
-      line-height: 0.98;
-      letter-spacing: 0;
-    }
-
-    .intro {
-      max-width: 720px;
-      margin: 18px 0 0;
-      color: #dbeafe;
-      font-size: 1.08rem;
-    }
-
-    .toolbar {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      margin: -24px auto 28px;
-      padding: 16px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
-    }
-
-    .search {
-      width: 100%;
-      min-height: 44px;
-      padding: 0 14px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      color: var(--ink);
-      font: inherit;
-    }
-
-    .search:focus {
-      border-color: var(--accent);
-      outline: 3px solid rgba(15, 118, 110, 0.16);
-    }
-
-    .count {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 14px;
-      border-radius: 6px;
-      background: var(--soft);
-      color: var(--accent);
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    main {
-      padding: 0 0 56px;
-    }
-
-    .section {
-      margin-top: 28px;
-    }
-
-    .section h2 {
-      margin: 0 0 10px;
-      font-size: 1.18rem;
-      letter-spacing: 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
-      gap: 8px;
-    }
-
-    button.emoji {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 58px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-      font-size: 1.65rem;
-      cursor: pointer;
-      transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
-    }
-
-    button.emoji:hover,
-    button.emoji:focus {
-      border-color: var(--accent);
-      box-shadow: 0 8px 22px rgba(15, 118, 110, 0.14);
-      outline: none;
-      transform: translateY(-1px);
-    }
-
-    .notes {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 40px;
-    }
-
-    .note {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-
-    .note h2 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-    }
-
-    .note ul {
-      margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    .warning {
-      color: var(--danger);
-      font-weight: 800;
-    }
-
-    .toast {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 10;
-      padding: 12px 14px;
-      border-radius: 8px;
-      background: #0f172a;
-      color: #ffffff;
-      font-weight: 800;
-      opacity: 0;
-      transform: translateY(8px);
-      transition: opacity 0.2s ease, transform 0.2s ease;
-      pointer-events: none;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    footer {
-      padding: 26px 0 34px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 720px) {
-      header {
-        padding-top: 42px;
-      }
-
-      .toolbar,
-      .notes {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHMCS Emoji Guide: copy-paste-safe emoji for client-facing content</title>
+  <meta name="description" content="A tested reference of emoji that survive WHMCS product names, email templates, and knowledge base articles, with a searchable browser copy board. Runs in your browser.">
+  <link rel="canonical" href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='36'%3E%E2%9C%93%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="WHMCS Emoji Guide: copy-paste-safe emoji for client-facing content">
+  <meta property="og:description" content="Emoji that survive WHMCS product names, email templates, and knowledge base articles, with a searchable copy board.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">
+  <meta property="og:image" content="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/assets/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/assets/preview.png">
+  <script>
+    (function () {
+      var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "WHMCS Emoji Compatibility Guide",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any (browser-based)",
+    "url": "https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Jayden Yoon ZK", "url": "https://github.com/JaydenYoonZK" }
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <p class="eyebrow">WHMCS compatibility reference</p>
-      <h1>Copy-paste-safe emoji for client-facing WHMCS content.</h1>
-      <p class="intro">Search, click, and copy symbols that are more likely to survive WHMCS product names, templates, emails, announcements, and knowledge base pages without turning into broken characters.</p>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <div class="toolbar" aria-label="Emoji tools">
-      <input id="search" class="search" type="search" placeholder="Search by category or paste an emoji..." autocomplete="off" />
-      <div id="count" class="count">0 emoji</div>
-    </div>
+<div class="bg-scene" aria-hidden="true">
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="star-layer sl-far">
+    <span class="star" style="left:12%;top:18%;animation-delay:-1.4s"></span>
+    <span class="star" style="left:38%;top:8%;animation-delay:-3.8s;animation-duration:8.6s"></span>
+    <span class="star" style="left:63%;top:14%;animation-delay:-5.6s"></span>
+    <span class="star" style="left:87%;top:22%;animation-delay:-2.3s;animation-duration:9.2s"></span>
+    <span class="star" style="left:22%;top:60%;animation-delay:-6.7s"></span>
+    <span class="star" style="left:74%;top:70%;animation-delay:-0.9s;animation-duration:8s"></span>
+  </div>
+  <div class="star-layer sl-mid">
+    <span class="star" style="left:8%;top:34%;animation-delay:-4.5s"></span>
+    <span class="star" style="left:47%;top:24%;animation-delay:-3.1s;animation-duration:7.8s"></span>
+    <span class="star" style="left:92%;top:47%;animation-delay:-1.8s"></span>
+    <span class="star" style="left:30%;top:86%;animation-delay:-5.9s;animation-duration:8.8s"></span>
+    <span class="star" style="left:61%;top:94%;animation-delay:-2.7s"></span>
+  </div>
+  <div class="star-layer sl-near">
+    <span class="star" style="left:5%;top:52%;animation-delay:-3.4s;animation-duration:7.4s"></span>
+    <span class="star" style="left:95%;top:31%;animation-delay:-6.2s"></span>
+    <span class="star" style="left:17%;top:116%;animation-delay:-1.2s;animation-duration:8.2s"></span>
+    <span class="star" style="left:84%;top:128%;animation-delay:-4.9s"></span>
+  </div>
+  <div class="shape cube3d p1"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape cube3d p2"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape cube3d p3"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape sph p4"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape sph p5"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape cube3d p6"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape sph p7"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape sph p10"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape sph p11"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape cube3d p8"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape cube3d p9"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+</div>
 
+<nav class="site-nav" aria-label="Page navigation">
+  <div class="wrap">
+    <a class="brand" href="#top">Jayden Yoon ZK</a>
+    <div class="nav-links">
+      <a href="#board">Copy board</a>
+      <a href="#why">Why it breaks</a>
+      <a href="#compat">Compatibility</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">☀️</button>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap header-grid">
+    <div class="header-copy">
+    <p class="eyebrow">WHMCS Emoji Guide</p>
+    <h1>Emoji that survive your client-facing content.</h1>
+    <p class="lede">Some emoji render perfectly in a WHMCS product name or email template. Others turn into <code>????</code>, empty boxes, or broken characters the moment they hit an older database or a mail client. This is a tested list of the ones that hold up, with a searchable copy board you can keep open while you write.</p>
+    <p class="privacy"><span class="dot"></span> 🔒 A static reference. Nothing you do here is tracked or sent anywhere.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 320 270" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs><radialGradient id="hg" cx="0.2" cy="0" r="1"><stop offset="0" stop-color="#abcf37" stop-opacity="0.1"/><stop offset="1" stop-color="#abcf37" stop-opacity="0"/></radialGradient></defs>
+  <rect x="4" y="4" width="312" height="262" rx="24" fill="#16140f" stroke="#ffffff" stroke-opacity="0.12"/>
+  <rect x="4" y="4" width="312" height="262" rx="24" fill="url(#hg)"/>
+  <circle cx="28" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/><circle cx="43" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/><circle cx="58" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/>
+  <text x="270" y="33" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8f887c">product name</text>
+  <path d="M4 48H316" stroke="#ffffff" stroke-opacity="0.08"/>
+  <g>
+    <rect x="28" y="70" width="120" height="34" rx="10" fill="#a7e26a" fill-opacity="0.08" stroke="#a7e26a" stroke-opacity="0.35"/>
+    <text x="46" y="93" font-size="18">&#9989;</text>
+    <text x="72" y="92" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#c8c2b6">Pro Plan</text>
+    <rect x="196" y="78" width="42" height="18" rx="6" fill="#a7e26a" fill-opacity="0.15"/><text x="217" y="90.5" text-anchor="middle" fill="#a7e26a" font-size="9" font-weight="700">SAFE</text>
+    <animate attributeName="opacity" values="1;0.6;1" dur="3.2s" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <rect x="28" y="116" width="120" height="34" rx="10" fill="#ff7a6e" fill-opacity="0.07" stroke="#ff7a6e" stroke-opacity="0.3"/>
+    <text x="44" y="138" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#ff7a6e">????</text>
+    <text x="92" y="137" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#8f887c">Plan</text>
+    <rect x="190" y="124" width="48" height="18" rx="6" fill="#ff7a6e" fill-opacity="0.15"/><text x="214" y="136.5" text-anchor="middle" fill="#ff7a6e" font-size="9" font-weight="700">BROKEN</text>
+    <animate attributeName="opacity" values="1;0.4;1" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+  </g>
+  <text x="28" y="182" fill="#8f887c" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif">Same idea. One renders,</text>
+  <text x="28" y="200" fill="#8f887c" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif">the other does not.</text>
+  <g font-size="20">
+    <text x="40" y="238">&#10004;&#65039;</text><text x="76" y="238">&#11088;</text><text x="112" y="238">&#10084;&#65039;</text><text x="148" y="238">&#9749;</text><text x="184" y="238">&#9993;&#65039;</text><text x="220" y="238">&#9888;&#65039;</text><text x="256" y="238">&#8505;&#65039;</text>
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="4s" repeatCount="indefinite"/>
+  </g>
+</svg>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="card" id="board">
+    <div class="search-wrap">
+      <span class="mag">🔍</span>
+      <label for="search" style="display:none">Search emoji</label>
+      <input id="search" type="search" placeholder="Search by name, for example: heart, star, check, arrow..." spellcheck="false" autocomplete="off">
+    </div>
+    <div class="board-toolbar">
+      <div class="cat-chips" id="cat-chips"></div>
+      <span class="board-count" id="count"></span>
+    </div>
     <div id="sections"></div>
+  </div>
 
-    <div class="notes">
-      <section class="note">
-        <h2>Usually safer</h2>
+  <p class="section-sub" style="margin-top:16px">Click any emoji to copy it. It works offline once the page has loaded, and the full list is available as <a href="data/emoji.json">machine-readable JSON</a>.</p>
+
+  <div class="prose">
+    <h2 id="why">🧩 Why emoji break in WHMCS</h2>
+    <p>An emoji is one or more Unicode code points, and every layer between your keyboard and your customer's screen has to agree on how to store and display them. In a WHMCS stack there are several layers that often disagree:</p>
+    <ul>
+      <li><strong>The database.</strong> Older installs use the <code>utf8</code> MySQL charset, which despite the name only stores three bytes per character and cannot hold most emoji. The full set needs <code>utf8mb4</code>. Save a four-byte emoji into a three-byte column and it becomes <code>????</code> or is truncated on the spot.</li>
+      <li><strong>Email.</strong> A template may render fine in the admin preview, then arrive in a mail client that substitutes a tofu box for a symbol it does not have a glyph for.</li>
+      <li><strong>Age.</strong> Newer emoji from recent Unicode releases are simply unknown to older systems, which fall back to a placeholder.</li>
+    </ul>
+    <p>The failure is quiet. The admin area looks fine, the customer sees a broken box, and nobody notices until a client mentions it. The safest emoji are the older, simpler, single-code-point symbols that every layer has understood for years, and that is what the copy board above is filtered to.</p>
+
+    <h2 id="compat">✅ What tends to work, and what does not</h2>
+    <div class="notes-grid">
+      <div class="note-card safe">
+        <h3>✅ Usually safer</h3>
         <ul>
           <li>Basic symbols and older Unicode emoji</li>
-          <li>Simple single-codepoint emoji</li>
+          <li>Simple single-code-point emoji</li>
           <li>Emoji without skin tone modifiers</li>
           <li>Emoji without gender or family combinations</li>
         </ul>
-      </section>
-
-      <section class="note">
-        <h2 class="warning">Often unsupported</h2>
+      </div>
+      <div class="note-card risk">
+        <h3>⚠️ Often unsupported</h3>
         <ul>
           <li>Country flags</li>
           <li>New emoji from recent Unicode releases</li>
           <li>Skin tone variations</li>
-          <li>Complex zero-width-joiner emoji sequences</li>
+          <li>Complex zero-width-joiner sequences</li>
         </ul>
-      </section>
+      </div>
     </div>
-  </main>
+    <p style="margin-top:16px">Even a safer emoji is worth a real test in your own stack before it goes into a billing-critical or support-critical message. The list here is a strong starting point, not a promise about your specific database, PHP version, and mail pipeline.</p>
 
-  <footer>
-    <div class="wrap">
-      Built by <a href="https://github.com/JaydenYoonZK">Jayden Yoon ZK</a>. Contributions welcome on <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide">GitHub</a>.
-    </div>
-  </footer>
+    <h2 id="faq">💬 Questions people ask</h2>
+    <h3>How were these chosen?</h3>
+    <p>They are drawn from the older, widely-supported Unicode ranges that predate the four-byte emoji explosion, the symbols that render consistently across old and new systems. The list is reviewed by hand rather than generated wholesale, which is why it is deliberately conservative.</p>
+    <h3>My emoji still broke. What now?</h3>
+    <p>The most common cause is a database still on <code>utf8</code> instead of <code>utf8mb4</code>. Converting the relevant tables and the connection charset fixes the majority of cases. If it renders in the database but breaks in email, the mail client is the likely culprit, and a plainer symbol is the safe move.</p>
+    <h3>Can I contribute an emoji that works, or one that breaks?</h3>
+    <p>Yes, and real test reports are the most valuable thing here. Open an <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report</a> with the emoji, your WHMCS and PHP versions, your database charset, and where you tested it.</p>
+    <h3>Is this only for WHMCS?</h3>
+    <p>The compatibility rules apply to any older PHP and MySQL stack, so the list is useful well beyond WHMCS. The framing is WHMCS because that is where product names, email templates, and client-area labels make the breakage most visible to paying customers.</p>
+  </div>
+</main>
 
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+<footer>
+  <div class="wrap">
+    <span>Built by <a href="https://github.com/JaydenYoonZK">Jayden Yoon ZK</a></span>
+    <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide">Source on GitHub</a>
+    <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues">Report an emoji</a>
+    <a href="data/emoji.json">Dataset (JSON)</a>
+    <span>MIT License</span>
+  </div>
+</footer>
 
-  <script>
-    const fallbackCategories = [
-      {
-        name: "Smileys & People",
-        emoji: ["☺️", "☹️", "☠️", "✊", "✌️", "☝️", "✋", "✍️", "⛑"]
-      },
-      {
-        name: "Nature & Weather",
-        emoji: ["☘️", "⭐️", "✨", "⚡️", "☄️", "☀️", "⛅️", "☁️", "⛈", "❄️", "☃️", "⛄️", "☔️", "☂️"]
-      },
-      {
-        name: "Food & Drink",
-        emoji: ["☕️"]
-      },
-      {
-        name: "Activities",
-        emoji: ["⚽️", "⚾️", "⛳️", "⛸", "⛷", "⛹️‍♀️", "⛹️", "⛹️‍♂️", "♟"]
-      },
-      {
-        name: "Travel & Places",
-        emoji: ["✈️", "⛵️", "⛴", "⚓️", "⛽️", "⛲️", "⛱", "⛰", "⛺️", "⛪️", "⛩"]
-      },
-      {
-        name: "Objects",
-        emoji: ["⌚️", "⌨️", "☎️", "⏱", "⏲", "⏰", "⌛️", "⏳", "⚖️", "⚒", "⛏", "⚙️", "⛓", "⚔️", "⚰️", "⚱️", "⚗️", "✉️", "✂️", "✒️", "✏️"]
-      },
-      {
-        name: "Symbols",
-        emoji: ["❤️", "❣️", "☮️", "✝️", "☪️", "☸️", "✡️", "☯️", "☦️", "⛎", "♈️", "♉️", "♊️", "♋️", "♌️", "♎️", "♏️", "♐️", "♑️", "♒️", "♓️", "⚛️", "☢️", "☣️", "✴️", "㊙️", "㊗️", "❌", "⭕️", "⛔️", "♨️", "❗️", "❕", "❓", "❔", "‼️", "⁉️", "〽️", "⚠️", "⚜️", "♻️", "✅", "❇️", "✳️", "❎", "Ⓜ️", "♿️", "⚧", "ℹ️", "0️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "#️⃣", "*️⃣", "⏏️", "▶️", "⏸", "⏯", "⏹", "⏺", "⏭", "⏮", "⏩", "⏪", "⏫", "⏬", "◀️", "➡️", "⬅️", "⬆️", "⬇️", "↗️", "↘️", "↙️", "↖️", "↕️", "↔️", "↪️", "↩️", "⤴️", "⤵️", "➕", "➖", "➗", "✖️", "♾️", "™️", "©️", "®️", "〰️", "➰", "➿", "✔️", "☑️", "⚫️", "⚪️", "▪️", "▫️", "◾️", "◽️", "◼️", "◻️", "⬛️", "⬜️", "♠️", "♣️", "♥️", "♦️"]
-      }
-    ];
-
-    let categories = fallbackCategories;
-
-    const sections = document.querySelector("#sections");
-    const search = document.querySelector("#search");
-    const count = document.querySelector("#count");
-    const toast = document.querySelector("#toast");
-    let toastTimer;
-
-    function copyEmoji(value) {
-      navigator.clipboard.writeText(value).then(() => {
-        toast.textContent = `Copied ${value}`;
-        toast.classList.add("show");
-        window.clearTimeout(toastTimer);
-        toastTimer = window.setTimeout(() => toast.classList.remove("show"), 1300);
-      });
-    }
-
-    function render() {
-      const query = search.value.trim().toLowerCase();
-      let total = 0;
-
-      sections.innerHTML = categories.map((category) => {
-        const categoryMatches = category.name.toLowerCase().includes(query);
-        const items = category.emoji.filter((value) => categoryMatches || value.includes(query));
-
-        if (!items.length) {
-          return "";
-        }
-
-        total += items.length;
-
-        return `
-          <section class="section">
-            <h2>${category.name}</h2>
-            <div class="grid">
-              ${items.map((value) => `<button class="emoji" type="button" aria-label="Copy ${value}" data-emoji="${value}">${value}</button>`).join("")}
-            </div>
-          </section>
-        `;
-      }).join("");
-
-      count.textContent = `${total} emoji`;
-
-      document.querySelectorAll("[data-emoji]").forEach((button) => {
-        button.addEventListener("click", () => copyEmoji(button.dataset.emoji));
-      });
-    }
-
-    async function loadCategories() {
-      try {
-        const response = await fetch("./data/emoji.json", { cache: "no-store" });
-        if (response.ok) {
-          const payload = await response.json();
-          categories = Array.isArray(payload.categories) ? payload.categories : fallbackCategories;
-        }
-      } catch (error) {
-        categories = fallbackCategories;
-      }
-
-      render();
-    }
-
-    search.addEventListener("input", render);
-    loadCategories();
-  </script>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button id="to-top" class="to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script type="module" src="app.js"></script>
 </body>
 </html>
