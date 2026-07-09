@@ -835,6 +835,10 @@ button[data-tip][data-tip-off]:disabled:focus-visible::after {
   content: attr(data-tip-off);
 }
 button:disabled { pointer-events: auto; }
+/* No hover on touch devices, where tapping a button would flash a tooltip. */
+@media (hover: none) {
+  button[data-tip]::after, button[data-tip]::before { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   button[data-tip]::after, button[data-tip]::before { transition: opacity 0.12s ease; }
 }
