@@ -15,6 +15,12 @@
     "test": "node --test test/search.test.mjs",
     "serve": "python3 -m http.server 8441 -d docs"
   },
+  "files": [
+    "docs/data/emoji.json",
+    "docs/search.js",
+    "LICENSE",
+    "README.md"
+  ],
   "license": "MIT",
   "author": "Jayden Yoon ZK",
   "homepage": "https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/",

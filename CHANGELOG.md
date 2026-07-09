@@ -3,6 +3,21 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## Unreleased
+
+### Added
+
+- GitHub Actions now runs the search tests and syntax checks on Node 18, 20, and 22 across Linux, macOS, and Windows.
+- A security policy points private vulnerability reports to GitHub Security Advisories.
+- The package metadata now limits packed files to the reusable search engine, emoji dataset, README, and license.
+
+### Fixed
+
+- The README stars badge now links to the repository page, avoiding GitHub's 404 on the empty stargazers page.
+- The copy button now falls back cleanly when `navigator.clipboard` is unavailable, instead of throwing before the existing fallback can run.
+- The `?demo` page no longer throws an early-load search error while the emoji dataset is still loading.
+- The browser app cache-busts its search-module import so GitHub Pages serves the current search engine after deployment.
+
 ## [2.2.0] - 2026-07-09
 
 ### Added
