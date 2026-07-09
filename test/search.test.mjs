@@ -87,3 +87,28 @@ test("empty query returns everything", () => {
   const r = search(index, "");
   assert.equal(r.results.length, index.items.length);
 });
+
+test("dataset integrity: well-formed, unique, and reviewed", () => {
+  assert.equal(data.schema, 3, "schema version present");
+  assert.match(data.lastReviewed, /^\d{4}-\d{2}-\d{2}$/, "lastReviewed is an ISO date");
+  assert.ok(Array.isArray(data.categories) && data.categories.length > 0);
+
+  const seen = new Set();
+  let count = 0;
+  for (const cat of data.categories) {
+    assert.ok(cat.name, "every category has a name");
+    assert.ok(Array.isArray(cat.emoji) && cat.emoji.length > 0, `category ${cat.name} has emoji`);
+    for (const e of cat.emoji) {
+      count++;
+      const ch = typeof e === "string" ? e : e.char;
+      assert.ok(ch && typeof ch === "string", "every entry has a char");
+      assert.ok(!seen.has(ch), `no duplicate emoji: ${ch}`);
+      seen.add(ch);
+      if (typeof e === "object") {
+        assert.ok(e.name && typeof e.name === "string", `${ch} has a name`);
+        assert.ok(Array.isArray(e.keywords), `${ch} has a keywords array`);
+      }
+    }
+  }
+  assert.ok(count >= 180, `at least 180 curated emoji (got ${count})`);
+});

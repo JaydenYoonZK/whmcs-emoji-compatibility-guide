@@ -34,8 +34,16 @@ It works offline once the page has loaded. Run locally:
 ```bash
 git clone https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide.git
 cd whmcs-emoji-compatibility-guide
-python3 -m http.server 8441 -d docs   # http://localhost:8441
+npm run serve   # http://localhost:8441
 ```
+
+## Tests
+
+```bash
+npm test
+```
+
+14 tests cover the ranked search (exact, prefix, substring, and typo-tolerant matching), did-you-mean suggestions, and a dataset integrity check that every curated emoji is unique, named, and keyworded.
 
 ## Usually safer vs often unsupported
 

@@ -3,6 +3,23 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.2.0] - 2026-07-09
+
+### Added
+
+- A package.json, so the project runs like the rest of the suite: `npm test` runs the test suite and `npm run serve` starts the local server. The repo had a test file but no way to run it with the standard command.
+- A dataset integrity test. It checks that every curated emoji is unique, has a name and a keyword list, and that the schema and review date are present, so a future edit cannot quietly corrupt the reference the whole tool is built on.
+- A Content Security Policy on the page. The only request it makes is for its own emoji dataset, so `connect-src` is limited to same-origin and nothing can be sent elsewhere. Verified in a browser: the board still loads and searches, and a request to any other origin is blocked.
+
+### Changed
+
+- Accessibility: the search box now has a real label instead of one hidden with `display:none`.
+- 14 tests, up from 13.
+
+### Notes
+
+This release followed a full audit of the search engine and dataset. Both are sound: the ranked matcher handles exact, prefix, substring, and typo-tolerant matches correctly ("hart" still finds the heart), and the 180 curated emoji are all unique, named, and keyworded.
+
 ## [2.1.7] - 2026-07-09
 
 ### Changed
@@ -82,6 +99,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.2.0]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.2.0
 [2.1.7]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.1.7
 [2.1.6]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.1.6
 [2.1.5]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.1.5

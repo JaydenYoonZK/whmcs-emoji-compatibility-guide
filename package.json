@@ -1,0 +1,26 @@
+{
+  "name": "whmcs-emoji-compatibility-guide",
+  "version": "2.2.0",
+  "description": "A tested reference of emoji that survive WHMCS product names, email templates, and knowledge base articles, with a searchable browser copy board. No dependencies.",
+  "type": "module",
+  "private": true,
+  "keywords": [
+    "whmcs",
+    "emoji",
+    "compatibility",
+    "unicode",
+    "reference"
+  ],
+  "scripts": {
+    "test": "node --test test/search.test.mjs",
+    "serve": "python3 -m http.server 8441 -d docs"
+  },
+  "license": "MIT",
+  "author": "Jayden Yoon ZK",
+  "homepage": "https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/",
+  "bugs": "https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide.git"
+  }
+}
