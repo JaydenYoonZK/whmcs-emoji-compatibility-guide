@@ -4,7 +4,8 @@ A tested reference of emoji that survive WHMCS product names, email templates, a
 
 <p>
   <a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/"><img src="https://img.shields.io/badge/Live%20guide-open-abcf37?style=for-the-badge&logo=githubpages&logoColor=black" alt="Open the live guide"></a>
-  <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/stargazers"><img src="https://img.shields.io/github/stars/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge&logo=github" alt="GitHub stars"></a>
+  <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/JaydenYoonZK/whmcs-emoji-compatibility-guide/ci.yml?branch=main&style=for-the-badge&label=tests" alt="CI status"></a>
+  <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide"><img src="https://img.shields.io/github/stars/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge&logo=github" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge" alt="MIT License"></a>
 </p>
 

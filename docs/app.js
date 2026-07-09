@@ -1,4 +1,4 @@
-import { buildIndex, search as smartSearch } from "./search.js";
+import { buildIndex, search as smartSearch } from "./search.js?v=20260710a";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -37,13 +37,16 @@ function copyEmoji(value) {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove("show"), 1300);
   };
-  navigator.clipboard.writeText(value).then(done).catch(() => {
+  const fallback = () => {
     // execCommand fallback for restricted clipboard contexts
     const ta = document.createElement("textarea");
     ta.value = value; document.body.appendChild(ta); ta.select();
     try { document.execCommand("copy"); done(); } catch { /* ignore */ }
     ta.remove();
-  });
+  };
+  const writeText = navigator.clipboard?.writeText?.bind(navigator.clipboard);
+  if (writeText) writeText(value).then(done).catch(fallback);
+  else fallback();
 }
 
 function renderChips() {
@@ -71,6 +74,12 @@ function render() {
   const query = searchInput.value.trim();
   suggestEl.hidden = true;
   suggestEl.innerHTML = "";
+
+  if (query && !index) {
+    count.textContent = "Loading emoji...";
+    sections.innerHTML = `<p class="board-empty">Loading emoji data...</p>`;
+    return;
+  }
 
   if (!query) {
     // Browse mode: category groups.
