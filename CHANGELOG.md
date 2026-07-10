@@ -3,6 +3,13 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.3.5] - 2026-07-10
+
+### Added
+
+- Tactile depth across the interface. Every button is now built like a physical key: a hard edge shadow beneath it, a soft ambient shadow, and a hairline top bevel. Hovering lifts the key slightly, and pressing travels it down while the edge collapses underneath, a real press you can feel. Primary buttons carry a chartreuse edge and glow, secondary buttons use a warm brand-brown edge in light mode and a deep neutral one in dark, disabled buttons stay flat since a dead control should not look pressable, and the movement is disabled under reduced-motion preferences while the shadow feedback remains. Cards gain a quiet layered elevation per theme.
+- The README preview is regenerated.
+
 ## [2.3.4] - 2026-07-10
 
 ### Fixed
@@ -156,6 +163,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.3.5]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.5
 [2.3.4]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.4
 [2.3.3]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.3
 [2.3.2]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.2
