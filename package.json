@@ -1,6 +1,6 @@
 {
   "name": "whmcs-emoji-compatibility-guide",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "description": "A tested reference of emoji that survive WHMCS product names, email templates, and knowledge base articles, with a searchable browser copy board. No dependencies.",
   "type": "module",
   "private": true,
