@@ -1,0 +1,181 @@
+emoji,name,category,safety_rating,notes,keywords
+☺️,white smiling face,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,face; happy; outlined; relaxed; smile; smiling; white
+☹️,white frowning face,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,face; frown; frowning; sad; white
+☠️,skull and crossbones,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,and; bone; caution; crossbones; danger; dead; death; face; hazard; monster; pirate; poison; skull
+✊,raised fist,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,clenched; fist; hand; punch; raised; solidarity
+✌️,victory hand,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,hand; peace; v; victory
+☝️,white up pointing index,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,finger; hand; index; point; pointing; this; up; white
+✋,raised hand,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,5; five; hand; high; raised; stop
+✍️,writing hand,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,draw; edit; hand; write; writing
+⛑,helmet with white cross,Smileys & People,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,aid; cross; face; hat; helmet; rescue; white; with; worker’s
+☘️,shamrock,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,green; irish; nature; outdoors; plant; shamrock
+⭐️,white medium star,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astronomy; gold; medium; star; stars; white; yellow
+✨,sparkles,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,*; glitter; gold; magic; shiny; sparkle; sparkles; star; yellow
+⚡️,high voltage sign,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,danger; electric; electricity; gold; high; lightning; nature; sky; thunder; thunderbolt; voltage; weather; yellow; zap
+☄️,comet,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,comet; nature; outdoors; sky; space; weather
+☀️,black sun with rays,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; bright; gold; rays; sky; space; sun; sunny; weather; with; yellow
+⛅️,sun behind cloud,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,behind; cloud; cloudy; sky; sun; weather
+☁️,cloud,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,cloud; sky; weather; white
+⛈,thunder cloud and rain,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,and; cloud; lightning; rain; sky; thunder; thunderstorm; weather; with
+❄️,snowflake,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,blue; cold; light blue; sky; snow; snowflake; weather
+☃️,snowman,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,cold; man; sky; snow; snowman; weather; white
+⛄️,snowman without snow,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,cold; man; sky; snow; snowman; weather; white; without
+☔️,umbrella with rain drops,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,blue; clothing; drop; drops; light blue; rain; sky; umbrella; weather; with
+☂️,umbrella,Nature & Weather,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,blue; clothing; light blue; rain; sky; umbrella; weather
+☕️,hot beverage,Food & Drink,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,beverage; brown; cafe; caffeine; chai; coffee; drink; hot; morning; steaming; tea
+⚽️,soccer ball,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,ball; football; futbol; game; play; soccer; sport
+⚾️,baseball,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,ball; baseball; game; play; sport
+⛳️,flag in hole,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,flag; game; golf; hole; in; play; sport
+⛸,ice skate,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,game; ice; play; skate; skating; sport
+⛷,skier,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,game; play; ski; skier; snow; sport
+⛹️‍♀️,person with ball female sign,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,athletic; ball; basketball; bouncing; championship; dribble; female; net; person; player; throw; with; woman
+⛹️,person with ball,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,athletic; ball; basketball; bouncing; championship; dribble; game; net; person; play; player; sport; throw; with
+⛹️‍♂️,person with ball male sign,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,athletic; ball; basketball; bouncing; championship; dribble; male; man; net; person; player; throw; with
+♟,black chess pawn,Activities,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; chess; dark; dupe; expendable; game; pawn; play; sport
+✈️,airplane,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,aeroplane; airplane; fly; flying; jet; plane; transport; travel; vehicle
+⛵️,sailboat,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,boat; resort; sailboat; sailing; sea; transport; travel; vehicle; yacht
+⛴,ferry,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,boat; ferry; passenger; transport; travel; vehicle
+⚓️,anchor,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,anchor; ship; tool; transport; travel; vehicle
+⛽️,fuel pump,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,diesel; fuel; fuelpump; gas; gasoline; pump; station; transport; travel; vehicle
+⛲️,fountain,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,fountain; nature; outdoors
+⛱,umbrella on ground,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,ground; on; rain; sun; umbrella
+⛰,mountain,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,mountain; nature; outdoors
+⛺️,tent,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,camping; nature; outdoors; tent
+⛪️,church,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,bless; chapel; christian; church; cross; religion
+⛩,shinto shrine,Travel & Places,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,religion; shinto; shrine
+⌚️,watch,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,clock; time; watch
+⌨️,keyboard,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,computer; keyboard; office; stationery; work
+☎️,black telephone,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; dark; phone; telephone
+⏱,stopwatch,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,clock; stopwatch; time
+⏲,timer clock,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,clock; time; timer
+⏰,alarm clock,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,alarm; clock; hours; hrs; late; time; waiting
+⌛️,hourglass,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,clock; done; hourglass; sand; time; timer
+⏳,hourglass with flowing sand,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,clock; done; flowing; hourglass; hours; not; sand; time; timer; waiting; with; yolo
+⚖️,scales,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,balance; justice; libra; scale; scales; tool; weight; zodiac
+⚒,hammer and pick,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,and; hammer; pick; tool
+⛏,pick,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,hammer; mining; pick; tool
+⚙️,gear,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,cog; cogwheel; gear; tool
+⛓,chains,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,chain; chains; connect; link; lock
+⚔️,crossed swords,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,crossed; swords; weapon
+⚰️,coffin,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,coffin; dead; death; vampire
+⚱️,funeral urn,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,ashes; death; funeral; urn
+⚗️,alembic,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,alembic; chemistry; tool
+✉️,envelope,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,e-mail; email; envelope; letter; office; stationery; work
+✂️,black scissors,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; cut; cutting; office; paper; scissors; stationery; tool; work
+✒️,black nib,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; dark; draw; edit; nib; office; pen; stationery; work; write
+✏️,pencil,Objects,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,draw; edit; office; pencil; stationery; work; write
+❤️,heavy black heart,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; emotion; heart; heavy; love; red; romance; valentine
+❣️,heavy heart exclamation mark ornament,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,exclamation; heart; heavy; love; ornament; punctuation; red; romance; valentine
+☮️,peace symbol,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,healing; peace; peaceful; symbol
+✝️,latin cross,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,christ; christian; cross; faith; latin; religion; spiritual
+☪️,star and crescent,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,and; crescent; faith; islam; muslim; ramadan; religion; spiritual; star
+☸️,wheel of dharma,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,buddhist; dharma; faith; of; religion; spiritual; wheel
+✡️,star of david,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,david; faith; jew; jewish; judaism; of; religion; spiritual; star
+☯️,yin yang,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,difficult; faith; lives; religion; spiritual; tao; taoist; total; yang; yin; yinyang
+☦️,orthodox cross,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,christian; cross; faith; orthodox; religion; spiritual
+⛎,ophiuchus,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; bearer; horoscope; ophiuchus; serpent; snake; zodiac
+♈️,aries,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,aries; astrology; horoscope; ram; zodiac
+♉️,taurus,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; bull; horoscope; ox; taurus; zodiac
+♊️,gemini,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; gemini; horoscope; twins; zodiac
+♋️,cancer,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; cancer; crab; horoscope; zodiac
+♌️,leo,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; horoscope; leo; lion; zodiac
+♎️,libra,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; balance; horoscope; justice; libra; scales; zodiac
+♏️,scorpius,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; horoscope; scorpio; scorpion; scorpius; zodiac
+♐️,sagittarius,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,archer; astrology; horoscope; sagittarius; zodiac
+♑️,capricorn,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; capricorn; goat; horoscope; zodiac
+♒️,aquarius,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,aquarius; astrology; bearer; horoscope; water; zodiac
+♓️,pisces,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,astrology; fish; horoscope; pisces; zodiac
+⚛️,atom symbol,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,atheist; atom; atomic; nuclear; science; symbol
+☢️,radioactive sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,atomic; caution; danger; hazard; nuclear; radioactive; science; sign
+☣️,biohazard sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,biohazard; caution; danger; hazard; sign
+✴️,eight pointed black star,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,*; black; eight; eight-pointed; gold; pointed; star; yellow
+㊙️,circled ideograph secret,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,button; circled; ideograph; japanese; secret; “secret”
+㊗️,circled ideograph congratulation,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,button; circled; congratulation; congratulations; ideograph; japanese; “congratulations”
+❌,cross mark,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,cancel; cross; multiplication; multiply; red; x; ×
+⭕️,heavy large circle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,circle; heavy; hollow; large; o; red
+⛔️,no entry,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,caution; danger; do; entry; fail; forbidden; hazard; no; not; pass; prohibited; red; traffic
+♨️,hot springs,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,hot; hotsprings; springs; steaming
+❗️,heavy exclamation mark symbol,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,!; exclamation; heavy; punctuation; red
+❕,white exclamation mark ornament,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,!; exclamation; ornament; outlined; punctuation; red; white
+❓,black question mark ornament,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,?; black; ornament; punctuation; question; red
+❔,white question mark ornament,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,?; ornament; outlined; punctuation; question; white
+‼️,double exclamation mark,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,!; !!; bangbang; double; exclamation; punctuation
+⁉️,exclamation question mark,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,!; !?; ?; exclamation; interrobang; punctuation; question
+〽️,part alternation mark,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,alternation; mark; part
+⚠️,warning sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,caution; danger; gold; hazard; sign; warning; yellow
+⚜️,fleur-de-lis,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,fleur-de-lis; knights
+♻️,black universal recycling symbol,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; recycle; recycling; universal
+✅,white heavy check mark,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,button; check; checked; checkmark; complete; completed; done; fixed; green; heavy; tick; white; ✓
+❇️,sparkle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,*; glitter; gold; magic; shiny; sparkle; yellow
+✳️,eight spoked asterisk,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,*; asterisk; eight; eight-spoked; spoked
+❎,negative squared cross mark,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,button; cross; green; multiplication; multiply; negative; square; squared; x; ×
+Ⓜ️,circled latin capital letter m,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,capital; circle; circled; latin; letter; m
+♿️,wheelchair symbol,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,access; handicap; symbol; wheelchair
+⚧,male with stroke and male and female sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,and; female; male; stroke; transgender; with
+ℹ️,information source,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,i; information; source
+0️⃣,digit zero keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,0; digit; keycap; keycap:; number; zero
+1️⃣,digit one keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,1; digit; keycap; keycap:; number; one
+2️⃣,digit two keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,2; digit; keycap; keycap:; number; two
+3️⃣,digit three keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,3; digit; keycap; keycap:; number; three
+4️⃣,digit four keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,4; digit; four; keycap; keycap:; number
+5️⃣,digit five keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,5; digit; five; keycap; keycap:; number
+6️⃣,digit six keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,6; digit; keycap; keycap:; number; six
+7️⃣,digit seven keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,7; digit; keycap; keycap:; number; seven
+8️⃣,digit eight keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,8; digit; eight; keycap; keycap:; number
+9️⃣,digit nine keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,9; digit; keycap; keycap:; nine; number
+#️⃣,number sign keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,digit; keycap; number; sign
+*️⃣,asterisk keycap,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,asterisk; digit; keycap; number
+⏏️,eject symbol,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,button; control; eject; media; playback; player; symbol; video
+▶️,black right-pointing triangle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; button; control; media; play; playback; player; right; right-pointing; triangle; video
+⏸,double vertical bar,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,bar; button; control; double; media; pause; playback; player; vertical; video
+⏯,black right-pointing triangle with double vertical bar,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; bar; black; button; control; double; media; or; pause; play; playback; player; right; right-pointing; triangle; vertical; video; with
+⏹,black square for stop,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; button; control; for; media; playback; player; square; stop; video
+⏺,black circle for record,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; button; circle; control; for; media; playback; player; record; video
+⏭,black right-pointing double triangle with vertical bar,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; bar; black; button; control; double; media; next; playback; player; right-pointing; scene; track; triangle; vertical; video; with
+⏮,black left-pointing double triangle with vertical bar,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; bar; black; button; control; double; last; left-pointing; media; playback; player; previous; scene; track; triangle; vertical; video; with
+⏩,black right-pointing double triangle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; button; control; double; fast; fast-forward; forward; media; playback; player; right-pointing; triangle; video
+⏪,black left-pointing double triangle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; button; control; double; fast; left-pointing; media; playback; player; reverse; rewind; triangle; video
+⏫,black up-pointing double triangle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; button; control; double; fast; media; playback; player; triangle; up; up-pointing; video
+⏬,black down-pointing double triangle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; button; control; double; down; down-pointing; fast; media; playback; player; triangle; video
+◀️,black left-pointing triangle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; button; control; left; left-pointing; media; playback; player; reverse; triangle; video
+➡️,black rightwards arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; cardinal; direction; east; point; right; rightwards
+⬅️,leftwards black arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; cardinal; direction; left; leftwards; point; west
+⬆️,upwards black arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; cardinal; direction; north; point; up; upwards
+⬇️,downwards black arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; black; cardinal; direction; down; downwards; point; south
+↗️,north east arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; direction; east; intercardinal; north; northeast; point; up-right
+↘️,south east arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; direction; down-right; east; intercardinal; point; south; southeast
+↙️,south west arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; direction; down-left; intercardinal; point; south; southwest; west
+↖️,north west arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; direction; intercardinal; north; northwest; point; up-left; west
+↕️,up down arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; direction; down; point; up; up-down
+↔️,left right arrow,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; direction; left; left-right; point; right
+↪️,rightwards arrow with hook,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; curving; direction; hook; left; point; right; rightwards; with
+↩️,leftwards arrow with hook,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; curving; direction; hook; left; leftwards; point; right; with
+⤴️,arrow pointing rightwards then curving upwards,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; curving; direction; point; pointing; right; rightwards; then; up; upwards
+⤵️,arrow pointing rightwards then curving downwards,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,arrow; curving; direction; down; downwards; point; pointing; right; rightwards; then
+➕,heavy plus sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,+; calculation; heavy; math; plus; sign
+➖,heavy minus sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,-; calculation; heavy; math; minus; −
+➗,heavy division sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,calculation; divide; division; heavy; math; ÷
+✖️,heavy multiplication x,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,calculation; cancel; heavy; math; multiplication; multiply; x; ×
+♾️,permanent paper sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,calculation; forever; infinity; math; paper; permanent; unbounded; universal
+™️,trade mark sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,tm; trade; trademark
+©️,copyright sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,c; copyright; sign
+®️,registered sign,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,r; registered; sign
+〰️,wavy dash,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,dash; punctuation; wavy
+➰,curly loop,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,curl; curly; loop
+➿,double curly loop,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,curl; curly; double; loop
+✔️,heavy check mark,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,check; checked; checkmark; done; heavy; tick; ✓
+☑️,ballot box with check,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,ballot; box; check; checked; done; off; tick; with; ✓
+⚫️,medium black circle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; circle; dark; geometric; medium
+⚪️,medium white circle,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,circle; geometric; medium; white
+▪️,black small square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; dark; geometric; small; square
+▫️,white small square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,geometric; small; square; white
+◾️,black medium small square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; dark; geometric; medium; medium-small; small; square
+◽️,white medium small square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,geometric; medium; medium-small; small; square; white
+◼️,black medium square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; dark; geometric; medium; square
+◻️,white medium square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,geometric; medium; square; white
+⬛️,black large square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; dark; geometric; large; square
+⬜️,white large square,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,geometric; large; square; white
+♠️,black spade suit,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; card; dark; game; spade; suit
+♣️,black club suit,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; card; club; clubs; dark; game; suit
+♥️,black heart suit,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; card; emotion; game; heart; hearts; love; red; romance; suit; valentine
+♦️,black diamond suit,Symbols,usually_safe,Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.,black; card; diamond; game; red; suit

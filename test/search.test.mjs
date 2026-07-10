@@ -4,10 +4,35 @@ import { readFileSync } from "node:fs";
 import { buildIndex, search, editDistance, didYouMean } from "../docs/search.js";
 
 const data = JSON.parse(readFileSync(new URL("../docs/data/emoji.json", import.meta.url)));
+const csv = readFileSync(new URL("../docs/data/emoji.csv", import.meta.url), "utf8");
+const html = readFileSync(new URL("../docs/index.html", import.meta.url), "utf8");
 const index = buildIndex(data.categories);
 
 const chars = (r) => r.results.map(x => x.char);
 const has = (r, glyph) => chars(r).includes(glyph);
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [], cell = "", quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i], next = text[i + 1];
+    if (quoted) {
+      if (ch === "\"" && next === "\"") { cell += "\""; i++; }
+      else if (ch === "\"") quoted = false;
+      else cell += ch;
+    } else if (ch === "\"") {
+      quoted = true;
+    } else if (ch === ",") {
+      row.push(cell); cell = "";
+    } else if (ch === "\n") {
+      row.push(cell); rows.push(row); row = []; cell = "";
+    } else if (ch !== "\r") {
+      cell += ch;
+    }
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  return rows;
+}
 
 test("dataset is enriched with keywords", () => {
   assert.ok(index.items.length >= 180);
@@ -111,4 +136,24 @@ test("dataset integrity: well-formed, unique, and reviewed", () => {
     }
   }
   assert.ok(count >= 180, `at least 180 curated emoji (got ${count})`);
+});
+
+test("CSV export mirrors the reviewed dataset", () => {
+  const rows = parseCsv(csv);
+  assert.deepEqual(rows[0], ["emoji", "name", "category", "safety_rating", "notes", "keywords"]);
+  assert.equal(rows.length - 1, index.items.length);
+  const csvChars = new Set(rows.slice(1).map(r => r[0]));
+  assert.equal(csvChars.size, index.items.length);
+  for (const item of index.items) assert.ok(csvChars.has(item.char), `CSV includes ${item.char}`);
+  assert.ok(rows.slice(1).every(r => r[3] === "usually_safe"));
+});
+
+test("curated copy groups use only reviewed emoji", () => {
+  const safe = new Set(index.items.map(i => i.char));
+  const groupChars = [...html.matchAll(/data-emoji="([^"]+)"/g)].map(m => m[1]);
+  assert.ok(groupChars.length >= 24, "copy groups expose several useful choices");
+  for (const ch of groupChars) assert.ok(safe.has(ch), `copy group emoji is reviewed: ${ch}`);
+  for (const label of ["Hosting", "Billing", "Support", "Security"]) {
+    assert.ok(html.includes(`<h3>${label}</h3>`), `${label} group is present`);
+  }
 });

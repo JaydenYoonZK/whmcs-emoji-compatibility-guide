@@ -801,6 +801,67 @@ html[data-theme="light"] .sph .inner {
 .board-suggest button:hover { color: #bcdf4e; }
 .emoji-btn .kw { display: none; }
 
+.usecase-card {
+  margin-top: 18px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--panel), var(--panel-2));
+}
+.usecase-head { max-width: 760px; }
+.usecase-head h2 { margin: 4px 0 8px; font-size: clamp(1.35rem, 2vw, 2rem); line-height: 1.12; }
+.usecase-head p:not(.eyebrow) { margin: 0; color: var(--ink-soft); }
+.usecase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
+.usecase-group {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  background: color-mix(in srgb, var(--bg-raise), transparent 8%);
+}
+.usecase-group h3 { margin: 0 0 12px; font-size: 0.92rem; color: var(--ink); }
+.usecase-group button {
+  width: 100%;
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--ink-soft);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.12s, border-color 0.15s, background 0.15s, color 0.15s;
+}
+.usecase-group button span { display: grid; place-items: center; width: 30px; height: 30px; font-size: 1.1rem; }
+.usecase-group button strong { font-size: 0.83rem; line-height: 1.15; }
+.usecase-group button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(171,207,55,0.45);
+  background: var(--panel-2);
+  color: var(--ink);
+}
+.usecase-group button:active { transform: scale(0.98); }
+
+.report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0; }
+.report-grid div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--panel);
+}
+.report-grid strong { display: block; color: var(--ink); margin-bottom: 6px; }
+.report-grid span { display: block; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.55; }
+@media (max-width: 920px) { .usecase-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) {
+  .usecase-card { padding: 18px; }
+  .usecase-grid, .report-grid { grid-template-columns: 1fr; }
+}
+
 /* Button tooltips: a small animated hint on hover and keyboard focus. */
 :where(button[data-tip]) { position: relative; } /* :where() = 0 specificity, so a button's own positioning (e.g. an absolute clear button) is never overridden */
 button[data-tip]::after {
