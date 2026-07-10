@@ -23,7 +23,8 @@ Some emoji render perfectly in a WHMCS product name or email template. Others tu
 
 - A **hand-reviewed list of 180 emoji** drawn from the older, widely-supported Unicode ranges that hold up across old and new systems.
 - A **smart copy board**: search by name (`heart`), concept (`love`, `danger`, `zodiac`), or color (`red`, `green`), with typo tolerance (`hart`, `chekc`) and did-you-mean suggestions. Filter by category and click to copy. All in your browser, nothing sent anywhere.
-- A **machine-readable dataset** at [`docs/data/emoji.json`](docs/data/emoji.json), enriched with Unicode CLDR keywords plus a curated color and concept layer, so it powers real search.
+- A **machine-readable dataset** in [`JSON`](docs/data/emoji.json) and [`CSV`](docs/data/emoji.csv), enriched with Unicode CLDR keywords plus a curated color and concept layer, so it powers real search and spreadsheet workflows.
+- **Curated copy groups** for hosting, billing, support, and security copy, using only emoji already in the reviewed safe list.
 - Plain-language notes on **why emoji break in WHMCS** and what tends to work.
 
 ## Use it
@@ -44,7 +45,7 @@ npm run serve   # http://localhost:8441
 npm test
 ```
 
-14 tests cover the ranked search (exact, prefix, substring, and typo-tolerant matching), did-you-mean suggestions, and a dataset integrity check that every curated emoji is unique, named, and keyworded.
+16 tests cover the ranked search (exact, prefix, substring, and typo-tolerant matching), did-you-mean suggestions, dataset integrity, CSV export integrity, and the curated copy groups.
 
 ## Usually safer vs often unsupported
 
@@ -60,6 +61,8 @@ Even a safer emoji is worth a real test in your own stack before it goes into a 
 ## Contributing
 
 Real test reports are the most valuable contribution. If an emoji works or breaks in your setup, open an [emoji report](https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose) with the emoji, your WHMCS and PHP versions, your database charset, and where you tested it. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Screenshots are especially useful. Please redact customer names, domains, invoice numbers, and private ticket text before posting them, then include the WHMCS location where the emoji broke and whether the database uses `utf8` or `utf8mb4`.
 
 ## License
 

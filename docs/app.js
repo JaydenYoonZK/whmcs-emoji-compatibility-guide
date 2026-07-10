@@ -64,11 +64,10 @@ function cell(char) {
   return `<button class="emoji-btn" type="button" title="${esc(name)}" aria-label="Copy ${esc(name)}" data-emoji="${esc(char)}">${char}</button>`;
 }
 
-function bindCopy() {
-  for (const btn of sections.querySelectorAll("[data-emoji]")) {
-    btn.addEventListener("click", () => copyEmoji(btn.dataset.emoji));
-  }
-}
+document.addEventListener("click", (event) => {
+  const btn = event.target.closest("[data-emoji]");
+  if (btn) copyEmoji(btn.dataset.emoji);
+});
 
 function render() {
   const query = searchInput.value.trim();
@@ -94,7 +93,6 @@ function render() {
       </section>`;
     }).join("");
     count.textContent = `${total} emoji`;
-    bindCopy();
     return;
   }
 
@@ -108,7 +106,6 @@ function render() {
       <h2>Results <span style="color:var(--ink-mute);font-weight:600">${filtered.length}</span></h2>
       <div class="emoji-grid">${filtered.map(r => cell(r.char)).join("")}</div>
     </section>`;
-    bindCopy();
   } else {
     sections.innerHTML = `<p class="board-empty">No emoji match “${esc(query)}”.</p>`;
   }

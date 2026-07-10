@@ -170,7 +170,53 @@
     <div id="sections"></div>
   </div>
 
-  <p class="section-sub" style="margin-top:16px">Click any emoji to copy it. It works offline once the page has loaded, and the full list is available as <a href="data/emoji.json">machine-readable JSON</a>.</p>
+  <p class="section-sub" style="margin-top:16px">Click any emoji to copy it. It works offline once the page has loaded, and the full list is available as <a href="data/emoji.json">JSON</a> and <a href="data/emoji.csv">CSV</a>.</p>
+
+  <section class="usecase-card" id="copy-groups" aria-labelledby="copy-groups-title">
+    <div class="usecase-head">
+      <p class="eyebrow">Curated copy groups</p>
+      <h2 id="copy-groups-title">Useful sets for hosting, billing, support, and security.</h2>
+      <p>These are small, conservative subsets of the reviewed list, grouped by the way WHMCS teams usually write product names, email subjects, and client-area labels.</p>
+    </div>
+    <div class="usecase-grid">
+      <section class="usecase-group">
+        <h3>Hosting</h3>
+        <button type="button" data-emoji="⚡️" aria-label="Copy fast setup emoji"><span>⚡️</span><strong>Fast setup</strong></button>
+        <button type="button" data-emoji="☁️" aria-label="Copy cloud hosting emoji"><span>☁️</span><strong>Cloud hosting</strong></button>
+        <button type="button" data-emoji="⚙️" aria-label="Copy managed service emoji"><span>⚙️</span><strong>Managed service</strong></button>
+        <button type="button" data-emoji="⏱" aria-label="Copy quick response emoji"><span>⏱</span><strong>Quick response</strong></button>
+        <button type="button" data-emoji="✅" aria-label="Copy ready emoji"><span>✅</span><strong>Ready</strong></button>
+        <button type="button" data-emoji="⭐️" aria-label="Copy featured plan emoji"><span>⭐️</span><strong>Featured plan</strong></button>
+      </section>
+      <section class="usecase-group">
+        <h3>Billing</h3>
+        <button type="button" data-emoji="✉️" aria-label="Copy invoice notice emoji"><span>✉️</span><strong>Invoice notice</strong></button>
+        <button type="button" data-emoji="⏰" aria-label="Copy renewal reminder emoji"><span>⏰</span><strong>Renewal reminder</strong></button>
+        <button type="button" data-emoji="✅" aria-label="Copy paid emoji"><span>✅</span><strong>Paid</strong></button>
+        <button type="button" data-emoji="⚖️" aria-label="Copy fair policy emoji"><span>⚖️</span><strong>Fair policy</strong></button>
+        <button type="button" data-emoji="➕" aria-label="Copy add-on emoji"><span>➕</span><strong>Add-on</strong></button>
+        <button type="button" data-emoji="#️⃣" aria-label="Copy invoice number emoji"><span>#️⃣</span><strong>Invoice number</strong></button>
+      </section>
+      <section class="usecase-group">
+        <h3>Support</h3>
+        <button type="button" data-emoji="☎️" aria-label="Copy phone support emoji"><span>☎️</span><strong>Phone support</strong></button>
+        <button type="button" data-emoji="✉️" aria-label="Copy email reply emoji"><span>✉️</span><strong>Email reply</strong></button>
+        <button type="button" data-emoji="ℹ️" aria-label="Copy update note emoji"><span>ℹ️</span><strong>Update note</strong></button>
+        <button type="button" data-emoji="❓" aria-label="Copy question emoji"><span>❓</span><strong>Question</strong></button>
+        <button type="button" data-emoji="✅" aria-label="Copy resolved emoji"><span>✅</span><strong>Resolved</strong></button>
+        <button type="button" data-emoji="☝️" aria-label="Copy next step emoji"><span>☝️</span><strong>Next step</strong></button>
+      </section>
+      <section class="usecase-group">
+        <h3>Security</h3>
+        <button type="button" data-emoji="✅" aria-label="Copy verified emoji"><span>✅</span><strong>Verified</strong></button>
+        <button type="button" data-emoji="⚠️" aria-label="Copy warning emoji"><span>⚠️</span><strong>Warning</strong></button>
+        <button type="button" data-emoji="⛔️" aria-label="Copy blocked emoji"><span>⛔️</span><strong>Blocked</strong></button>
+        <button type="button" data-emoji="㊙️" aria-label="Copy private note emoji"><span>㊙️</span><strong>Private note</strong></button>
+        <button type="button" data-emoji="⛓" aria-label="Copy secure link emoji"><span>⛓</span><strong>Secure link</strong></button>
+        <button type="button" data-emoji="☣️" aria-label="Copy malware risk emoji"><span>☣️</span><strong>Malware risk</strong></button>
+      </section>
+    </div>
+  </section>
 
   <div class="prose">
     <h2 id="why">🧩 Why emoji break in WHMCS</h2>
@@ -205,6 +251,15 @@
     </div>
     <p style="margin-top:16px">Even a safer emoji is worth a real test in your own stack before it goes into a billing-critical or support-critical message. The list here is a strong starting point, not a promise about your specific database, PHP version, and mail pipeline.</p>
 
+    <h2 id="reports">📸 Help build the failure gallery</h2>
+    <p>Real screenshots are the next thing that will make this guide more useful. If an emoji turns into question marks, an empty box, or a broken character in your WHMCS install, please share a report with enough context for someone else to learn from it.</p>
+    <div class="report-grid">
+      <div><strong>Where it broke</strong><span>Product name, received email, knowledge base article, announcement, client-area label, or admin note.</span></div>
+      <div><strong>Your stack</strong><span>WHMCS version, PHP version, database charset, and collation if you know them.</span></div>
+      <div><strong>Proof</strong><span>Before and after screenshots are ideal. Redact names, domains, invoice numbers, and customer details.</span></div>
+    </div>
+    <p>Use the <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report form</a>, or add screenshots to the open <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/6">render-failure collection issue</a>.</p>
+
     <h2 id="faq">💬 Questions people ask</h2>
     <h3>How does the search work?</h3>
     <p>Every emoji carries the official Unicode CLDR keywords (the same set that powers phone emoji keyboards) plus a curated layer of colors and concepts. So you can search by name (<code>heart</code>), by idea (<code>love</code>, <code>danger</code>, <code>zodiac</code>), or by color (<code>red</code>, <code>green</code>), and it still finds the right symbol if you make a typo like <code>hart</code> or <code>chekc</code>. It all runs in your browser, with no lookups sent anywhere.</p>
@@ -225,6 +280,7 @@
     <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide">Source on GitHub</a>
     <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues">Report an emoji</a>
     <a href="data/emoji.json">Dataset (JSON)</a>
+    <a href="data/emoji.csv">Dataset (CSV)</a>
     <span>MIT License</span>
   </div>
 </footer>

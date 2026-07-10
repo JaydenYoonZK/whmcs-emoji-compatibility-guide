@@ -3,6 +3,15 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## Unreleased
+
+### Added
+
+- A generated CSV export of the emoji dataset for spreadsheet use.
+- Curated copy groups for hosting, billing, support, and security content, built only from emoji already in the reviewed safe list.
+- A clearer screenshot-reporting checklist for real WHMCS render failures.
+- CI now checks that the CSV export is regenerated from the JSON source.
+
 ## [2.2.1] - 2026-07-10
 
 ### Added

@@ -12,10 +12,12 @@
     "reference"
   ],
   "scripts": {
+    "export:csv": "node scripts/export-csv.mjs",
     "test": "node --test test/search.test.mjs",
     "serve": "python3 -m http.server 8441 -d docs"
   },
   "files": [
+    "docs/data/emoji.csv",
     "docs/data/emoji.json",
     "docs/search.js",
     "LICENSE",

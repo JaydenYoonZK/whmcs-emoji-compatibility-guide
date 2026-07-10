@@ -32,6 +32,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
+      - run: npm run export:csv
+      - run: git diff --exit-code docs/data/emoji.csv
       - run: npm test
       - run: node --check docs/search.js
       - run: node --check docs/app.js
+      - run: node --check scripts/export-csv.mjs
