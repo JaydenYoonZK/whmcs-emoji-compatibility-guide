@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.3.12] - 2026-07-10
+
+### Fixed
+
+- The theme crossfade no longer stutters on phones. The browser's default crossfade blends the old and new page snapshots with a plus-lighter blend inside an isolated compositing group, which means two full-screen render passes every frame. Desktop GPUs absorb that, phone GPUs drop frames. The new page now sits fully opaque underneath while the old snapshot simply fades out above it, which reads identically on an opaque page and costs a single alpha layer. Decorative drift animations also pause for the half second the fade runs, freeing GPU headroom on mobile without any visible freeze.
+
 ## [2.3.11] - 2026-07-10
 
 ### Fixed
@@ -205,6 +211,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.3.12]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.12
 [2.3.11]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.11
 [2.3.10]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.10
 [2.3.9]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.9
