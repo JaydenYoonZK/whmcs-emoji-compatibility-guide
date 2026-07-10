@@ -1,4 +1,4 @@
-import { buildIndex, search as smartSearch } from "./search.js?v=20260711t";
+import { buildIndex, search as smartSearch } from "./search.js?v=20260711u";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
