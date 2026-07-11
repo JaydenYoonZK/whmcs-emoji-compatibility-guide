@@ -1,4 +1,4 @@
-import { buildIndex, normalizeCategories, search as smartSearch } from "./search.js?v=2.4.3";
+import { buildIndex, normalizeCategories, search as smartSearch } from "./search.js?v=2.4.4";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
