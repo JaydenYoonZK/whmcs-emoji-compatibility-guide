@@ -3,6 +3,13 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.11] - 2026-07-11
+
+### Fixed
+
+- The hero header now carries the full product name, WHMCS Emoji Compatibility Guide, matching the repository. The page title and social title follow.
+- The Copied toast looks right in light mode. It borrowed the light theme's deep text green as a background, which read as a murky pill with dark ink; it now wears the same chartreuse-with-dark-ink pairing as dark mode and the buttons.
+
 ## [2.4.10] - 2026-07-11
 
 ### Fixed
@@ -364,6 +371,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.11]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.11
 [2.4.10]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.10
 [2.4.9]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.9
 [2.4.8]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.8
