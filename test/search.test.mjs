@@ -106,6 +106,14 @@ test("exact word does not trigger a suggestion", () => {
   assert.equal(didYouMean(index, ["heart"]), null);
 });
 
+test("a glyph pasted without its variation selector still finds itself", () => {
+  const withSelector = index.items.find((item) => item.char.includes("\uFE0F"));
+  const bare = withSelector.char.replaceAll("\uFE0F", "");
+  const { results } = search(index, bare);
+  assert.equal(results.length, 1);
+  assert.equal(results[0].char, withSelector.char);
+});
+
 test("pasting an emoji glyph finds itself", () => {
   assert.ok(has(search(index, "⚠️"), "⚠️"));
 });

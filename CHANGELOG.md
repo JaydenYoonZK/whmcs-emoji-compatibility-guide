@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.1] - 2026-07-11
+
+### Fixed
+
+- Pasting an emoji without its variation selector now finds the entry. Plain-text sources often drop the U+FE0F presentation selector, and 136 of the 178 entries carry it, so glyph lookups ignore it on both sides of the comparison.
+
 ## [2.4.0] - 2026-07-11
 
 ### Added
@@ -304,6 +310,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.1]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.1
 [2.4.0]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.0
 [2.3.23]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.23
 [2.3.22]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.22

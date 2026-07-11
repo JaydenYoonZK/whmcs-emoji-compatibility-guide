@@ -141,7 +141,10 @@ export function search(index, query, { limit = 400 } = {}) {
   const safeLimit = Number.isInteger(limit) ? Math.max(0, Math.min(limit, items.length)) : Math.min(400, items.length);
   if (!raw) return { results: items.slice(0, safeLimit).map(i => ({ char: i.char, category: i.category, score: 0 })), suggestion: null, tokens: [] };
 
-  const direct = items.find(item => item.char === raw);
+  // Plain-text sources often drop the U+FE0F emoji presentation selector,
+  // and most stored entries carry it, so glyph lookups ignore it on both sides.
+  const bare = raw.replace(/\uFE0F/g, "");
+  const direct = bare && items.find(item => item.char === raw || item.char.replace(/\uFE0F/g, "") === bare);
   if (direct) return { results: [{ char: direct.char, category: direct.category, score: 100 }], suggestion: null, tokens: [raw] };
 
   const tokens = words(raw).filter(t => !STOP.has(t));
