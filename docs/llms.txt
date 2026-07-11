@@ -1,0 +1,16 @@
+# WHMCS Emoji Compatibility Guide
+
+> A searchable, conservative emoji shortlist for testing in WHMCS product names, emails, and knowledge base articles.
+
+## Tool
+
+- [WHMCS Emoji Compatibility Guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/): the tool itself, a static page that runs entirely in the browser with no accounts and no data collection
+
+## Documentation
+
+- [README](https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide#readme): what the tool does, how it works, and its engineering notes
+- [Changelog](https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/blob/main/CHANGELOG.md): dated release history
+
+## Source
+
+- [Repository](https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide): MIT licensed source code
