@@ -45,7 +45,7 @@ npm run serve   # http://localhost:8441
 npm test
 ```
 
-22 tests cover ranked search, punctuation, multi-term matching, typo suggestions, bounded inputs, dataset-profile integrity, CSV export integrity, and curated copy groups.
+23 tests cover ranked search, punctuation, multi-term matching, typo suggestions, glyph lookups with and without variation selectors, bounded inputs, dataset-profile integrity, CSV export integrity, and curated copy groups.
 
 ## Data contract
 

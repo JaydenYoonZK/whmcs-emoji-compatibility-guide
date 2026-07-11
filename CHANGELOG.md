@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.12] - 2026-07-11
+
+### Changed
+
+- Social sharing metadata carries explicit X and Twitter titles and descriptions, matching the other tools in the suite. The README's test summary reflects the current 23-test suite.
+
 ## [2.4.11] - 2026-07-11
 
 ### Fixed
@@ -371,6 +377,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.12]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.12
 [2.4.11]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.11
 [2.4.10]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.10
 [2.4.9]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.9
