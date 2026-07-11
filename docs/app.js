@@ -1,4 +1,4 @@
-import { buildIndex, search as smartSearch } from "./search.js?v=20260711x";
+import { buildIndex, normalizeCategories, search as smartSearch } from "./search.js?v=2.4.0";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -22,7 +22,7 @@ const FALLBACK = { categories: [
   ] }
 ]};
 
-let categories = FALLBACK.categories;
+let categories = normalizeCategories(FALLBACK.categories);
 let activeCat = "all";
 
 function normalizeEmoji(list) {
@@ -31,18 +31,22 @@ function normalizeEmoji(list) {
 }
 
 function copyEmoji(value) {
-  const done = () => {
-    toast.textContent = `Copied ${value}`;
+  const announce = (message) => {
+    toast.textContent = message;
     toast.classList.add("show");
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove("show"), 1300);
   };
+  const done = () => announce(`Copied ${value}`);
   const fallback = () => {
     // execCommand fallback for restricted clipboard contexts
     const ta = document.createElement("textarea");
     ta.value = value; document.body.appendChild(ta); ta.select();
-    try { document.execCommand("copy"); done(); } catch { /* ignore */ }
+    let copied = false;
+    try { copied = document.execCommand("copy"); } catch { /* report below */ }
     ta.remove();
+    if (copied) done();
+    else announce("Copy failed. Select the emoji and copy it manually.");
   };
   const writeText = navigator.clipboard?.writeText?.bind(navigator.clipboard);
   if (writeText) writeText(value).then(done).catch(fallback);
@@ -124,7 +128,8 @@ async function load() {
     const res = await fetch("data/emoji.json", { cache: "no-store" });
     if (res.ok) {
       const data = await res.json();
-      if (Array.isArray(data.categories) && data.categories.length) categories = data.categories;
+      const loaded = normalizeCategories(data.categories);
+      if (loaded.length) categories = loaded;
     }
   } catch { /* keep fallback */ }
   index = buildIndex(categories);

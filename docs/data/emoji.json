@@ -1,6 +1,22 @@
 {
   "name": "WHMCS Emoji Compatibility Guide",
-  "lastReviewed": "2026-07-07",
+  "lastReviewed": "2026-07-11",
+  "compatibilityProfile": {
+    "classification": "usually_safer_starting_point",
+    "allCodePointsInBmp": true,
+    "excludes": [
+      "emoji_zwj_sequences",
+      "emoji_modifier_sequences",
+      "regional_indicator_flags",
+      "supplementary_plane_code_points"
+    ],
+    "scope": "A conservative shortlist for testing in a specific WHMCS database, template, and mail pipeline. Inclusion is not a compatibility guarantee."
+  },
+  "sources": {
+    "whmcsLocalisation": "https://docs.whmcs.com/8-13/system/general-settings/general-settings-localisation/",
+    "mysqlUnicodeSets": "https://dev.mysql.com/doc/refman/8.4/en/charset-unicode-sets.html",
+    "unicodeEmoji": "https://www.unicode.org/reports/tr51/"
+  },
   "categories": [
     {
       "name": "Smileys & People",
@@ -411,25 +427,6 @@
           ]
         },
         {
-          "char": "⛹️‍♀️",
-          "name": "person with ball female sign",
-          "keywords": [
-            "athletic",
-            "ball",
-            "basketball",
-            "bouncing",
-            "championship",
-            "dribble",
-            "female",
-            "net",
-            "person",
-            "player",
-            "throw",
-            "with",
-            "woman"
-          ]
-        },
-        {
           "char": "⛹️",
           "name": "person with ball",
           "keywords": [
@@ -445,25 +442,6 @@
             "play",
             "player",
             "sport",
-            "throw",
-            "with"
-          ]
-        },
-        {
-          "char": "⛹️‍♂️",
-          "name": "person with ball male sign",
-          "keywords": [
-            "athletic",
-            "ball",
-            "basketball",
-            "bouncing",
-            "championship",
-            "dribble",
-            "male",
-            "man",
-            "net",
-            "person",
-            "player",
             "throw",
             "with"
           ]
@@ -2389,6 +2367,6 @@
       "Complex zero-width-joiner emoji sequences"
     ]
   },
-  "schema": 3,
-  "keywordSource": "Unicode CLDR annotations (en) plus Unicode names"
+  "schema": 4,
+  "keywordSource": "Unicode CLDR annotations (en), Unicode names, and curated search terms"
 }

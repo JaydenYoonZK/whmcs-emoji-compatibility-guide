@@ -19,8 +19,9 @@ The most useful reports include:
 For compatibility changes:
 
 1. Add only emoji you have tested in WHMCS.
-2. Keep categories alphabetized by section where practical.
-3. Include a short note in your pull request describing the test environment.
-4. Avoid adding flags, skin tone modifiers, and complex family/gender sequences unless you have clear proof they work in a real WHMCS environment.
+2. Keep the conservative profile free of supplementary-plane code points, regional flags, skin tone modifiers, and ZWJ sequences.
+3. Keep categories alphabetized by section where practical.
+4. Include a short note in your pull request describing the test environment.
+5. Run `npm run export:csv` and `npm test` before opening the pull request.
 
 Small, verified improvements are preferred over large untested dumps.
