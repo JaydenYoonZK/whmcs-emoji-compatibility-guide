@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.7] - 2026-07-11
+
+### Changed
+
+- Button shadows are lighter. The ground shadow under the 3D keys drops much of its opacity and trades its tight spread for a softer blur, so it reads as ambient light falloff instead of an ink block, and the hard edge tone eases slightly in both themes. The key geometry and travel are unchanged. README previews regenerated.
+
 ## [2.4.6] - 2026-07-11
 
 ### Added
@@ -340,6 +346,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.7]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.7
 [2.4.6]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.6
 [2.4.5]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.5
 [2.4.4]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.4
