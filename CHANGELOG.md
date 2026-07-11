@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.15] - 2026-07-11
+
+### Added
+
+- A branded 404 page. Broken or mistyped links now land on a page in the full design, with a note written in the tool's own voice, a chartreuse key back to the tool, and a grid linking the six sibling tools. GitHub Pages serves it automatically for any missing path, and search engines are told not to index it.
+
 ## [2.4.14] - 2026-07-11
 
 ### Added
@@ -389,6 +395,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.15]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.15
 [2.4.14]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.14
 [2.4.13]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.13
 [2.4.12]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.12
