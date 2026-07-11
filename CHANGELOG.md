@@ -3,6 +3,29 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.0] - 2026-07-11
+
+### Added
+
+- JSON schema 4 declares a machine-readable compatibility profile and its exclusions.
+- The CSV export includes a conservative compatibility rating, sequence type, and Unicode code points for every entry.
+- Search regression coverage includes punctuation, strict multi-term matching, bounded results, malformed reusable input, and multi-word typo correction.
+- Private security reporting is linked from the issue chooser.
+
+### Changed
+
+- The shortlist contains 178 entries and excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane code points.
+- Search requires every meaningful query term to match instead of returning unrelated partial matches.
+- Multi-word spelling suggestions preserve terms that were already correct.
+- Compatibility documentation now separates MySQL storage limits from Unicode sequence rendering and cites primary sources.
+- CI covers Node.js 20, 22, and 24 on Linux, with Windows and macOS jobs retained.
+
+### Fixed
+
+- Clipboard fallback no longer reports success when the browser's copy command returns false.
+- Punctuation around search terms no longer creates misleading fuzzy suggestions.
+- Invalid categories and entries are skipped safely by the reusable search index.
+
 ## [2.3.23] - 2026-07-11
 
 ### Fixed
@@ -281,6 +304,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.0]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.0
 [2.3.23]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.23
 [2.3.22]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.22
 [2.3.21]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.3.21

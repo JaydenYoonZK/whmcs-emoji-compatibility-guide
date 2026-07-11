@@ -6,12 +6,12 @@
   <!-- The only request is this page's own emoji dataset, so connect-src is
        limited to same-origin and nothing can be sent anywhere else. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
-  <title>WHMCS Emoji Guide: copy-paste-safe emoji for client-facing content</title>
-  <meta name="description" content="A tested reference of emoji that survive WHMCS product names, email templates, and knowledge base articles, with a searchable browser copy board. Runs in your browser.">
+  <title>WHMCS Emoji Guide: a conservative shortlist for client-facing content</title>
+  <meta name="description" content="A searchable shortlist of older, structurally simpler emoji to test in WHMCS product names, email templates, and knowledge base articles.">
   <link rel="canonical" href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='36'%3E%E2%9C%93%3C/text%3E%3C/svg%3E">
-  <meta property="og:title" content="WHMCS Emoji Guide: copy-paste-safe emoji for client-facing content">
-  <meta property="og:description" content="Emoji that survive WHMCS product names, email templates, and knowledge base articles, with a searchable copy board.">
+  <meta property="og:title" content="WHMCS Emoji Guide: a conservative shortlist for client-facing content">
+  <meta property="og:description" content="Search and copy older, structurally simpler emoji, then test them in your own WHMCS stack.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">
   <meta property="og:image" content="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/assets/preview.png">
@@ -24,7 +24,7 @@
       document.documentElement.dataset.theme = t;
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260711x">
+  <link rel="stylesheet" href="styles.css?v=2.4.0">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -176,7 +176,7 @@
     <div class="search-wrap">
       <span class="mag">🔍</span>
       <label for="search" class="sr-only">Search emoji</label>
-      <input id="search" type="search" placeholder="Search by name, concept, or color, for example: love, danger, red, arrow..." spellcheck="false" autocomplete="off">
+      <input id="search" type="search" maxlength="256" aria-describedby="board-scope" placeholder="Search by name, concept, or color, for example: love, danger, red, arrow..." spellcheck="false" autocomplete="off">
       <button id="search-clear" class="search-clear" type="button" aria-label="Clear search" hidden data-tip="Clear the search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg></button>
     </div>
     <div class="board-toolbar">
@@ -187,7 +187,7 @@
     <div id="sections"></div>
   </div>
 
-  <p class="section-sub" style="margin-top:16px">Click any emoji to copy it. It works offline once the page has loaded, and the full list is available as <a href="data/emoji.json">JSON</a> and <a href="data/emoji.csv">CSV</a>.</p>
+  <p class="section-sub" id="board-scope" style="margin-top:16px">Click any emoji to copy it. The 178-entry shortlist excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane code points. Inclusion means usually safer to test, not guaranteed compatible. The full profile is available as <a href="data/emoji.json">JSON</a> and <a href="data/emoji.csv">CSV</a>.</p>
 
   <section class="usecase-card" id="copy-groups" aria-labelledby="copy-groups-title">
     <div class="usecase-head">
@@ -239,11 +239,11 @@
     <h2 id="why">🧩 Why emoji break in WHMCS</h2>
     <p>An emoji is one or more Unicode code points, and every layer between your keyboard and your customer's screen has to agree on how to store and display them. In a WHMCS stack there are several layers that often disagree:</p>
     <ul>
-      <li><strong>The database.</strong> Older installs use the <code>utf8</code> MySQL charset, which despite the name only stores three bytes per character and cannot hold most emoji. The full set needs <code>utf8mb4</code>. Save a four-byte emoji into a three-byte column and it becomes <code>????</code> or is truncated on the spot.</li>
+      <li><strong>The database.</strong> MySQL's three-byte UTF-8 character set stores Basic Multilingual Plane code points but not supplementary-plane characters used by most modern emoji. Those characters require <code>utf8mb4</code>. WHMCS also documents an extended-character setting that should only be changed when the connection and table collation use <code>utf8mb4</code>.</li>
       <li><strong>Email.</strong> A template may render fine in the admin preview, then arrive in a mail client that substitutes a tofu box for a symbol it does not have a glyph for.</li>
       <li><strong>Age.</strong> Newer emoji from recent Unicode releases are simply unknown to older systems, which fall back to a placeholder.</li>
     </ul>
-    <p>The failure is quiet. The admin area looks fine, the customer sees a broken box, and nobody notices until a client mentions it. The safest emoji are the older, simpler, single-code-point symbols that every layer has understood for years, and that is what the copy board above is filtered to.</p>
+    <p>The failure can be quiet: a value may save differently from how it previewed, or an email client may lack the requested glyph. This board narrows the test set by excluding supplementary-plane characters, ZWJ sequences, skin tone modifiers, and regional flags. It still includes standard variation and keycap sequences, so saving, reloading, and checking the received email remain essential.</p>
 
     <h2 id="compat">✅ What tends to work, and what does not</h2>
     <div class="notes-grid">
@@ -267,6 +267,7 @@
       </div>
     </div>
     <p style="margin-top:16px">Even a safer emoji is worth a real test in your own stack before it goes into a billing-critical or support-critical message. The list here is a strong starting point, not a promise about your specific database, PHP version, and mail pipeline.</p>
+    <p>Technical references: <a href="https://docs.whmcs.com/8-13/system/general-settings/general-settings-localisation/">WHMCS localisation settings</a>, <a href="https://dev.mysql.com/doc/refman/8.4/en/charset-unicode-sets.html">MySQL Unicode character sets</a>, and <a href="https://www.unicode.org/reports/tr51/">Unicode Emoji, UTS #51</a>.</p>
 
     <h2 id="reports">📸 Help build the failure gallery</h2>
     <p>Real screenshots are the next thing that will make this guide more useful. If an emoji turns into question marks, an empty box, or a broken character in your WHMCS install, please share a report with enough context for someone else to learn from it.</p>
@@ -281,13 +282,13 @@
     <h3>How does the search work?</h3>
     <p>Every emoji carries the official Unicode CLDR keywords (the same set that powers phone emoji keyboards) plus a curated layer of colors and concepts. So you can search by name (<code>heart</code>), by idea (<code>love</code>, <code>danger</code>, <code>zodiac</code>), or by color (<code>red</code>, <code>green</code>), and it still finds the right symbol if you make a typo like <code>hart</code> or <code>chekc</code>. It all runs in your browser, with no lookups sent anywhere.</p>
     <h3>How were these chosen?</h3>
-    <p>They are drawn from the older, widely-supported Unicode ranges that predate the four-byte emoji explosion, the symbols that render consistently across old and new systems. The list is reviewed by hand rather than generated wholesale, which is why it is deliberately conservative.</p>
+    <p>They are drawn from older Unicode ranges and checked against a documented structural profile. Every entry uses Basic Multilingual Plane code points, and the list excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane characters. That reduces common compatibility risks, but only a save-and-reload test in your own stack can establish compatibility.</p>
     <h3>My emoji still broke. What now?</h3>
-    <p>The most common cause is a database still on <code>utf8</code> instead of <code>utf8mb4</code>. Converting the relevant tables and the connection charset fixes the majority of cases. If it renders in the database but breaks in email, the mail client is the likely culprit, and a plainer symbol is the safe move.</p>
+    <p>Check the exact value after saving and reloading, then inspect the database connection charset and the relevant column or table collation. For supplementary-plane characters, WHMCS documents <code>utf8mb4</code> requirements. If the stored value is intact but the received email differs, test a plainer symbol and compare mail clients.</p>
     <h3>Can I contribute an emoji that works, or one that breaks?</h3>
     <p>Yes, and real test reports are the most valuable thing here. Open an <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report</a> with the emoji, your WHMCS and PHP versions, your database charset, and where you tested it.</p>
     <h3>Is this only for WHMCS?</h3>
-    <p>The compatibility rules apply to any older PHP and MySQL stack, so the list is useful well beyond WHMCS. The framing is WHMCS because that is where product names, email templates, and client-area labels make the breakage most visible to paying customers.</p>
+    <p>The Unicode storage and rendering principles are broader than WHMCS, but this shortlist and its reporting fields are organized around WHMCS product names, templates, email, and client-area content.</p>
   </div>
 </main>
 
@@ -304,6 +305,6 @@
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <button id="to-top" class="to-top" type="button" aria-label="Back to top">&#8593;</button>
-<script type="module" src="app.js?v=20260711x"></script>
+<script type="module" src="app.js?v=2.4.0"></script>
 </body>
 </html>

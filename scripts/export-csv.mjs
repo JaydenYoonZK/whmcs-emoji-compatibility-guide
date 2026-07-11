@@ -5,10 +5,23 @@ const rows = [[
   "emoji",
   "name",
   "category",
-  "safety_rating",
+  "compatibility_rating",
+  "sequence_type",
+  "code_points",
   "notes",
   "keywords"
 ]];
+
+function codePoints(value) {
+  return [...value].map(char => `U+${char.codePointAt(0).toString(16).toUpperCase().padStart(4, "0")}`);
+}
+
+function sequenceType(value) {
+  const points = codePoints(value);
+  if (points.includes("U+20E3")) return "keycap_sequence";
+  if (points.includes("U+FE0F")) return "variation_sequence";
+  return points.length === 1 ? "single_code_point" : "combining_sequence";
+}
 
 for (const category of data.categories) {
   for (const entry of category.emoji) {
@@ -17,8 +30,10 @@ for (const category of data.categories) {
       emoji.char,
       emoji.name || "",
       category.name,
-      "usually_safe",
-      "Curated older Unicode symbol; test in your own WHMCS stack before billing-critical use.",
+      "usually_safer",
+      sequenceType(emoji.char),
+      codePoints(emoji.char).join(" "),
+      "Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",
       (emoji.keywords || []).join("; ")
     ]);
   }

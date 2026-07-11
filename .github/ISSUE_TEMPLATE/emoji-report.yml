@@ -62,6 +62,6 @@ body:
     id: details
     attributes:
       label: Details
-      description: Add screenshots, reproduction notes, or template/database details.
+      description: Add screenshots, save-and-reload results, mail-client results, or template and database details. Redact customer and account information.
     validations:
       required: false
