@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.17] - 2026-07-12
+
+### Added
+
+- The tool now works offline. A small service worker caches the page shell on the first visit, answers repeat visits from cache while refreshing in the background, and drops old caches on every release. Since the tool runs entirely in the browser, everything keeps working with no connection at all, and the privacy note now says so.
+
 ## [2.4.16] - 2026-07-11
 
 ### Changed
@@ -401,6 +407,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.17]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.17
 [2.4.16]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.16
 [2.4.15]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.15
 [2.4.14]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.14
