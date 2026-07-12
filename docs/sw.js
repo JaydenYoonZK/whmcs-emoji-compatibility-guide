@@ -3,7 +3,7 @@
    requests pass through untouched so live lookups stay live. The cache name
    carries the release version and old caches are dropped on activate. */
 
-const VERSION = "?v=2.4.18";
+const VERSION = "?v=2.4.19";
 const CACHE = "whmcs-emoji-compatibility-guide-" + VERSION;
 const SHELL = [
   "./",
