@@ -1,3 +1,4 @@
+/*! WHMCS Emoji Compatibility Guide | Copyright (c) 2026 Jayden Yoon ZK | MIT License | https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide */
 /**
  * Smart emoji search: concept, color, and synonym matching with typo
  * tolerance and did-you-mean suggestions. Pure functions, no DOM, no

@@ -1,9 +1,10 @@
+/*! WHMCS Emoji Compatibility Guide | Copyright (c) 2026 Jayden Yoon ZK | MIT License | https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide */
 /* Offline support. The shell is precached at install, same-origin requests
    are answered from cache and refreshed in the background, and cross-origin
    requests pass through untouched so live lookups stay live. The cache name
    carries the release version and old caches are dropped on activate. */
 
-const VERSION = "?v=2.4.19";
+const VERSION = "?v=2.4.20";
 const CACHE = "whmcs-emoji-compatibility-guide-" + VERSION;
 const SHELL = [
   "./",
