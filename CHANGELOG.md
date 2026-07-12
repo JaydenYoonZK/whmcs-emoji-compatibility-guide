@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.27] - 2026-07-12
+
+### Added
+
+- The navigation bar lifts with a soft, tight shadow once the page scrolls beneath it, and sits flush again at the top. Each theme carries its own tint.
+
 ## [2.4.26] - 2026-07-12
 
 ### Added
@@ -472,6 +478,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.27]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.27
 [2.4.26]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.26
 [2.4.25]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.25
 [2.4.24]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.24
