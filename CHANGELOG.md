@@ -3,6 +3,17 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.24] - 2026-07-12
+
+### Added
+
+- The FAQ is a set of full-width accordions now, each question carrying a plus that turns into a close mark as the answer unfolds, with the state exposed to keyboards and screen readers.
+- The page carries an emoji-and-tofu scene beside the why-emoji-break section, so sections close at the full width instead of trailing off empty on the right.
+
+### Changed
+
+- Result chips grow to close each row, the seam between the tool and the prose is tighter, and loose paragraphs run the full section width.
+
 ## [2.4.23] - 2026-07-12
 
 ### Fixed
@@ -444,6 +455,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.24]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.24
 [2.4.23]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.23
 [2.4.22]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.22
 [2.4.21]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.21

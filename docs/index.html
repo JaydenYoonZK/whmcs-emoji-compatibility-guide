@@ -28,7 +28,7 @@
       document.documentElement.dataset.theme = t;
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=2.4.23">
+  <link rel="stylesheet" href="styles.css?v=2.4.24">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -242,13 +242,42 @@
 
   <div class="prose">
     <h2 id="why">🧩 Why emoji break in WHMCS</h2>
-    <p>An emoji is one or more Unicode code points, and every layer between your keyboard and your customer's screen has to agree on how to store and display them. In a WHMCS stack there are several layers that often disagree:</p>
+    <div class="why-split">
+      <div>
+        <p>An emoji is one or more Unicode code points, and every layer between your keyboard and your customer's screen has to agree on how to store and display them. In a WHMCS stack there are several layers that often disagree:</p>
     <ul>
       <li><strong>The database.</strong> MySQL's three-byte UTF-8 character set stores Basic Multilingual Plane code points but not supplementary-plane characters used by most modern emoji. Those characters require <code>utf8mb4</code>. WHMCS also documents an extended-character setting that should only be changed when the connection and table collation use <code>utf8mb4</code>.</li>
       <li><strong>Email.</strong> A template may render fine in the admin preview, then arrive in a mail client that substitutes a tofu box for a symbol it does not have a glyph for.</li>
       <li><strong>Age.</strong> Newer emoji from recent Unicode releases are simply unknown to older systems, which fall back to a placeholder.</li>
     </ul>
     <p>The failure can be quiet: a value may save differently from how it previewed, or an email client may lack the requested glyph. This board narrows the test set by excluding supplementary-plane characters, ZWJ sequences, skin tone modifiers, and regional flags. It still includes standard variation and keycap sequences, so saving, reloading, and checking the received email remain essential.</p>
+      </div>
+      <svg class="why-art" viewBox="16 30 268 128" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="var(--line-strong)" fill="var(--panel)" stroke-width="2">
+          <rect x="34" y="76" width="56" height="62" rx="12"/>
+          <rect x="106" y="76" width="56" height="62" rx="12"/>
+        </g>
+        <text x="62" y="118" font-size="30" text-anchor="middle">😀</text>
+        <text x="134" y="118" font-size="30" text-anchor="middle">✅</text>
+        <rect x="178" y="76" width="56" height="62" rx="12" fill="var(--accent-soft)" fill-opacity="0.5" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 6">
+          <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="1.6s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="196" y="92" width="20" height="28" rx="3" fill="none" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <g fill="var(--accent)">
+          <path d="M256 40 L259 48 L267 51 L259 54 L256 62 L253 54 L245 51 L253 48 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.5s" repeatCount="indefinite"/>
+          </path>
+          <path d="M46 44 L48.4 50.4 L54.8 53 L48.4 55.6 L46 62 L43.6 55.6 L37.2 53 L43.6 50.4 Z">
+            <animate attributeName="opacity" values="1;0.15;1" dur="4.2s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="258" cy="128" r="3">
+            <animate attributeName="opacity" values="0.9;0.25;0.9" dur="3s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg>
+    </div>
+
+    
 
     <h2 id="compat">✅ What tends to work, and what does not</h2>
     <div class="notes-grid">
@@ -272,29 +301,52 @@
       </div>
     </div>
     <p style="margin-top:16px">Even a safer emoji is worth a real test in your own stack before it goes into a billing-critical or support-critical message. The list here is a strong starting point, not a promise about your specific database, PHP version, and mail pipeline.</p>
-    <p>Technical references: <a href="https://docs.whmcs.com/8-13/system/general-settings/general-settings-localisation/">WHMCS localisation settings</a>, <a href="https://dev.mysql.com/doc/refman/8.4/en/charset-unicode-sets.html">MySQL Unicode character sets</a>, and <a href="https://www.unicode.org/reports/tr51/">Unicode Emoji, UTS #51</a>.</p>
+    <p class="full-measure">Technical references: <a href="https://docs.whmcs.com/8-13/system/general-settings/general-settings-localisation/">WHMCS localisation settings</a>, <a href="https://dev.mysql.com/doc/refman/8.4/en/charset-unicode-sets.html">MySQL Unicode character sets</a>, and <a href="https://www.unicode.org/reports/tr51/">Unicode Emoji, UTS #51</a>.</p>
 
     <h2 id="reports">📸 Help build the failure gallery</h2>
-    <p>Real screenshots are the next thing that will make this guide more useful. If an emoji turns into question marks, an empty box, or a broken character in your WHMCS install, please share a report with enough context for someone else to learn from it.</p>
+    <p class="full-measure">Real screenshots are the next thing that will make this guide more useful. If an emoji turns into question marks, an empty box, or a broken character in your WHMCS install, please share a report with enough context for someone else to learn from it.</p>
     <div class="report-grid">
       <div><strong>Where it broke</strong><span>Product name, received email, knowledge base article, announcement, client-area label, or admin note.</span></div>
       <div><strong>Your stack</strong><span>WHMCS version, PHP version, database charset, and collation if you know them.</span></div>
       <div><strong>Proof</strong><span>Before and after screenshots are ideal. Redact names, domains, invoice numbers, and customer details.</span></div>
     </div>
-    <p>Use the <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report form</a>, or add screenshots to the open <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/6">render-failure collection issue</a>.</p>
+    <p class="full-measure">Use the <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report form</a>, or add screenshots to the open <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/6">render-failure collection issue</a>.</p>
 
     <h2 id="faq">💬 Questions people ask</h2>
-    <h3>How does the search work?</h3>
-    <p>Every emoji carries the official Unicode CLDR keywords (the same set that powers phone emoji keyboards) plus a curated layer of colors and concepts. So you can search by name (<code>heart</code>), by idea (<code>love</code>, <code>danger</code>, <code>zodiac</code>), or by color (<code>red</code>, <code>green</code>), and it still finds the right symbol if you make a typo like <code>hart</code> or <code>chekc</code>. It all runs in your browser, with no lookups sent anywhere.</p>
-    <h3>How were these chosen?</h3>
-    <p>They are drawn from older Unicode ranges and checked against a documented structural profile. Every entry uses Basic Multilingual Plane code points, and the list excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane characters. That reduces common compatibility risks, but only a save-and-reload test in your own stack can establish compatibility.</p>
-    <h3>My emoji still broke. What now?</h3>
-    <p>Check the exact value after saving and reloading, then inspect the database connection charset and the relevant column or table collation. For supplementary-plane characters, WHMCS documents <code>utf8mb4</code> requirements. If the stored value is intact but the received email differs, test a plainer symbol and compare mail clients.</p>
-    <h3>Can I contribute an emoji that works, or one that breaks?</h3>
-    <p>Yes, and real test reports are the most valuable thing here. Open an <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report</a> with the emoji, your WHMCS and PHP versions, your database charset, and where you tested it.</p>
-    <h3>Is this only for WHMCS?</h3>
-    <p>The Unicode storage and rendering principles are broader than WHMCS, but this shortlist and its reporting fields are organized around WHMCS product names, templates, email, and client-area content.</p>
-  </div>
+    <div class="faq">
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b1" aria-expanded="false" aria-controls="faq-a1"><span>How does the search work?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-b1">
+          <div class="faq-a-inner"><p>Every emoji carries the official Unicode CLDR keywords (the same set that powers phone emoji keyboards) plus a curated layer of colors and concepts. So you can search by name (<code>heart</code>), by idea (<code>love</code>, <code>danger</code>, <code>zodiac</code>), or by color (<code>red</code>, <code>green</code>), and it still finds the right symbol if you make a typo like <code>hart</code> or <code>chekc</code>. It all runs in your browser, with no lookups sent anywhere.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b2" aria-expanded="false" aria-controls="faq-a2"><span>How were these chosen?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-b2">
+          <div class="faq-a-inner"><p>They are drawn from older Unicode ranges and checked against a documented structural profile. Every entry uses Basic Multilingual Plane code points, and the list excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane characters. That reduces common compatibility risks, but only a save-and-reload test in your own stack can establish compatibility.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b3" aria-expanded="false" aria-controls="faq-a3"><span>My emoji still broke. What now?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-b3">
+          <div class="faq-a-inner"><p>Check the exact value after saving and reloading, then inspect the database connection charset and the relevant column or table collation. For supplementary-plane characters, WHMCS documents <code>utf8mb4</code> requirements. If the stored value is intact but the received email differs, test a plainer symbol and compare mail clients.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b4" aria-expanded="false" aria-controls="faq-a4"><span>Can I contribute an emoji that works, or one that breaks?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-b4">
+          <div class="faq-a-inner"><p>Yes, and real test reports are the most valuable thing here. Open an <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report</a> with the emoji, your WHMCS and PHP versions, your database charset, and where you tested it.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b5" aria-expanded="false" aria-controls="faq-a5"><span>Is this only for WHMCS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-b5">
+          <div class="faq-a-inner"><p>The Unicode storage and rendering principles are broader than WHMCS, but this shortlist and its reporting fields are organized around WHMCS product names, templates, email, and client-area content.</p></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
 </main>
 
 <footer>
@@ -313,6 +365,6 @@
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <button id="to-top" class="to-top" type="button" aria-label="Back to top">&#8593;</button>
-<script type="module" src="app.js?v=2.4.23"></script>
+<script type="module" src="app.js?v=2.4.24"></script>
 </body>
 </html>
