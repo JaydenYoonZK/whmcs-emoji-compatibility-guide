@@ -28,7 +28,7 @@
       document.documentElement.dataset.theme = t;
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=2.4.24">
+  <link rel="stylesheet" href="styles.css?v=2.4.25">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,6 +110,7 @@
     <a href="#why">Why it breaks</a>
     <a href="#compat">Compatibility</a>
     <a href="#faq">FAQ</a>
+      <a href="#why-built">Story</a>
     </div>
   </div>
 </nav>
@@ -197,7 +198,7 @@
   <section class="usecase-card" id="copy-groups" aria-labelledby="copy-groups-title">
     <div class="usecase-head">
       <p class="eyebrow">Curated copy groups</p>
-      <h2 id="copy-groups-title">Useful sets for hosting, billing, support, and security.</h2>
+      <h2 id="copy-groups-title">🧰 Useful sets for hosting, billing, support, and security.</h2>
       <p>These are small, conservative subsets of the reviewed list, grouped by the way WHMCS teams usually write product names, email subjects, and client-area labels.</p>
     </div>
     <div class="usecase-grid">
@@ -312,7 +313,7 @@
     </div>
     <p class="full-measure">Use the <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/new/choose">emoji report form</a>, or add screenshots to the open <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/issues/6">render-failure collection issue</a>.</p>
 
-    <h2 id="faq">💬 Questions people ask</h2>
+    <h2 id="faq">💬 Frequently asked questions</h2>
     <div class="faq">
       <div class="faq-item">
         <h3 class="faq-q"><button type="button" id="faq-b1" aria-expanded="false" aria-controls="faq-a1"><span>How does the search work?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
@@ -346,6 +347,37 @@
       </div>
     </div>
 
+    <h2 id="why-built">🌱 Why I built this</h2>
+    <div class="why-split story-split">
+      <div>
+        <p>Working around WHMCS, I watched an emoji ship in a product name, survive the order form, and arrive in the invoice email as question marks. Whether a character survives depends on layers most people never look at. I kept notes on what worked, and this guide is those notes, cleaned up and published.</p>
+      </div>
+      <svg class="why-art art-sprout" viewBox="79 62 180 198" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <animateTransform attributeName="transform" type="rotate" values="-1.6 170 196; 1.6 170 196; -1.6 170 196" dur="6s" repeatCount="indefinite"/>
+          <path d="M170 190 C169 168 172 150 170 128" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M170 158 C150 154 138 140 136 122 C156 124 168 138 170 158 Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M170 138 C190 132 200 118 202 100 C182 102 172 116 170 138 Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+        </g>
+        <path d="M128 190 L212 190 L202 244 C201 250 196 254 190 254 L150 254 C144 254 139 250 138 244 Z" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <rect x="122" y="184" width="96" height="14" rx="7" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-width="2"/>
+        <g fill="var(--accent)">
+          <path d="M96 96 L99 104 L107 107 L99 110 L96 118 L93 110 L85 107 L93 104 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.6s" repeatCount="indefinite"/>
+          </path>
+          <path d="M244 70 L246.4 76.4 L252.8 79 L246.4 81.6 L244 88 L241.6 81.6 L235.2 79 L241.6 76.4 Z">
+            <animate attributeName="opacity" values="1;0.15;1" dur="4.4s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="222" cy="150" r="3">
+            <animate attributeName="opacity" values="0.25;0.9;0.25" dur="2.9s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="118" cy="146" r="3">
+            <animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.7s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg>
+    </div>
+
     </div>
 </main>
 
@@ -365,6 +397,6 @@
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <button id="to-top" class="to-top" type="button" aria-label="Back to top">&#8593;</button>
-<script type="module" src="app.js?v=2.4.24"></script>
+<script type="module" src="app.js?v=2.4.25"></script>
 </body>
 </html>
