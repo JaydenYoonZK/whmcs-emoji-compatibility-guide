@@ -77,6 +77,7 @@ emoji,name,category,compatibility_rating,sequence_type,code_points,notes,keyword
 ♊️,gemini,Symbols,usually_safer,variation_sequence,U+264A U+FE0F,"Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",astrology; gemini; horoscope; twins; zodiac
 ♋️,cancer,Symbols,usually_safer,variation_sequence,U+264B U+FE0F,"Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",astrology; cancer; crab; horoscope; zodiac
 ♌️,leo,Symbols,usually_safer,variation_sequence,U+264C U+FE0F,"Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",astrology; horoscope; leo; lion; zodiac
+♍️,virgo,Symbols,usually_safer,variation_sequence,U+264D U+FE0F,"Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",astrology; horoscope; maiden; virgo; zodiac
 ♎️,libra,Symbols,usually_safer,variation_sequence,U+264E U+FE0F,"Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",astrology; balance; horoscope; justice; libra; scales; zodiac
 ♏️,scorpius,Symbols,usually_safer,variation_sequence,U+264F U+FE0F,"Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",astrology; horoscope; scorpio; scorpion; scorpius; zodiac
 ♐️,sagittarius,Symbols,usually_safer,variation_sequence,U+2650 U+FE0F,"Conservative BMP-only shortlist; test in your own WHMCS database, template, and mail pipeline.",archer; astrology; horoscope; sagittarius; zodiac

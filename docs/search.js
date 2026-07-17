@@ -138,14 +138,19 @@ const STOP = new Set(["a", "an", "the", "of", "with", "and", "or", "for", "emoji
  */
 export function search(index, query, { limit = 400 } = {}) {
   const items = Array.isArray(index?.items) ? index.items : [];
-  const raw = String(query ?? "").normalize("NFKC").trim().toLowerCase().slice(0, MAX_QUERY_LENGTH);
+  // The glyph lookup compares against the raw pasted text: NFKC decomposes a
+  // handful of stored emoji (e.g. the enclosed ideographs \u3299\uFE0F -> \u79D8\uFE0F, \u203C\uFE0F -> !!\uFE0F),
+  // so normalizing before the char compare would make those safe emoji
+  // un-findable by paste. NFKC is applied only to the token/name path below.
+  const original = String(query ?? "").trim().slice(0, MAX_QUERY_LENGTH);
+  const raw = original.normalize("NFKC").toLowerCase();
   const safeLimit = Number.isInteger(limit) ? Math.max(0, Math.min(limit, items.length)) : Math.min(400, items.length);
   if (!raw) return { results: items.slice(0, safeLimit).map(i => ({ char: i.char, category: i.category, score: 0 })), suggestion: null, tokens: [] };
 
   // Plain-text sources often drop the U+FE0F emoji presentation selector,
   // and most stored entries carry it, so glyph lookups ignore it on both sides.
-  const bare = raw.replace(/\uFE0F/g, "");
-  const direct = bare && items.find(item => item.char === raw || item.char.replace(/\uFE0F/g, "") === bare);
+  const bareGlyph = original.replace(/\uFE0F/g, "");
+  const direct = bareGlyph && items.find(item => item.char === original || item.char.replace(/\uFE0F/g, "") === bareGlyph);
   if (direct) return { results: [{ char: direct.char, category: direct.category, score: 100 }], suggestion: null, tokens: [raw] };
 
   const tokens = words(raw).filter(t => !STOP.has(t));
@@ -190,12 +195,22 @@ export function didYouMean(index, tokens) {
   let changed = false;
   const corrected = tokens.map((t) => {
     if (known.has(t) || t.length < 3) return t;
-    let best = null, bestD = Infinity;
+    let best = null, bestD = Infinity, bestAff = -1;
     const cap = Math.max(2, fuzzyCap(t.length));
+    // shared leading + trailing characters with the token: among words at the
+    // same edit distance this prefers the one that keeps more of the stem, so
+    // "hart" suggests "heart" (shares the "art" tail) over "hat"
+    const affinity = (w) => {
+      let p = 0; while (p < w.length && p < t.length && w[p] === t[p]) p++;
+      let s = 0; while (s < w.length - p && s < t.length - p && w[w.length - 1 - s] === t[t.length - 1 - s]) s++;
+      return p + s;
+    };
     for (const word of vocab) {
       if (Math.abs(word.length - t.length) > cap) continue;
       const d = editDistance(t, word, cap);
-      if (d > 0 && d <= cap && d < bestD) { bestD = d; best = word; }
+      if (d <= 0 || d > cap) continue;
+      const aff = affinity(word);
+      if (d < bestD || (d === bestD && aff > bestAff)) { bestD = d; best = word; bestAff = aff; }
     }
     if (best) changed = true;
     return best || t;

@@ -4,7 +4,7 @@
    requests pass through untouched so live lookups stay live. The cache name
    carries the release version and old caches are dropped on activate. */
 
-const VERSION = "?v=2.4.32";
+const VERSION = "?v=2.4.33";
 const CACHE = "whmcs-emoji-compatibility-guide-" + VERSION;
 const SHELL = [
   "./",
@@ -13,7 +13,7 @@ const SHELL = [
   "styles.css" + VERSION,
   "app.js" + VERSION,
   "search.js" + VERSION,
-  "data/emoji.json" + VERSION,
+  "data/emoji.json",
   "data/emoji.csv",
 ];
 

@@ -1,5 +1,5 @@
 /*! WHMCS Emoji Compatibility Guide | Copyright (c) 2026 Jayden Yoon ZK | MIT License | https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide */
-import { buildIndex, normalizeCategories, search as smartSearch } from "./search.js?v=2.4.32";
+import { buildIndex, normalizeCategories, search as smartSearch } from "./search.js?v=2.4.33";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -177,7 +177,8 @@ themeToggle.addEventListener("click", () => {
     const vt = document.startViewTransition(() => {
       const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
       document.documentElement.dataset.theme = next;
-      localStorage.setItem("theme", next);
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", next === "light" ? "#f6f4ee" : "#0d0c0a");
+      try { localStorage.setItem("theme", next); } catch { /* storage may be blocked */ }
       syncThemeIcon();
     });
     vt.finished.finally(() => document.documentElement.classList.remove("vt-active"));
@@ -188,10 +189,22 @@ themeToggle.addEventListener("click", () => {
   themeFadeTimer = setTimeout(() => document.documentElement.classList.remove("theme-fading"), 500);
   const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
   document.documentElement.dataset.theme = next;
-  localStorage.setItem("theme", next);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", next === "light" ? "#f6f4ee" : "#0d0c0a");
+  try { localStorage.setItem("theme", next); } catch { /* storage may be blocked */ }
   syncThemeIcon();
 });
 syncThemeIcon();
+
+// SMIL animations are not covered by CSS reduced-motion rules, pause them.
+const svgMotion = matchMedia("(prefers-reduced-motion: reduce)");
+function applyReducedMotion() {
+  document.querySelectorAll("svg").forEach((el) => {
+    if (svgMotion.matches) el.pauseAnimations?.();
+    else el.unpauseAnimations?.();
+  });
+}
+applyReducedMotion();
+svgMotion.addEventListener?.("change", applyReducedMotion);
 
 // Scroll spy: the active menu item is the last section whose heading sits
 // at or above the reading line just below the sticky header. Computed from

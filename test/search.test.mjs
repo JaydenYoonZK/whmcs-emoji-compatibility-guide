@@ -35,7 +35,7 @@ function parseCsv(text) {
 }
 
 test("dataset is enriched with keywords", () => {
-  assert.equal(index.items.length, 178);
+  assert.equal(index.items.length, 179);
   assert.ok(index.items.every(i => Array.isArray(i.keywords)));
   assert.ok(index.vocab.includes("heart"));
   assert.ok(index.vocab.includes("warning"));
@@ -87,8 +87,7 @@ test("search ignores ordinary punctuation around words", () => {
 test("typo still finds the target", () => {
   assert.ok(has(search(index, "hart"), "❤️"), "hart -> heart");
   assert.ok(search(index, "wraning").results.some(r => r.char === "⚠️"), "wraning -> warning");
-  assert.ok(search(index, "arow").results.some(r => r.char.length && r.char.includes("➡")) ||
-            search(index, "arow").results.length > 0, "arow -> arrow");
+  assert.ok(search(index, "arow").results.some(r => r.char.includes("➡")), "arow -> arrow");
 });
 
 test("did-you-mean suggests a close term for a typo", () => {
@@ -116,6 +115,33 @@ test("a glyph pasted without its variation selector still finds itself", () => {
 
 test("pasting an emoji glyph finds itself", () => {
   assert.ok(has(search(index, "⚠️"), "⚠️"));
+});
+
+test("a single-code-point glyph pasted WITH a stray variation selector still finds itself", () => {
+  const bare = index.items.find((item) => !item.char.includes("\uFE0F"));
+  const { results } = search(index, bare.char + "\uFE0F");
+  assert.equal(results[0].char, bare.char);
+});
+
+test("every stored glyph resolves by paste, in both variation-selector forms", () => {
+  // NFKC normalization once broke this for the enclosed ideographs (㊙️, ‼️);
+  // the whole list, not one arbitrary entry, must survive a copy-paste lookup
+  for (const item of index.items) {
+    const withSel = search(index, item.char);
+    assert.equal(withSel.results[0]?.char, item.char, `paste ${item.char}`);
+    const bare = item.char.replaceAll("\uFE0F", "");
+    if (bare && bare !== item.char) {
+      assert.equal(search(index, bare).results[0]?.char, item.char, `paste bare ${item.char}`);
+    }
+  }
+});
+
+test("a query of only stop words returns nothing", () => {
+  const r = search(index, "the of and");
+  assert.equal(r.results.length, 0);
+  assert.equal(r.tokens.length, 0);
+  // "emoji" is itself a stop word, so it collapses to the same empty branch
+  assert.equal(search(index, "emoji").results.length, 0);
 });
 
 test("results are ranked, best first", () => {
@@ -188,7 +214,7 @@ test("dataset integrity: well-formed, unique, and reviewed", () => {
       }
     }
   }
-  assert.equal(count, 178, "the reviewed profile has 178 entries");
+  assert.equal(count, 179, "the reviewed profile has 179 entries");
   assert.equal(data.compatibilityProfile.classification, "usually_safer_starting_point");
   assert.equal(data.compatibilityProfile.allCodePointsInBmp, true);
   assert.deepEqual(data.compatibilityProfile.excludes, [

@@ -1,6 +1,6 @@
 {
   "name": "WHMCS Emoji Compatibility Guide",
-  "lastReviewed": "2026-07-11",
+  "lastReviewed": "2026-07-17",
   "compatibilityProfile": {
     "classification": "usually_safer_starting_point",
     "allCodePointsInBmp": true,
@@ -1037,6 +1037,17 @@
             "horoscope",
             "leo",
             "lion",
+            "zodiac"
+          ]
+        },
+        {
+          "char": "♍️",
+          "name": "virgo",
+          "keywords": [
+            "astrology",
+            "horoscope",
+            "maiden",
+            "virgo",
             "zodiac"
           ]
         },

@@ -3,6 +3,24 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.33] - 2026-07-17
+
+A deep quality pass from an adversarial review.
+
+### Fixed
+
+- Pasting a copied glyph now finds every entry. NFKC normalization was decomposing a handful of enclosed and punctuation emoji (the secret and congratulations ideographs, the double exclamation and exclamation-question marks) before the character comparison, so those safe entries returned nothing when pasted back into the search box. The glyph lookup now compares against the raw pasted text, keeping NFKC only for name and keyword matching, and a test loops the whole shortlist to prove every glyph resolves in both variation-selector forms.
+- The 404 page works at any depth. Its stylesheet, script, escape links, and dataset links were relative, so a missing deep URL rendered it unstyled with dead links that led to further 404s; every asset, nav, brand, back, and data link is now project-absolute, matching the rest of the suite.
+- The favicon is visible. Its check glyph had no fill and rendered black on the near-black tile; it now carries the brand chartreuse, with PNG and apple-touch fallbacks.
+- A did-you-mean now prefers the closer word: "hart" suggests "heart" (which the results already show) rather than an equally-distant but unrelated word, via a prefix-and-suffix tiebreak among equal-edit-distance candidates.
+- prefers-reduced-motion pauses the SVG scene animations, the hidden back-to-top button leaves the tab order, theme storage is guarded for private-mode browsers, and the service worker caches the dataset under the URL the app actually requests so the full list is available offline.
+- The hero lede no longer says the list was "tested"; it is a conservative shortlist to start from and test, matching the methodology and the "not a guarantee" framing throughout.
+- Removed a dead GitHub stars badge from the README, corrected a stale preview cache-bust, and deleted four blocks of stylesheet copied from sibling tools that this page never renders.
+
+### Added
+
+- Virgo (U+264D) completes the zodiac set; searching "virgo" was returning nothing while the other eleven signs worked. The shortlist is now 179 entries. A theme-color meta and a data-theme fallback were added to match the rest of the suite.
+
 ## [2.4.32] - 2026-07-15
 
 ### Added
@@ -508,6 +526,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.33]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.33
 [2.4.32]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.32
 [2.4.31]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.31
 [2.4.30]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.30

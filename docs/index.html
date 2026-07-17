@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- WHMCS Emoji Compatibility Guide, built by Jayden Yoon ZK. Source: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide (MIT License) -->
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Jayden Yoon ZK">
@@ -11,7 +11,9 @@
   <title>WHMCS Emoji Compatibility Guide: a conservative shortlist for client-facing content</title>
   <meta name="description" content="A searchable shortlist of older, structurally simpler emoji to test in WHMCS product names, email templates, and knowledge base articles.">
   <link rel="canonical" href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='36'%3E%E2%9C%93%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='36' fill='%23abcf37'%3E%E2%9C%93%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:title" content="WHMCS Emoji Compatibility Guide: a conservative shortlist for client-facing content">
   <meta property="og:description" content="Search and copy older, structurally simpler emoji, then test them in your own WHMCS stack.">
   <meta property="og:type" content="website">
@@ -23,12 +25,17 @@
   <meta name="twitter:image" content="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/assets/social-preview.png">
   <script>
     (function () {
-      var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
+      var t = new URLSearchParams(location.search).get("theme");
+      if (!t) { try { t = localStorage.getItem("theme"); } catch (e) { /* storage may be blocked */ } }
       if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
       document.documentElement.dataset.theme = t;
+      var m = document.createElement("meta");
+      m.name = "theme-color";
+      m.content = t === "light" ? "#f6f4ee" : "#0d0c0a";
+      document.head.appendChild(m);
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=2.4.32">
+  <link rel="stylesheet" href="styles.css?v=2.4.33">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -126,7 +133,7 @@
     <div class="header-copy">
     <p class="eyebrow">WHMCS Emoji Compatibility Guide</p>
     <h1>Emoji that survive your client-facing content.</h1>
-    <p class="lede">Some emoji render perfectly in a WHMCS product name or email template. Others turn into <code>????</code>, empty boxes, or broken characters the moment they hit an older database or a mail client. This is a tested list of the ones that hold up, with a searchable copy board you can keep open while you write.</p>
+    <p class="lede">Some emoji render perfectly in a WHMCS product name or email template. Others turn into <code>????</code>, empty boxes, or broken characters the moment they hit an older database or a mail client. This is a conservative shortlist of structurally simpler ones to start from, with a searchable copy board you can keep open while you write and test.</p>
     <p class="privacy"><span class="privacy-lock" aria-hidden="true">🔒</span><span>A static reference. Nothing you do here is tracked or sent anywhere. Works offline after your first visit.</span></p>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -193,13 +200,13 @@
     </div>
     <div class="board-toolbar">
       <div class="cat-chips" id="cat-chips"></div>
-      <span class="board-count" id="count"></span>
+      <span class="board-count" id="count" role="status" aria-live="polite"></span>
     </div>
     <div id="suggest" class="board-suggest" hidden></div>
     <div id="sections"></div>
   </div>
 
-  <p class="section-sub" id="board-scope" style="margin-top:16px">Click any emoji to copy it. The 178-entry shortlist excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane code points. Inclusion means usually safer to test, not guaranteed compatible. The full profile is available as <a href="data/emoji.json">JSON</a> and <a href="data/emoji.csv">CSV</a>.</p>
+  <p class="section-sub" id="board-scope" style="margin-top:16px">Click any emoji to copy it. The 179-entry shortlist excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane code points. Inclusion means usually safer to test, not guaranteed compatible. The full profile is available as <a href="data/emoji.json">JSON</a> and <a href="data/emoji.csv">CSV</a>.</p>
 
   <section class="usecase-card" id="copy-groups" aria-labelledby="copy-groups-title">
     <div class="usecase-head">
@@ -404,6 +411,6 @@
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <button id="to-top" class="to-top" type="button" aria-label="Back to top">&#8593;</button>
-<script type="module" src="app.js?v=2.4.32"></script>
+<script type="module" src="app.js?v=2.4.33"></script>
 </body>
 </html>

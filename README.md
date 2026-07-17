@@ -5,12 +5,11 @@ A searchable, conservative emoji shortlist for testing in WHMCS product names, e
 <p>
   <a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/"><img src="https://img.shields.io/badge/Live%20guide-open-abcf37?style=for-the-badge&logo=githubpages&logoColor=black" alt="Open the live guide"></a>
   <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/JaydenYoonZK/whmcs-emoji-compatibility-guide/ci.yml?branch=main&style=for-the-badge&label=tests" alt="CI status"></a>
-  <a href="https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide"><img src="https://img.shields.io/github/stars/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge&logo=github" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/JaydenYoonZK/whmcs-emoji-compatibility-guide?style=for-the-badge" alt="MIT License"></a>
 </p>
 
 <a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/?demo">
-  <img src="docs/assets/preview.png?v=2.4.0" alt="WHMCS Emoji Guide shown in light and dark themes, the hero with its illustration of an emoji that survives a product name and one that breaks" width="100%">
+  <img src="docs/assets/preview.png?v=2.4.33" alt="WHMCS Emoji Guide shown in light and dark themes, the hero with its illustration of an emoji that survives a product name and one that breaks" width="100%">
 </a>
 
 **[Open the live guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/)** or **[jump to a search demo](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/?demo)**. Nothing is tracked or uploaded.
@@ -21,7 +20,7 @@ Emoji compatibility depends on storage, the WHMCS connection and filtering setti
 
 ## What this is
 
-- A **178-entry conservative shortlist** drawn from older Unicode ranges. Every entry uses Basic Multilingual Plane code points, and the profile excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane characters.
+- A **179-entry conservative shortlist** drawn from older Unicode ranges. Every entry uses Basic Multilingual Plane code points, and the profile excludes ZWJ sequences, skin tone modifiers, regional flags, and supplementary-plane characters.
 - A **smart copy board**: search by name (`heart`), concept (`love`, `danger`, `zodiac`), or color (`red`, `green`), with typo tolerance (`hart`, `chekc`) and did-you-mean suggestions. Filter by category and click to copy. All in your browser, nothing sent anywhere.
 - A **machine-readable dataset** in [`JSON`](docs/data/emoji.json) and [`CSV`](docs/data/emoji.csv), enriched with Unicode CLDR keywords plus a curated color and concept layer. The JSON declares the compatibility profile; the CSV adds code points and sequence types.
 - **Curated copy groups** for hosting, billing, support, and security copy, using only emoji already in the conservative shortlist.
@@ -45,7 +44,7 @@ npm run serve   # http://localhost:8441
 npm test
 ```
 
-23 tests cover ranked search, punctuation, multi-term matching, typo suggestions, glyph lookups with and without variation selectors, bounded inputs, dataset-profile integrity, CSV export integrity, and curated copy groups.
+26 tests cover ranked search, punctuation, multi-term matching, typo suggestions, glyph lookups with and without variation selectors, bounded inputs, dataset-profile integrity, CSV export integrity, and curated copy groups.
 
 ## Data contract
 
