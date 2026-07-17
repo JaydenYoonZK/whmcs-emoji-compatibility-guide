@@ -206,6 +206,11 @@ export function didYouMean(index, tokens) {
       return p + s;
     };
     for (const word of vocab) {
+      // never offer a one or two character word as a correction: the vocabulary
+      // holds stray short tokens (digits, "v", "tm") that are never a useful
+      // suggestion, and the query side already refuses to correct tokens this
+      // short, so keep the two sides symmetric
+      if (word.length < 3) continue;
       if (Math.abs(word.length - t.length) > cap) continue;
       const d = editDistance(t, word, cap);
       if (d <= 0 || d > cap) continue;

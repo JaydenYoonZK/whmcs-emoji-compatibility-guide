@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.34] - 2026-07-17
+
+### Fixed
+
+- A did-you-mean no longer offers a one or two character word. The vocabulary holds a few stray short tokens (single letters and abbreviations pulled from keywords), and they sit an equal edit distance from some real words, so "luv" was suggesting "v" instead of "love". Suggestions are now drawn only from words of three characters or more, the same floor the query side already used, so "luv" suggests "love" and the junk letters can never surface.
+
 ## [2.4.33] - 2026-07-17
 
 A deep quality pass from an adversarial review.
@@ -526,6 +532,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.34]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.34
 [2.4.33]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.33
 [2.4.32]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.32
 [2.4.31]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.31

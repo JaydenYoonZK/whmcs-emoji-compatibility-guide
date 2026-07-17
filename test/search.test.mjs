@@ -105,6 +105,20 @@ test("exact word does not trigger a suggestion", () => {
   assert.equal(didYouMean(index, ["heart"]), null);
 });
 
+test("a suggestion is never a one or two character word", () => {
+  // "luv" sits an equal edit distance from the stray token "v" and the real
+  // word "love"; the correction must be the useful word, never the junk letter
+  assert.equal(didYouMean(index, ["luv"]), "love");
+  for (const token of ["luv", "xox", "tmm", "iii", "ono"]) {
+    const s = didYouMean(index, [token]);
+    if (s !== null) {
+      for (const w of s.split(" ")) {
+        assert.ok(w === token || w.length >= 3, `suggested "${w}" for "${token}" is too short to be useful`);
+      }
+    }
+  }
+});
+
 test("a glyph pasted without its variation selector still finds itself", () => {
   const withSelector = index.items.find((item) => item.char.includes("\uFE0F"));
   const bare = withSelector.char.replaceAll("\uFE0F", "");
