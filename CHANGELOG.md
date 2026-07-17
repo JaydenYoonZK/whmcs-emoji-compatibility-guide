@@ -11,8 +11,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [2.4.33] - 2026-07-17
 
-A deep quality pass from an adversarial review.
-
 ### Fixed
 
 - Pasting a copied glyph now finds every entry. NFKC normalization was decomposing a handful of enclosed and punctuation emoji (the secret and congratulations ideographs, the double exclamation and exclamation-question marks) before the character comparison, so those safe entries returned nothing when pasted back into the search box. The glyph lookup now compares against the raw pasted text, keeping NFKC only for name and keyword matching, and a test loops the whole shortlist to prove every glyph resolves in both variation-selector forms.
@@ -448,10 +446,6 @@ A deep quality pass from an adversarial review.
 
 - Accessibility: the search box now has a real label instead of one hidden with `display:none`.
 - 14 tests, up from 13.
-
-### Notes
-
-This release followed a full audit of the search engine and dataset. Both are sound: the ranked matcher handles exact, prefix, substring, and typo-tolerant matches correctly ("hart" still finds the heart), and the 180 curated emoji are all unique, named, and keyworded.
 
 ## [2.1.7] - 2026-07-09
 
