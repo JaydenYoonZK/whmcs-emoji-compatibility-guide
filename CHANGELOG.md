@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.35] - 2026-07-18
+
+### Fixed
+
+- Twenty-one emoji now render in color instead of as a black-and-white outline. Symbols like the ferry, the skier, the rescue helmet, the stopwatch, and the chains are "default text presentation" characters in Unicode: they show as a monochrome glyph unless a variation selector (U+FE0F) follows them to request the emoji form. Most of the shortlist already carried that selector, but these did not, so they looked like line-art next to their color neighbours. They now carry it, matching the rest of the board. The selector is itself a Basic Multilingual Plane character, so the shortlist stays entirely within the plane it documents.
+
 ## [2.4.34] - 2026-07-17
 
 ### Fixed
@@ -526,6 +532,7 @@ First stable release.
 - SEO metadata, sitemap, and robots.txt for the GitHub Pages site.
 - MIT license.
 
+[2.4.35]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.35
 [2.4.34]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.34
 [2.4.33]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.33
 [2.4.32]: https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide/releases/tag/v2.4.32

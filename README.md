@@ -9,7 +9,7 @@ A searchable, conservative emoji shortlist for testing in WHMCS product names, e
 </p>
 
 <a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/?demo">
-  <img src="docs/assets/preview.png?v=2.4.34" alt="WHMCS Emoji Guide shown in light and dark themes, the hero with its illustration of an emoji that survives a product name and one that breaks" width="100%">
+  <img src="docs/assets/preview.png?v=2.4.35" alt="WHMCS Emoji Guide shown in light and dark themes, the hero with its illustration of an emoji that survives a product name and one that breaks" width="100%">
 </a>
 
 **[Open the live guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/)** or **[jump to a search demo](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/?demo)**. Nothing is tracked or uploaded.

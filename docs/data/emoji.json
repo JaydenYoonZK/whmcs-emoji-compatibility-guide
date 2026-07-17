@@ -1,6 +1,6 @@
 {
   "name": "WHMCS Emoji Compatibility Guide",
-  "lastReviewed": "2026-07-17",
+  "lastReviewed": "2026-07-18",
   "compatibilityProfile": {
     "classification": "usually_safer_starting_point",
     "allCodePointsInBmp": true,
@@ -124,7 +124,7 @@
           ]
         },
         {
-          "char": "⛑",
+          "char": "⛑️",
           "name": "helmet with white cross",
           "keywords": [
             "aid",
@@ -255,7 +255,7 @@
           ]
         },
         {
-          "char": "⛈",
+          "char": "⛈️",
           "name": "thunder cloud and rain",
           "keywords": [
             "and",
@@ -403,7 +403,7 @@
           ]
         },
         {
-          "char": "⛸",
+          "char": "⛸️",
           "name": "ice skate",
           "keywords": [
             "game",
@@ -415,7 +415,7 @@
           ]
         },
         {
-          "char": "⛷",
+          "char": "⛷️",
           "name": "skier",
           "keywords": [
             "game",
@@ -447,7 +447,7 @@
           ]
         },
         {
-          "char": "♟",
+          "char": "♟️",
           "name": "black chess pawn",
           "keywords": [
             "black",
@@ -497,7 +497,7 @@
           ]
         },
         {
-          "char": "⛴",
+          "char": "⛴️",
           "name": "ferry",
           "keywords": [
             "boat",
@@ -546,7 +546,7 @@
           ]
         },
         {
-          "char": "⛱",
+          "char": "⛱️",
           "name": "umbrella on ground",
           "keywords": [
             "ground",
@@ -557,7 +557,7 @@
           ]
         },
         {
-          "char": "⛰",
+          "char": "⛰️",
           "name": "mountain",
           "keywords": [
             "mountain",
@@ -588,7 +588,7 @@
           ]
         },
         {
-          "char": "⛩",
+          "char": "⛩️",
           "name": "shinto shrine",
           "keywords": [
             "religion",
@@ -632,7 +632,7 @@
           ]
         },
         {
-          "char": "⏱",
+          "char": "⏱️",
           "name": "stopwatch",
           "keywords": [
             "clock",
@@ -641,7 +641,7 @@
           ]
         },
         {
-          "char": "⏲",
+          "char": "⏲️",
           "name": "timer clock",
           "keywords": [
             "clock",
@@ -707,7 +707,7 @@
           ]
         },
         {
-          "char": "⚒",
+          "char": "⚒️",
           "name": "hammer and pick",
           "keywords": [
             "and",
@@ -717,7 +717,7 @@
           ]
         },
         {
-          "char": "⛏",
+          "char": "⛏️",
           "name": "pick",
           "keywords": [
             "hammer",
@@ -737,7 +737,7 @@
           ]
         },
         {
-          "char": "⛓",
+          "char": "⛓️",
           "name": "chains",
           "keywords": [
             "chain",
@@ -1446,7 +1446,7 @@
           ]
         },
         {
-          "char": "⚧",
+          "char": "⚧️",
           "name": "male with stroke and male and female sign",
           "keywords": [
             "and",
@@ -1639,7 +1639,7 @@
           ]
         },
         {
-          "char": "⏸",
+          "char": "⏸️",
           "name": "double vertical bar",
           "keywords": [
             "bar",
@@ -1655,7 +1655,7 @@
           ]
         },
         {
-          "char": "⏯",
+          "char": "⏯️",
           "name": "black right-pointing triangle with double vertical bar",
           "keywords": [
             "arrow",
@@ -1679,7 +1679,7 @@
           ]
         },
         {
-          "char": "⏹",
+          "char": "⏹️",
           "name": "black square for stop",
           "keywords": [
             "black",
@@ -1695,7 +1695,7 @@
           ]
         },
         {
-          "char": "⏺",
+          "char": "⏺️",
           "name": "black circle for record",
           "keywords": [
             "black",
@@ -1711,7 +1711,7 @@
           ]
         },
         {
-          "char": "⏭",
+          "char": "⏭️",
           "name": "black right-pointing double triangle with vertical bar",
           "keywords": [
             "arrow",
@@ -1734,7 +1734,7 @@
           ]
         },
         {
-          "char": "⏮",
+          "char": "⏮️",
           "name": "black left-pointing double triangle with vertical bar",
           "keywords": [
             "arrow",
