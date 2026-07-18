@@ -3,6 +3,13 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.4.36] - 2026-07-18
+
+### Changed
+
+- The link preview declares its image size for cleaner unfurls.
+- The page is marked as a software application in its structured data.
+
 ## [2.4.35] - 2026-07-18
 
 ### Fixed
