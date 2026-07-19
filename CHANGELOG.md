@@ -489,7 +489,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - A package.json, so the project runs like the rest of the suite: `npm test` runs the test suite and `npm run serve` starts the local server. The repo had a test file but no way to run it with the standard command.
 - A dataset integrity test. It checks that every curated emoji is unique, has a name and a keyword list, and that the schema and review date are present, so a future edit cannot quietly corrupt the reference the whole tool is built on.
-- A Content Security Policy on the page. The only request it makes is for its own emoji dataset, so `connect-src` is limited to same-origin and nothing can be sent elsewhere. Verified in a browser: the board still loads and searches, and a request to any other origin is blocked.
+- A Content Security Policy on the page. The only request it makes is for its own emoji dataset, so `connect-src` is limited to same-origin and nothing can be sent elsewhere.
 
 ### Changed
 
