@@ -1,5 +1,5 @@
 /*! WHMCS Emoji Compatibility Guide | Copyright (c) 2026 Jayden Yoon ZK | MIT License | https://github.com/JaydenYoonZK/whmcs-emoji-compatibility-guide */
-import { buildIndex, normalizeCategories, search as smartSearch } from "./search.js?v=2.4.36";
+import { buildIndex, normalizeCategories, search as smartSearch } from "./search.js?v=2.4.37";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -215,6 +215,14 @@ svgMotion.addEventListener?.("change", applyReducedMotion);
 const navAnchors = [...document.querySelectorAll(".nav-links a")];
 const navSections = navAnchors.map(a => document.getElementById(a.hash.slice(1))).filter(Boolean);
 navSections.sort((a, b) => (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) ? -1 : 1);
+// Short trailing sections pile into the final screen, where the page can no
+// longer scroll each heading up to the line, so position alone cannot tell them
+// apart at the bottom. Remember the clicked link and honor it while parked at
+// the bottom; a real scroll (wheel or touch) clears it and the line takes over.
+let clickedHash = null;
+for (const a of navAnchors) if (a.hash) a.addEventListener("click", () => { clickedHash = a.hash; });
+addEventListener("wheel", () => { clickedHash = null; }, { passive: true });
+addEventListener("touchmove", () => { clickedHash = null; }, { passive: true });
 function syncActiveLink() {
   const nav = document.querySelector(".site-nav");
   const line = (nav ? nav.offsetHeight : 0) + 40;
@@ -222,10 +230,11 @@ function syncActiveLink() {
   for (const sec of navSections) {
     if (sec.getBoundingClientRect().top <= line) current = sec;
   }
-  // At the very bottom the last section is current even when the page is
-  // too short to lift its heading up to the line.
+  // At the very bottom the last section is current even when the page is too
+  // short to lift its heading up to the line, unless the reader clicked one of
+  // the piled-up trailing links, in which case honor that.
   if (navSections.length && Math.ceil(scrollY + innerHeight) >= document.documentElement.scrollHeight - 2) {
-    current = navSections[navSections.length - 1];
+    current = (clickedHash && navSections.find((s) => "#" + s.id === clickedHash)) || navSections[navSections.length - 1];
   }
   for (const a of navAnchors) {
     const on = !!current && a.hash === "#" + current.id;
